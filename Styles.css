@@ -1,0 +1,84 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+.dropdown-content {
+  display: none;
+  padding-left: 70px; /* Adjust the indentation of sub-items */
+  list-style-type: circle;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+  animation: 1s linear 0s 1 fadeIn;
+}
+
+.dropdown-content a:hover {
+  color: blue;
+}
+
+.language-picker-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.language-picker-wrapper .expand-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.language-picker-wrapper .expand-icon::before {
+  content: "expand_more";
+}
+
+.language-picker-wrapper .select-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active {
+  background-color: blue !important;
+}
+.custom-dropdown {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.content {
+  transition: margin-left 0.3s;
+}
+
+/* Add a style for the "on" state */
+.on {
+  color: rgba(19, 78, 163, 1);
+}
+
+.toggle-element {
+  font-size: 24px;
+  /* Adjust the size as needed */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 900px) {
+  .button-container {
+    display: none;
+  }
+}

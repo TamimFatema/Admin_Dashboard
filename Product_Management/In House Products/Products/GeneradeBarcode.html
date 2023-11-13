@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+  <link href="/Styles.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+            green: "rgba(49, 189, 122, 1)",
+            gb: "rgba(42, 198, 188, 1)",
+            reset: "rgba(236, 40, 111, 1)",
+            newb: "rgba(16, 129, 224, 1)",
+          },
+        },
+      },
+    };
+  </script>
+  <title>Generate Code</title>
+</head>
+
+<body class="h-max bg-gray-100">
+  <div class="flex flex-col items-center container mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
+    <div class="bg-white rounded-t-lg mb-2 w-full">
+      <h1 class="text-xl font-bold p-2 ">Add New Product</h1>
+    </div>
+    <table class="w-full text-sm text-gray-500">
+      <thead class="text-xs text-gray-700 uppercase">
+        <tr class="text-left bg-blue-100">
+          <th scope="col" class="px-4 py-3">Code</th>
+          <th scope="col" class="px-4 py-3">Name</th>
+          <th scope="col" class="px-4 py-3">Quantity</th>
+          <th scope="col" class="px-4 py-3">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-white border-b text-left">
+          <td class="p-4">1</td>
+          <td class="p-4">Somename</td>
+          <td class="p-4">
+            <input type="text" id="emptyField" name="emptyField"
+              class="py-2 border w-full md:w-4/6 rounded-md focus:outline-none focus:ring focus:border-blue-300" />
+          </td>
+
+          <td class="p-4 flex flex-wrap gap-3">
+            <button class="bg-gb text-white p-2 rounded-md text-sm font-bold">
+              Generate Barcode
+            </button>
+            <button class="bg-reset text-white p-2 rounded-md text-sm font-bold">
+              Reset
+            </button>
+            <button class="bg-newb text-white p-2 rounded-md text-sm font-bold">
+              Print
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div class="grid grid-cols-3 gap-4 bg-white p-5 rounded-lg w-full lg:w-4/6">
+      <div class="flex flex-col gap-2 justify-center items-center border-2 rounded-md py-4">
+        <h5 class="font-bold">Store name</h5>
+        <p>Product Name</p>
+        <p>BDT 100.00</p>
+        <p>IMAGE</p>
+        <p>Code: 012345</p>
+      </div>
+      <div class="flex flex-col gap-2 justify-center items-center border-2 rounded-md py-4">
+        <h5 class="font-bold">Store name</h5>
+        <p>Product Name</p>
+        <p>BDT 100.00</p>
+        <p>IMAGE</p>
+        <p>Code: 012345</p>
+      </div>
+      <div class="flex flex-col gap-2 justify-center items-center border-2 rounded-md py-4">
+        <h5 class="font-bold">Store name</h5>
+        <p>Product Name</p>
+        <p>BDT 100.00</p>
+        <p>IMAGE</p>
+        <p>Code: 012345</p>
+      </div>
+      <div class="flex flex-col gap-2 justify-center items-center border-2 rounded-md py-4">
+        <h5 class="font-bold">Store name</h5>
+        <p>Product Name</p>
+        <p>BDT 100.00</p>
+        <p>IMAGE</p>
+        <p>Code: 012345</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="/Script.js"></script>
+
+</html>

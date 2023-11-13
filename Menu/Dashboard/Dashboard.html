@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="/Styles.css" rel="stylesheet" />
+  <link href="Dashboard.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+          },
+        },
+      },
+    };
+  </script>
+  <title>Admin's Dashboard</title>
+</head>
+
+<body class="h-max bg-gray-100">
+  <!-- Navbar Starts -->
+  <nav
+    class="inset-0 z-10 block h-max w-full max-w-full rounded-none border border-blue-80 bg-white bg-opacity-80 py-2 px-4 text-white backdrop-saturate-200 md:py-4">
+    <div class="flex items-center text-gray-900">
+      <button
+        class="left none relative mr-auto h-6 max-h-[40px] w-6 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-blue-gray-500 transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none xl:hidden"
+        data-collapse-target="sticky-navar">
+        <span class="absolute top-1/2 right-1\2 -translate-y-1/2 -translate-x-1/2 transform">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </span>
+      </button>
+      <ul class="ml-auto justify-items-end gap-3 flex">
+        <li class="block p-1 justify-items-start font-sans text-sm font-normal leading-normal text-inherit antialiased">
+          <a class="flex items-center gap-1">
+            <span class="material-symbols-outlined">
+              home
+            </span>
+            Home
+          </a>
+        </li>
+        <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+          <a class="flex items-center" href="#">
+            <span class="material-symbols-outlined"> account_circle </span>
+          </a>
+        </li>
+        <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+          <a class="flex items-center" href="#">
+            <span class="material-symbols-outlined">
+              notifications
+            </span>
+          </a>
+        </li>
+        <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+          <div class="language-picker-wrapper">
+            <div class="select-wrapper">
+              <select name="language-picker-select" id="language-picker-select">
+                <option lang="ban" value="bengali">Ban</option>
+                <option lang="en" value="english" selected>Eng</option>
+              </select>
+              <span class="material-symbols-outlined"> globe </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  <!-- Navbar ends -->
+
+  <div class="flex">
+    <!-- Sidebar Starts -->
+    <div class="hidden md:flex flex-col w-72 max-h- px-4 py-8 bg-blue-200 border-r overflow-y-auto"
+      data-collapse="sticky-sidebar">
+      <div class="relative">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+          <span class="material-symbols-outlined text-gray-700">
+            search
+          </span>
+        </span>
+        <input type="text"
+          class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-3xl shadow-xl focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+          placeholder="Search" />
+      </div>
+
+      <div class="flex flex-col justify-between flex-1 mt-6 text-sm">
+        <aside>
+          <div>
+            <h3 class="">MENU</h3>
+            <ul>
+              <li>
+                <a id="dashboard-link" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
+                  href="/Menu/Dashboard/Dashboard.html" onclick="changeColor(this, event)">
+                  <span class="material-symbols-outlined"> dashboard </span>
+                  <span class="mx-4 font-medium">Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a id="pos-link" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="/Menu/POS/POS.html"
+                  onclick="changeColor(this)">
+                  <span class="material-symbols-outlined">
+                    point_of_sale
+                  </span>
+                  <span class="mx-4 font-medium">POS</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="py-2">ORDER MANAGEMENT</h3>
+            <ul class="dropdown">
+              <li>
+                <a id="orders-link" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('orders-dropdown')">
+                  <span class="material-symbols-outlined"> package_2 </span>
+                  <p class="mx-4 font-medium">Orders</p>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+
+                <ul id="orders-dropdown" class="dropdown-content py-1">
+                  <li>
+                    <a href="/Order Management/Orders/All/Orders.html">All</a>
+                  </li>
+                  <li>
+                    <a href="/Order Management/Orders/Pending Orders/PendingOrders.html">Pending</a>
+                  </li>
+                  <li>
+                    <a href="/Order Management/Orders/Confirmed Orders/ConfirmedOrders.html">Confirmed</a>
+                  </li>
+                  <li>
+                    <a href="/Order Management/Orders/Packaged Orders/PackagedOrders.html">Packaged</a>
+                  </li>
+                  <li>
+                    <a href="/Order Management/Orders/Out for Delivery/OutforDelivery.html">Out for Delivery</a>
+                  </li>
+                  <li>
+                    <a href="/Order Management/Orders/Delivered Orders/DeliveredOrders.html">Delivered</a>
+                  </li>
+                  <li>
+                    <a href="/Order Management/Orders/Returned Orders/ReturnedOrders.html">Returned</a>
+                  </li>
+                  <li>
+                    <a href="/Order Management/Orders/Delivery Failed/DeliveryFailed.js">Failed to Deliver</a>
+                  </li>
+                  <li>
+                    <a href="/Order Management/Orders/Cancelled Orders/CancelledOrders.html">Cancelled</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- refund requests -->
+              <li>
+                <a id="refund-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('refund-dropdown')">
+                  <span class="material-symbols-outlined">
+                    request_page
+                  </span>
+                  <p class="mx-4 font-medium">Refund Request</p>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="refund-dropdown" class="dropdown-content py-1">
+                  <li>
+                    <a href="/Order Management/Refund/Pending Refund/PendingRequest.html">Pending</a>
+                  </li>
+                  <li>
+                    <a href="/Order Management/Refund/Approved Refunds/ApprovedRequests.html">Approved</a>
+                  </li>
+                  <li>
+                    <a href="/Order Management/Refund/Refunded/Refunded.html">Refunded</a>
+                  </li>
+                  <li>
+                    <a href="/Order Management/Refund/Rejected Refund Requests/RejectedRequests.html">Rejected</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="py-2">PRODUCT MANAGEMENT</h3>
+            <ul>
+              <li>
+                <a id="category-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('category-dropdown')">
+                  <span class="material-symbols-outlined"> menu </span>
+                  <p class="mx-4 font-medium">Category Setup</p>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+
+                <ul id="category-dropdown" class="dropdown-content py-1">
+                  <li>
+                    <a href="/Product Management/Category/CategorySetup/CategorySetup.html">Category</a>
+                  </li>
+                  <li>
+                    <a href="/Product Management/Category/SubCategory Setup/SubCategorySetup.html">Sub Category</a>
+                  </li>
+                  <li>
+                    <a href="/Product Management/Category/SubSub Category/SubSubCategory.html">Sub Sub Category</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a id="brand-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('brand-dropdown')">
+                  <span class="material-symbols-outlined"> star </span>
+                  <p class="mx-4 font-medium">Brands</p>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="brand-dropdown" class="dropdown-content py-1">
+                  <li>
+                    <a href="/Product Management/Brands/New/AddNew.html">Add
+                      New</a>
+                  </li>
+
+                  <li>
+                    <a href="/Product Management/Brands/List/List.html">List</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a id="prodAttributes-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
+                  href="/Product Management/Product Attribute/ProductAttributes.html" onclick="changeColor(this)">
+                  <span class="material-symbols-outlined"> sell </span>
+                  <span class="mx-4 font-medium">Product Attributes</span>
+                </a>
+              </li>
+
+              <li>
+                <a id="inhouse-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('inhouse-dropdown')">
+                  <span class="material-symbols-outlined">
+                    location_city
+                  </span>
+                  <p class="mx-4 font-medium">In-house Products</p>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="inhouse-dropdown" class="dropdown-content">
+                  <li>
+                    <a href="/Product Management/In House Products/Products/Products.html">Products</a>
+                  </li>
+                  <li>
+                    <a href="/Product Management/In House Products/Bulk/Bulk.html">Bulk Imports</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a id="SellerProd-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('sellerprod-dropdown')">
+                  <span class="material-symbols-outlined"> storefront </span>
+                  <p class="mx-4 font-medium">Seller Products</p>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="sellerprod-dropdown" class="dropdown-content py-1">
+                  <li>
+                    <a href="/Product Management/Seller Products/Updated Products/UpdatedProducts.html">Update
+                      Product</a>
+                  </li>
+                  <li>
+                    <a href="/Product Management/Seller Products/New Products/NewProducts.html">New Product</a>
+                  </li>
+                  <li>
+                    <a href="/Product Management/Seller Products/Approved Products/ApprovedProducts.html">Approved
+                      Product</a>
+                  </li>
+                  <li>
+                    <a href="/Product Management/Seller Products/Declined Products/DeclinedProduct.html">Declined
+                      Product</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="py-2">PROMOTION MANAGEMENT</h3>
+            <ul>
+              <li>
+                <a id="banner-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('banner-dropdown')">
+                  <span class="material-symbols-outlined"> ad_units </span>
+                  <span class="mx-4 font-medium">Banner</span>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="banner-dropdown" class="dropdown-content py-1">
+                  <li>
+                    <a href="/Promotion/Banners/Top Banner/TopBanners.html">Top Banner</a>
+                  </li>
+                  <li>
+                    <a href="/Promotion/Banners/Side Banner/SidebarBanner.html">Sidebar Banner</a>
+                  </li>
+                  <li>
+                    <a href="/Promotion/Banners/Header Banner/HeaderBanner.html">Header Banner</a>
+                  </li>
+                  <li>
+                    <a href="/Promotion/Banners/Main Banner/MainSectionBanner.html">Main Section Banner</a>
+                  </li>
+                  <li>
+                    <a href="/Promotion/Banners/Popup Banner/PopupBanner.html">Popup Banner</a>
+                  </li>
+                  <li>
+                    <a href="/Promotion/Banners/Footer Banner/Footerbanner.html">Footer Banner</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a id="offers-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('offers-dropdown')">
+                  <span class="material-symbols-outlined">
+                    notifications
+                  </span>
+                  <p class="mx-4 font-medium">Offers & Deals</p>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="offers-dropdown" class="dropdown-content py-1">
+                  <li><a href="/Promotion/Offers/Offers.html">Coupons</a></li>
+                </ul>
+              </li>
+              <li>
+                <a id="notifications-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
+                  href="/Promotion/Push Notifications/PushNotify.html" onclick="changeColor(this)">
+                  <span class="material-symbols-outlined">
+                    notifications
+                  </span>
+                  <span class="mx-4 font-medium">Push Notifications</span>
+                </a>
+              </li>
+              <li>
+                <a id="annoucement-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
+                  href="/Promotion/Announcements/Announcments.html" onclick="changeColor(this)">
+                  <span class="material-symbols-outlined"> campaign </span>
+                  <span class="mx-4 font-medium">Announcement</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="py-2">HELP & SUPPORT</h3>
+            <ul>
+              <li>
+                <a class="flex items-center px-4 py-1 text-gray-700 rounded-md"
+                  href="/Help and Support/Messages/Messages.html">
+                  <span class="material-symbols-outlined"> mail </span>
+                  <span class="mx-4 font-medium">Messages</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center px-4 py-1 text-gray-700 rounded-md"
+                  href="/Help and Support/Support Ticket/SupportTicket.html">
+                  <span class="material-symbols-outlined">
+                    confirmation_number
+                  </span>
+                  <span class="mx-4 font-medium">Support Ticket</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="py-2">REPORT & ANALYTICS</h3>
+            <ul>
+              <li>
+                <a id="salesReport-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('sales-dropdown')">
+                  <span class="material-symbols-outlined"> monitoring </span>
+                  <span class="mx-4 font-medium">Sales & Transactions Report</span>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="sales-dropdown" class="dropdown-content py-1">
+                  <li>
+                    <a href="/Reports and Analytics/Sales and Transactions/Earning Reports/EarningReports.html">Earning
+                      Report</a>
+                  </li>
+                  <li>
+                    <a href="/Reports and Analytics/Sales and Transactions/in-house Reports/InhouseReport.html">Inhouse
+                      Sales</a>
+                  </li>
+                  <li>
+                    <a href="/Reports and Analytics/Sales and Transactions/Seller Reports/SellerReport.html">Seller
+                      Report</a>
+                  </li>
+                  <li>
+                    <a href="/Reports and Analytics/Sales and Transactions/Transaction Reports/TransactionReport.html">Transaction
+                      Report</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a id="productReport-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
+                  href="/Reports and Analytics/Product Reports/ProductReport.html">
+                  <span class="material-symbols-outlined"> lab_profile </span>
+                  <span class="mx-4 font-medium">Product Report</span>
+                </a>
+              </li>
+              <li>
+                <a id="orderReport-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
+                  href="/Reports and Analytics/Orders Reports/OrderReport.html">
+                  <span class="material-symbols-outlined">
+                    insert_chart
+                  </span>
+                  <span class="mx-4 font-medium">Order Report</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="py-2">USER MANAGEMENT</h3>
+            <ul>
+              <li>
+                <a id="customer-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('customers-dropdown')">
+                  <span class="material-symbols-outlined"> groups_2 </span>
+                  <span class="mx-4 font-medium">Customers</span>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="customers-dropdown" class="dropdown-content">
+                  <li><a href="/Users/Customers.html"></a></li>
+                </ul>
+              </li>
+              <li>
+                <a id="sellers-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('sellers-dropdown')">
+                  <span class="material-symbols-outlined"> groups </span>
+                  <span class="mx-4 font-medium">All Sellers</span>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="sellers-dropdown" class="dropdown-content py-1">
+                  <li><a href="/Users/Sellers/New Sellers/AddNewSellers.html">Add New Seller</a></li>
+                  <li><a href="/Users/Sellers/Seller List/Sellers.html">Seller List</a></li>
+                  <li><a href="/Users/Sellers/Withdraws/withdraws.html">Withdraws</a></li>
+                  <li><a href="/Users/Sellers/Withdrawal Methods/methods.html">Withdraw Methods</a></li>
+                </ul>
+              </li>
+              <li>
+                <a id="subscribers-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('subscribers-dropdown')">
+                  <span class="material-symbols-outlined"> person </span>
+                  <span class="mx-4 font-medium">Subscribers</span>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="subscribers-dropdown" class="dropdown-content py-1">
+                  <li><a href="/Users/Subscriber.html">Something</a></li>
+                </ul>
+              </li>
+              <li>
+                <a id="deliveryman-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('deliveryman-dropdown')">
+                  <span class="material-symbols-outlined"> person </span>
+                  <span class="mx-4 font-medium">Delivery Man</span>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="deliveryman-dropdown" class="dropdown-content py-1">
+                  <li><a href="/Users/DeliveryMan.html">Something</a></li>
+                  <li><a href="/Users/DeliveryMan.html">Something</a></li>
+                </ul>
+              </li>
+              <li>
+                <a id="employee-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
+                  onclick="toggleDropdown('employee-dropdown')">
+                  <span class="material-symbols-outlined"> person </span>
+                  <span class="mx-4 font-medium">Employees</span>
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </a>
+                <ul id="employee-dropdown" class="dropdown-content py-1">
+                  <li><a href="/Users/Employee.html">Something</a></li>
+                  <li><a href="/Users/Employee.html">Something</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <!--Sidebar ends-->
+
+    <div class="flex flex-col mx-auto w-full p-4 sm:p-6 md:p-8 lg:p-10">
+      <div class="flex gap-2">
+        <span class="material-symbols-outlined">
+          dashboard
+        </span>
+        <h1 class="text-2xl font-bold mb-4">Admin's Dashboard </h1>
+      </div>
+      <p class="mb-2 ">Welcome to admin's dashboard</p>
+      <div class="bg-white p-5 md:p-10 lg:p-5 rounded-lg flex flex-col ">
+        <div class="flex gap-3">
+          <span class="material-symbols-outlined">
+            monitoring
+          </span>
+          <h2 class="px-1 py-1">Business Analytics</h2>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6 my-4 md:mx-10">
+
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined">
+                deployed_code_history
+              </span>
+              <p>
+                Pending
+              </p>
+            </div>
+            <p>0</p>
+          </div>
+
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined">
+                check_circle
+              </span>
+              <p>
+                Confirmed
+              </p>
+            </div>
+            <p>0</p>
+          </div>
+
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined">
+                package_2
+              </span>
+              <p>
+                Packaging
+              </p>
+            </div>
+            <p>0</p>
+          </div>
+
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined">
+                local_shipping
+              </span>
+              <p>
+                Out for Delivery
+              </p>
+            </div>
+            <p>0</p>
+          </div>
+
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5 ">
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined">
+                select_check_box
+              </span>
+              <p>
+                Delivered
+              </p>
+            </div>
+            <p>0</p>
+          </div>
+
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined">
+                cancel
+              </span>
+              <p>
+                Cancelled
+              </p>
+            </div>
+            <p>0</p>
+          </div>
+
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined">
+                sync
+              </span>
+              <p>
+                Returned
+              </p>
+            </div>
+            <p>0</p>
+          </div>
+
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined">
+                close
+              </span>
+              <p>
+                Failed to Deliver
+              </p>
+            </div>
+            <p>0</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6 w-grow md:mx-10 mt-3">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center px-5 py-5">
+            <div>
+              <h3>Total Sale</h3>
+              <p>1000.00</p>
+            </div>
+            <div>
+              <span class="material-symbols-outlined">
+                monetization_on
+              </span>
+            </div>
+          </div>
+
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center px-5 py-5">
+            <div>
+              <h3>Total Stores</h3>
+              <p>10</p>
+            </div>
+            <div>
+              <span class="material-symbols-outlined">
+                storefront
+              </span>
+            </div>
+          </div>
+
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center px-5 py-5">
+            <div>
+              <h3>Total Products</h3>
+              <p>10</p>
+            </div>
+            <div>
+              <span class="material-symbols-outlined">
+                package_2
+              </span>
+            </div>
+          </div>
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center px-5 py-5">
+            <div>
+              <h3>Total Customers</h3>
+              <p>50</p>
+            </div>
+            <div>
+              <span class="material-symbols-outlined">
+                groups
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-5 mt-5 sm:p-8 md:p-10 lg:p-5 rounded-lg flex flex-col flex-grow">
+        <div class="flex gap-3">
+          <span class="material-symbols-outlined">
+            wallet
+          </span>
+          <h2>Admin Wallet</h2>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 my-3">
+          <div
+            class="col-span-2 lg:col-span-1 lg:row-span-2 bg-[#D2E9FB] flex flex-col gap-3 justify-around rounded-lg shadow-xl items-center px-5 py-5 mx-auto w-[50%] lg:w-[90%] lg:mx-0">
+            <span class="material-symbols-outlined text-3xl">
+              attach_money
+            </span>
+            <p class="font-bold">0.00 &#2547;</p>
+            <p class="font-bold">In House Earning</p>
+          </div>
+
+          <div class="bg-[#D2E9FB] lg:col-span-1 flex rounded-lg shadow-xl items-center px-5 py-5 justify-between">
+            <div class="flex flex-col">
+              <p class="font-bold">0.00 &#2547;</p>
+              <p>Commission Earned</p>
+            </div>
+            <span class="material-symbols-outlined text-3xl">
+              attach_money
+            </span>
+          </div>
+
+          <div class="bg-[#D2E9FB] flex rounded-lg shadow-xl items-center px-5 py-5 justify-between">
+            <div class="flex flex-col">
+              <p class="font-bold">0.00 &#2547;</p>
+              <p>Total Tax Collected</p>
+            </div>
+            <span class="material-symbols-outlined text-3xl">
+              attach_money
+            </span>
+          </div>
+          <div class="bg-[#D2E9FB] flex rounded-lg shadow-xl items-center px-5 py-5 justify-between">
+            <div class="flex flex-col">
+              <p class="font-bold">0.00 &#2547;</p>
+              <p>Delivery Charge Earned</p>
+            </div>
+            <span class="material-symbols-outlined text-3xl">
+              attach_money
+            </span>
+          </div>
+          <div class="bg-[#D2E9FB] flex rounded-lg shadow-xl items-center px-5 py-5 justify-between">
+            <div class="flex flex-col">
+              <p class="font-bold">0.00 &#2547;</p>
+              <p>Pending Amount</p>
+            </div>
+            <span class="material-symbols-outlined text-3xl">
+              attach_money
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex flex-col bg-white p-5 mt-5 sm:p-8 md:p-10 lg:p-5 rounded-lg">
+        <div class="flex justify-between">
+          <div class="flex gap-3">
+            <span class="material-symbols-outlined">
+              bar_chart_4_bars
+            </span>
+            <h2>Earning Statistics</h2>
+          </div>
+          <div class="flex border-2 border-gray rounded-md my-3">
+            <!-- This Year Button -->
+            <button id="thisYearBtn" class="bg-white border-2 rounded-md font-bold py-2 px-4 my-2 mx-2">
+              This Year
+            </button>
+
+            <!-- This Month Button -->
+            <button id="thisMonthBtn" class="bg-white border-2 rounded-md text-black font-bold py-2 px-4 my-2 mx-2">
+              This Month
+            </button>
+
+            <!-- This Week Button -->
+            <button id="thisWeekBtn" class="bg-white border-2 rounded-md text-black font-bold py-2 px-4 my-2 mx-2">
+              This Week
+            </button>
+          </div>
+        </div>
+
+
+
+        <div class="w-[400px] sm:w-[500px] lg:w-[600px] xl:w-[800px] 2xl:w-[1000px] self-center py-5">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 mt-5 lg:p-5">
+
+        <!--Top Customers-->
+        <div class="bg-white rounded-lg">
+          <div class="flex justify-between m-3">
+            <h3 class="font-bold">Top Customer</h3>
+            <h3 class="font-bold text-[#134EA3] underline">See all</h3>
+          </div>
+          <div class="border-2 shadow-xl"></div>
+          <div class="flex justify-between space-x-5 items-center mx-3 my-4 text-sm ">
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border rounded-lg">
+              <span class="material-symbols-outlined">account_circle </span>
+              <p class="text-center">First Name</p>
+              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+            </div>
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border rounded-lg">
+              <span class="material-symbols-outlined">account_circle </span>
+              <p class="text-center">First Name</p>
+              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+            </div>
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border rounded-lg">
+              <span class="material-symbols-outlined">account_circle </span>
+              <p class="text-center">First Name</p>
+              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+            </div>
+          </div>
+        </div>
+        <!--Most Popular Stores-->
+        <div class="bg-white rounded-lg flex flex-col">
+          <div class="flex justify-between m-3">
+            <h3 class="font-bold">Most Popular Stores</h3>
+            <h3 class="font-bold text-[#134EA3] underline">See all</h3>
+          </div>
+          <div class="border-2"></div>
+          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-sm">
+            <div class="flex justify-between items-center border-2 rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTsib-s9dxHh_ubpRnBglygvx2lWX25lj_DX6lGKt&s"
+                    alt="apex logo" style="width:50px; height:20px;" />
+                </div>
+                <p class="font-bold">Apex Store</p>
+              </div>
+              <div class="flex gap-2 text-red-500">
+                <p class="font-bold">10</p>
+                <span class="material-symbols-outlined ">favorite</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center border-2 rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTsib-s9dxHh_ubpRnBglygvx2lWX25lj_DX6lGKt&s"
+                    alt="apex logo" style="width:50px; height:20px;" />
+                </div>
+                <p class="font-bold">Apex Store</p>
+              </div>
+              <div class="flex gap-2 text-red-500">
+                <p class="font-bold">10</p>
+                <span class="material-symbols-outlined ">favorite</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center border-2 rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTsib-s9dxHh_ubpRnBglygvx2lWX25lj_DX6lGKt&s"
+                    alt="apex logo" style="width:50px; height:20px;" />
+                </div>
+                <p class="font-bold">Apex Store</p>
+              </div>
+              <div class="flex gap-2 text-red-500">
+                <p class="font-bold">10</p>
+                <span class="material-symbols-outlined ">favorite</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Top Selling Stores-->
+        <div class="bg-white rounded-lg flex flex-col">
+          <div class="flex justify-between m-3">
+            <h3 class="font-bold">Top Selling Stores</h3>
+            <h3 class="font-bold text-[#134EA3] underline">See all</h3>
+          </div>
+          <div class="border-2"></div>
+          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-sm">
+            <div class="flex justify-between border-2 items-center rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTsib-s9dxHh_ubpRnBglygvx2lWX25lj_DX6lGKt&s"
+                    alt="apex logo" style="width:50px; height:20px;" />
+                </div>
+                <p class="font-bold">Apex Store</p>
+              </div>
+              <div class="flex gap-2 items-center text-[#134EA3]">
+                <p class="font-bold">10000.00 &#2547; </p>
+                <span class="material-symbols-outlined">
+                  shopping_cart
+                </span>
+              </div>
+            </div>
+            <div class="flex justify-between border-2 items-center rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTsib-s9dxHh_ubpRnBglygvx2lWX25lj_DX6lGKt&s"
+                    alt="apex logo" style="width:50px; height:20px;" />
+                </div>
+                <p class="font-bold">Apex Store</p>
+              </div>
+              <div class="flex gap-2 items-center text-[#134EA3]">
+                <p class="font-bold">10000.00 &#2547; </p>
+                <span class="material-symbols-outlined">
+                  shopping_cart
+                </span>
+              </div>
+            </div>
+            <div class="flex justify-between border-2 items-center rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTsib-s9dxHh_ubpRnBglygvx2lWX25lj_DX6lGKt&s"
+                    alt="apex logo" style="width:50px; height:20px;" />
+                </div>
+                <p class="font-bold">Apex Store</p>
+              </div>
+              <div class="flex gap-2 items-center text-[#134EA3]">
+                <p class="font-bold">10000.00 &#2547; </p>
+                <span class="material-symbols-outlined">
+                  shopping_cart
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Most Popular Products-->
+        <div class="bg-white rounded-lg flex flex-col">
+          <div class="flex justify-between m-3">
+            <h3 class="font-bold">Most Popular Products</h3>
+            <h3 class="font-bold text-[#134EA3] underline">See all</h3>
+          </div>
+          <div class="border-2"></div>
+          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-sm">
+            <div class="flex justify-between items-center border-2 rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Max-9907.jpg"
+                    alt="apex logo" style="width:30px; height:30px;" />
+                </div>
+                <p class="font-bold">iPhone 14 Pro Max</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <span class="material-symbols-outlined text-yellow-500 fill-yellow-500">grade</span>
+                <p class="">4.8</p>
+                <p>(7 Reviews)</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center border-2 rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Max-9907.jpg"
+                    alt="apex logo" style="width:30px; height:30px;" />
+                </div>
+                <p class="font-bold">iPhone 14 Pro Max</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <span class="material-symbols-outlined text-yellow-500 fill-yellow-500">grade</span>
+                <p class="">4.8</p>
+                <p>(7 Reviews)</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center border-2 rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Max-9907.jpg"
+                    alt="apex logo" style="width:30px; height:30px;" />
+                </div>
+                <p class="font-bold">iPhone 14 Pro Max</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <span class="material-symbols-outlined text-yellow-500 fill-yellow-500">grade</span>
+                <p class="">4.8</p>
+                <p>(7 Reviews)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Top Selling Products-->
+        <div class="bg-white rounded-lg flex flex-col">
+          <div class="flex justify-between m-3">
+            <h3 class="font-bold">Top Selling Products</h3>
+            <h3 class="font-bold text-[#134EA3] underline">See all</h3>
+          </div>
+          <div class="border-2"></div>
+          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-sm">
+            <div class="flex justify-between border-2 items-center rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Max-9907.jpg"
+                    alt="apex logo" style="width:30px; height:30px;" />
+                </div>
+                <p class="font-bold">iPhone 14 Pro Max</p>
+              </div>
+              <div class="flex gap-2 items-center bg-[#134EA3] text-white rounded-md">
+                <p class="py-1 px-4 text-md font-bold"> Sold: 8</p>
+              </div>
+            </div>
+            <div class="flex justify-between border-2 items-center rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Max-9907.jpg"
+                    alt="apex logo" style="width:30px; height:30px;" />
+                </div>
+                <p class="font-bold">iPhone 14 Pro Max</p>
+              </div>
+              <div class="flex gap-2 items-center bg-[#134EA3] text-white rounded-md">
+                <p class="py-1 px-4 text-md font-bold"> Sold: 8</p>
+              </div>
+            </div>
+            <div class="flex justify-between border-2 items-center rounded-lg py-2 px-2">
+              <div class="flex gap-2 items-center">
+                <div class="border-2 py-1 px-1 rounded-md">
+                  <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Max-9907.jpg"
+                    alt="apex logo" style="width:30px; height:30px;" />
+                </div>
+                <p class="font-bold">iPhone 14 Pro Max</p>
+              </div>
+              <div class="flex gap-2 items-center bg-[#134EA3] text-white rounded-md">
+                <p class="py-1 px-4 text-md font-bold"> Sold: 8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Top Delivery Man-->
+        <div class="bg-white rounded-lg">
+          <div class="flex justify-between m-3">
+            <h3 class="font-bold">Top Delivery Man</h3>
+            <h3 class="font-bold text-[#134EA3] underline">See all</h3>
+          </div>
+          <div class="border-2"></div>
+          <div class="flex justify-between space-x-5 items-center mx-4 my-10 text-sm ">
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border-2 rounded-lg">
+              <span class="material-symbols-outlined">account_circle </span>
+              <p class="text-center">First Name</p>
+              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+            </div>
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border-2 rounded-lg">
+              <span class="material-symbols-outlined">account_circle </span>
+              <p class="text-center">First Name</p>
+              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+            </div>
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border-2 rounded-lg">
+              <span class="material-symbols-outlined">account_circle </span>
+              <p class="text-center">First Name</p>
+              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const ctx = document.getElementById('myChart');
+
+    const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          type: 'line',
+          label: 'In House',
+          data: [80, 20, 60, 70, 20, 30, 10, 20, 60, 50, 20, 60],
+        },
+        {
+          type: 'line',
+          label: 'Seller',
+          data: [10, 40, 30, 10, 40, 30, 10, 40, 30, 10, 40, 30],
+        },
+        {
+          type: 'line',
+          label: 'Commissioner',
+          data: [50, 20, 50, 50, 20, 50, 50, 20, 50, 50, 20, 50],
+        }
+      ]
+    };
+
+
+    const config = {
+      type: 'scatter',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          }
+        }
+      }
+    };
+
+    new Chart(ctx, config);
+  </script>
+  <script src="/Script.js"></script>
+  <script src="Dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="/Styles.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+          },
+        },
+      },
+    };
+  </script>
+  <title>Popup Banner</title>
+</head>
+
+<body class="h-max bg-gray-100">
+  <div class="justify-center container mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="material-symbols-outlined">
+        planner_banner_ad_pt
+      </span>
+      <h2 class="text-2xl font-bold">Banner Setting</h2>
+    </div>
+
+    <!-- Form Section -->
+    <div class="mb-8 flex flex-col sm:flex-row">
+      <form id="categoryForm" action="#" method="POST" enctype="multipart/form-data"
+        class="bg-white shadow-xl p-4 sm:p-8 md:p-10 lg:p-8 rounded-md flex-grow">
+        <h1 class="underline text-[#134EA3] text-2xl font-bold mb-3">English (EN)</h1>
+        <!-- Category Name -->
+        <div class="flex flex-col sm:flex-row justify-between">
+          <div class="flex flex-col gap-2">
+            <div class="lg:w-80 xl:w-96 mb-2">
+              <label for="priority" class="block text-sm font-medium text-black mb-2"
+                placeholder="Select Location">Banner Location</label>
+              <select id="priority" name="priority" class="mt-1 p-2 w-full rounded-md custom-dropdown">
+                <option value="1">Top</option>
+                <option value="2">Side</option>
+                <option value="3">Pop Up</option>
+                <option value="4">Header</option>
+                <option value="5">Main</option>
+                <option value="6">Footer</option>
+              </select>
+            </div>
+
+            <div class="w-full lg:w-80 xl:w-96 mb-2 ">
+              <div class="flex items-center gap-2">
+                <label for="categoryName" class="block text-sm font-medium text-black">Custom Link </label>
+                <input type="checkbox" id="customLinkCheckbox" name="customLinkCheckbox" class="mr-2">
+              </div>
+              <input type="text" id="categoryName" name="categoryName"
+                class="mt-1 p-2 w-full border border-black rounded-md" required />
+            </div>
+
+            <!-- Priority -->
+            <div class="lg:w-80 xl:w-96 mb-2">
+              <label for="priority" class="block text-sm font-medium text-black mb-2">Choose Product</label>
+              <select id="priority" name="priority" class="mt-1 p-2 w-full rounded-md custom-dropdown">
+                <option value="1">iPhone</option>
+                <option value="2">Galaxy</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+
+            <!-- Image Upload -->
+            <div class="w-full lg:w-80 xl:w-96 mb-2">
+              <label for="image" class="block text-sm font-medium text-black mb-2">Upload Image</label>
+              <input type="file" id="image" name="image"
+                class="mt-1 w-full mb-2 sm:mb-0 border rounded-md file:bg-[#134EA3] file:text-white file:border-0 file:p-2" />
+            </div>
+          </div>
+
+          <!-- Image Preview -->
+          <img id="preview" src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg" alt="Preview"
+            class="h-[220px] w-auto self-center rounded-md" />
+
+          <!-- Submit Buttons -->
+          <div class="mt-4 flex gap-3 items-end">
+            <button type="button" class="w-full h-fit bg-[#545454] text-white px-6 py-2 font-bold rounded-md">
+              Reset
+            </button>
+            <button type="submit" class="w-full h-fit bg-[#134EA3] text-white px-6 py-2 font-bold rounded-md">
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Table Section -->
+    <div class="bg-white shadow-xl overflow-x-auto rounded-lg">
+      <div class="flex justify-between p-5 flex-wrap">
+        <div class="flex gap-4 text-base">
+          <h1 class="text-2xl font-bold mb-2">Popup Banner</h1>
+          <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex">
+            <div class="flex items-center rounded-l-lg border p-2 gap-2">
+              <span class="material-symbols-outlined text-gray-700">
+                search
+              </span>
+              <input type="text" placeholder="Search" />
+            </div>
+            <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">
+              Search
+            </button>
+          </div>
+          <div class="button-container">
+            <button class="border-2 border-[#134EA3] center-container gap-1 p-1 sm:p-2 rounded-md">
+              <span class="material-symbols-outlined text-[#134EA3]">
+                download
+              </span>
+              <p class="text-[#134EA3]">Export</p>
+              <span class="material-symbols-outlined  text-[#134EA3]">
+                keyboard_arrow_down
+              </span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Table -->
+      <table id="categoryTable" class="w-full text-sm text-black text-center">
+        <thead class="text-xs text-black uppercase bg-[#D2E9FB]">
+          <tr>
+            <th scope="col" class="px-6 py-3">ID</th>
+            <th scope="col" class="px-6 py-3">Banner Image</th>
+            <th scope="col" class="px-6 py-3">Banner Status</th>
+            <th scope="col" class="px-6 py-3">Time</th>
+            <th scope="col" class="px-6 py-3">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <td class="py-2 px-4 border-b min-w-[box-width]">1</td>
+          <td class="py-2 px-4 border-b min-w-[box-width]">
+            <img
+              src="https://img.freepik.com/free-vector/abstract-yellow-blue-geometric-banner-half-tone-design_1017-39620.jpg"
+              alt="" style="width: auto; height: 50px;" class="mx-auto" />
+          </td>
+          <td class="py-2 px-4 border-b min-w-[box-width] toggle-row">
+            <a href="#">
+              <span class="material-icons toggle-element" data-value="0">
+                toggle_off
+              </span>
+            </a>
+          </td>
+          <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
+            <div class="flex flex-col">
+              <p>26th November 2023 10:00am -</p>
+              <p>26th November 2023 10:00pm </p>
+            </div>
+
+          <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
+            <a href="/Promotion/Banners/Popup Banner/PopupUpdate.html">
+              <span class="material-symbols-outlined border border-[#46D7BD] rounded-md text-[#46D7BD]">
+                edit
+              </span>
+            </a>
+            <a href="#">
+              <span class="material-symbols-outlined border border-red-500 rounded-md text-red-500">
+                delete
+              </span>
+            </a>
+
+          </td>
+        </tbody>
+      </table>
+      <!-- <div class="flex items-center justify-end space-x-4 mb-6 mx-3">
+          <span class="material-symbols-outlined border py-2 px-2 rounded">
+            chevron_left
+          </span>
+          <button class="page-btn text-black border py-2 px-4 rounded">1</button>
+          <button class="page-btn text-black border py-2 px-4 rounded">2</button>
+          <button class="page-btn text-black border py-2 px-4 rounded">3</button>
+          <span class="material-symbols-outlined border py-2 px-2 rounded">
+            chevron_right
+          </span>
+        </div> -->
+    </div>
+  </div>
+  <script>
+    // Get all elements with the toggle class
+    const toggleElements = document.querySelectorAll('.toggle-element');
+
+    // Add a click event listener to toggle the state for each element
+    toggleElements.forEach(toggleElement => {
+      toggleElement.addEventListener('click', () => {
+        // Toggle the value between 1 and 0
+        const currentValue = parseInt(toggleElement.getAttribute('data-value'));
+        const newValue = currentValue === 1 ? 0 : 1;
+
+        // Update the value attribute
+        toggleElement.setAttribute('data-value', newValue);
+
+        // Toggle the class for the "on" state
+        toggleElement.classList.toggle('on', newValue === 1);
+
+        // Set the icon based on the value
+        toggleElement.innerText = newValue === 1 ? 'toggle_on' : 'toggle_off';
+      });
+    });
+    const imageInput = document.getElementById("image");
+    const preview = document.getElementById("preview");
+
+    imageInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          preview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        preview.src =
+          "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg";
+      }
+    });
+  </script>
+</body>
+
+</html>

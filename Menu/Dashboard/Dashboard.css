@@ -1,0 +1,4 @@
+.flex button.active {
+    background-color: rgba(19, 78, 163, 1) !important;
+    color: white !important;
+  }

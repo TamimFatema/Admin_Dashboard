@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="/Styles.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+            barcode: "rgba(232, 107, 53, 1)",
+            visible: "rgb(19, 78, 163,1)",
+            dustbin: "rgba(211, 77, 77, 1)",
+            edit: "rgba(36, 199, 251, 1)",
+            approval: "rgba(85, 181, 135, 0.2)",
+            green: "rgba(49, 189, 122, 1)"
+          },
+        },
+      },
+    };
+  </script>
+  <title>Add New Products</title>
+</head>
+
+<body class="h-max bg-gray-100">
+
+  <div class="justify-center container mx-auto p-2 md:p-4 lg:p-8">
+    <div class="flex mb-4 items-center gap-4">
+      <span class="material-symbols-outlined">
+        package_2
+      </span>
+      <h1 class="text-xl font-bold">Add New Product</h1>
+    </div>
+
+    <!--Main Form-->
+    <form id="categoryForm" action="#" method="POST" enctype="multipart/form-data"
+      class="bg-white shadow-xl p-4 sm:p-8 md:p-10 lg:p-8 mb-8 rounded-md flex-grow">
+      <div class="flex flex-col gap-2">
+        <p class="text-[#134EA3] text-2xl font-bold underline underline-offset-1">English (EN)</p>
+        <!-- Name Input Field -->
+        <div class="max-w-full mb-2">
+          <label for="productName" class="block text-sm font-bold text-black mb-2">Name</label>
+          <input type="text" id="productName" name="categoryName" placeholder="Please Type the Product Name"
+            class="mt-1 p-2 w-full border rounded-md" />
+        </div>
+        <!-- Description Input Field -->
+        <div class=" mb-2">
+          <label for="productDescription" class="block text-sm font-bold text-black mb-2">Description</label>
+          <input type="text" id="productDescription" name="categoryDescription"
+            placeholder="Please Type the Product Description" class="mt-1 p-2 w-full
+                      h-64 border rounded-md" />
+        </div>
+      </div>
+    </form>
+
+    <!--General Info-->
+    <div class="mb-1 flex flex-col sm:flex-row shadow-xl">
+      <div class="bg-white py-2 px-4 lg:px-6 rounded-t-md flex-grow">
+        <h3 class="font-bold">General Info</h3>
+      </div>
+    </div>
+    <div class="bg-white p-4 lg:p-6 rounded-md flex-grow mb-8">
+      <form id="product-detail" action="#" method="POST" enctype="multipart/form-data">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto">
+          <!--Product Type Drop Down-->
+          <div class="my-2 lg:col-span-full lg:w-1/3">
+            <label for="product-type" class="block text-sm font-medium text-black mb-2">Product Type</label>
+            <select id="product-type-dropdown" name="product-type" class="mt-1 p-2 w-full border rounded-md ">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <!--Category DropDown-->
+          <div class="my-2">
+            <label for="category" class="block text-sm font-medium text-black mb-2">Category</label>
+            <select id="category-dropdown" name="category" class="mt-1 p-2 w-full border rounded-md">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <!--Sub Category Dropdown-->
+          <div class="my-2">
+            <label for="subcategory" class="block text-sm font-medium text-black mb-2">Sub Category</label>
+            <select id="subcategory-dropdown" name="subcategory" class="mt-1 p-2 w-full border rounded-md">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <!--Sub Sub Category Dropdown-->
+          <div class="my-2">
+            <label for="subsubcategory" class="block text-sm font-medium text-black mb-2">Sub Sub
+              Category</label>
+            <select id="subsubcategory-dropdown" name="subsubcategory" class="mt-1 p-2 w-full border rounded-md">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <!--Product Code SKU dropdown-->
+          <div class="my-2">
+            <div class="flex text-sm gap-2">
+              <label for="sku" class="block text-sm font-medium text-black mb-2">Product Code Sku <span
+                  class="text-red-500">*</span></label>
+              <a href="GeneradeBarcode.html">
+                <p class="text-blue-500 font-bold">Generate Code</p>
+              </a>
+            </div>
+            <input type="text" id="skuName" name="skuName" class="mt-1 p-2 w-full border rounded-md" />
+          </div>
+
+          <!--Brand Dropdown-->
+          <div class="my-2">
+            <label for="brand" class="block text-sm font-medium text-black mb-2">Brand</label>
+            <select id="brand-dropdown" name="brand" class="mt-1 p-2 w-full border rounded-md">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <!--Unit Dropdown-->
+          <div class="my-2">
+            <label for="unit" class="block text-sm font-medium text-black mb-2">Unit</label>
+            <select id="unit-dropdown" name="unit" class="mt-1 p-2 w-full border rounded-md">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!--Variations-->
+    <div class="mb-1 flex flex-col sm:flex-row shadow-xl">
+      <div class="bg-white py-2 px-4 lg:px-6 rounded-t-md flex-grow">
+        <div class="flex justify-between">
+          <h3 class="font-bold">Variations</h3>
+        </div>
+      </div>
+    </div>
+    <form id="product-detail" action="#" method="POST" enctype="multipart/form-data"
+      class="bg-white p-6 sm:p-8 md:p-10 lg:p-6 rounded-md w-full">
+      <div class="flex flex-col sm:flex-row justify-between gap-3">
+        <div class="w-full mb-2">
+          <div class="flex gap-2">
+            <p class="font-bold">Colors:</p>
+            <span class="material-icons toggle-element" data-value="0">
+              toggle_off
+            </span>
+          </div>
+          <div class="mt-1 flex w-full gap-3 p-2 border rounded-md">
+            <button class="flex gap-2 border rounded-md items-center p-2" onclick="removeItem(this)">
+              <span class="material-symbols-outlined">close</span>
+              <p>Blue</p>
+            </button>
+            <button class="flex gap-2 border rounded-md items-center p-2" onclick="removeItem(this)">
+              <span class="material-symbols-outlined">close</span>
+              <p>Black</p>
+            </button>
+          </div>
+        </div>
+        <div class="w-full mb-2">
+          <div>
+            <p class="font-bold">Attributes</p>
+          </div>
+          <div class="mt-1 flex w-full gap-3 p-2 border rounded-md">
+            <button class="flex gap-2 border rounded-md items-center p-2" onclick="removeItem(this)">
+              <span class="material-symbols-outlined">close</span>
+              <p>Color</p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <div class="w-full flex gap-2">
+          <label class="border rounded-md p-3 text-black">Color </label>
+          <div class="p-2 w-full border rounded-md p-3">
+            <input placeholder="Enter value choices" />
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!--Product Price and Stock-->
+    <div class="mb-1 flex flex-col sm:flex-row shadow-xl">
+      <div class="bg-white py-2 px-4 lg:px-6 rounded-t-md flex-grow">
+        <div class="flex justify-between">
+          <h3 class="font-bold">Product Price and Stock</h3>
+        </div>
+      </div>
+    </div>
+    <form id="product-detail" action="#" method="POST" enctype="multipart/form-data"
+      class="bg-white p-6 sm:p-8 mb-8 md:p-10 lg:p-6 rounded-md w-full">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-3">
+        <div class="mb-2">
+          <label for="sku" class="block text-sm font-medium text-black mb-2">Unit Price</label>
+          <input type="text" id="skuName" name="skuName" class="mt-1 p-2 w-full border rounded-md" />
+        </div>
+        <div class="mb-2">
+          <label for="sku" class="block text-sm font-medium text-black mb-2">Purchase Price</label>
+          <input type="text" id="skuName" name="skuName" class="mt-1 p-2 w-full border rounded-md" />
+        </div>
+        <div class="mb-2">
+          <label for="sku" class="block text-sm font-medium text-black mb-2">Type (in %)</label>
+          <input type="text" id="skuName" name="skuName" class="mt-1 p-2 w-full border rounded-md" />
+        </div>
+        <div class="mb-2">
+          <label for="sku" class="block text-sm font-medium text-black mb-2">Tax Model</label>
+          <select id="brand-dropdown" name="brand" class="mt-1 p-2 w-full border rounded-md">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="sku" class="block text-sm font-medium text-black mb-2">Discount Amount</label>
+          <input type="text" id="skuName" name="skuName" class="mt-1 p-2 w-full border rounded-md" />
+        </div>
+        <div class="mb-2 ">
+          <label for="sku" class="block text-sm font-medium text-black mb-2">Discount Type</label>
+          <select id="brand-dropdown" name="brand" class="mt-1 p-2 w-full border rounded-md">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      </div>
+      <table class="table-auto w-full">
+        <thead>
+          <tr>
+            <th class="border px-4 py-2">Variant</th>
+            <th class="border px-4 py-2">Variant Price</th>
+            <th class="border px-4 py-2">SKU</th>
+            <th class="border px-4 py-2">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">Black</td>
+            <td class="border px-4 py-2"></td>
+            <td class="border px-4 py-2"></td>
+            <td class="border px-4 py-2"></td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Blue</td>
+            <td class="border px-4 py-2"></td>
+            <td class="border px-4 py-2"></td>
+            <td class="border px-4 py-2"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-3">
+        <!--Product Code SKU dropdown-->
+        <div class="mb-2 mt-6">
+          <label for="sku" class="block text-sm font-medium text-black mb-2">Total Quantity <span
+              class="text-blue-500 font-bold">(Auto Generated)</span></label>
+          <input type="text" id="skuName" name="skuName" class="mt-1 p-2 w-full border rounded-md" />
+        </div>
+
+        <!--Brand Dropdown-->
+        <div class="mb-2 mt-6">
+          <label for="brand" class="block text-sm font-medium text-black mb-2">Minimum Order Quantity</label>
+          <input type="text" id="orderQuantity" name="orderQuantity" class="mt-1 p-2 w-full border rounded-md" />
+        </div>
+
+        <!--Unit Dropdown-->
+        <div class="mb-2 lg:mt-6">
+          <div class="flex items-center gap-2">
+            <label for="unit" class="block text-xs font-medium sm:whitespace-nowrap">Shipping Cost</label>
+            <span class="material-icons toggle-element cursor-pointer" data-value="0">
+              toggle_off
+            </span>
+            <p class="text-xs font-medium sm:whitespace-nowrap">Shipping Cost Multiply with Quantity</p>
+          </div>
+
+          <input type="text" id="orderQuantity" name="orderQuantity" class="mt-1 p-2 w-full border rounded-md"
+            placeholder="Type Shipping Cost" />
+        </div>
+      </div>
+    </form>
+
+    <!--Tags Form-->
+    <div class="mb-1 flex flex-col sm:flex-row shadow-xl">
+      <div class="bg-white py-2 px-4 lg:px-6 rounded-t-md flex-grow">
+        <h3 class="font-bold">Tags</h3>
+      </div>
+    </div>
+    <form id="product-add" action="#" method="POST" enctype="multipart/form-data"
+      class="bg-white mb-8 p-6 lg:p-6 rounded-md w-full">
+      <div class="flex flex-col gap-2">
+        <!-- Name Input Field -->
+        <div class="max-w-full mb-2">
+          <label for="productName" class="block text-sm font-medium text-gray-600 mb-2">Search Tag</label>
+          <input type="text" id="productName" name="categoryName" placeholder="Add Tags"
+            class="mt-1 p-2 w-full border rounded-md" />
+        </div>
+      </div>
+    </form>
+
+
+    <!--SEO-->
+    <div class="mb-1 flex flex-col sm:flex-row shadow-xl">
+      <div class="bg-white py-2 px-4 lg:px-6 rounded-t-md flex-grow">
+        <h3 class="font-bold">SEO</h3>
+      </div>
+    </div>
+    <form id="product-add" action="#" method="POST" enctype="multipart/form-data"
+      class="bg-white mb-8 p-6 sm:p-8 md:p-10 lg:p-6 rounded-md w-full">
+      <div class=" flex flex-col gap-2">
+        <!-- Name Input Field -->
+        <div class="max-w-full mb-2">
+          <label for="productName" class="block text-sm font-medium text-black mb-2">Meta Title </label>
+          <input type="text" id="productName" name="categoryName" placeholder="Type Meta Title"
+            class="mt-1 p-2 w-full border rounded-md" />
+        </div>
+
+        <!-- Description Input Field -->
+        <div class="flex flex-col sm:flex-row justify-between gap-2 sm:gap-[100px] lg:gap-[200px]">
+          <div class="mb-2 flex-grow">
+            <label for="productDescription" class="block text-sm font-medium text-black mb-2">Meta
+              Description</label>
+            <input type="text" id="productDescription" name="categoryDescription"
+              class="mt-1 p-2 h-[120px] sm:h-[200px] lg:h-[250px] w-full border rounded-md" />
+          </div>
+          <div class=" ">
+            <label for="productDescription" class="block text-sm font-medium text-gray-600 mb-2">Meta Image</label>
+            <div class="flex justify-center">
+              <img src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg" alt=""
+                class="h-[120px] sm:h-[200px] lg:h-[250px] rounded-md">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!--Youtube Link-->
+    <form id="product-add" action="#" method="POST" enctype="multipart/form-data"
+      class="bg-white p-6 rounded-md w-full">
+      <div class="flex flex-col gap-2">
+        <div class="bg-white py-2 rounded-t-md flex-grow">
+          <h3 class="font-bold">YouTube Video Link <span class="text-[#134EA3] text-sm">(Optional; please provide
+              embed
+              link, not direct link)</span></h3>
+        </div>
+        <div class="max-w-full mb-2">
+          <input type="text" id="productName" name="productName" class="mt-1 p-2 w-full border rounded-md" />
+        </div>
+        <div class="flex flex-col lg:flex-row justify-between gap-2">
+          <div class="mt-1 p-2 border rounded-md w-full flex flex-col p-3">
+            <p class="font-medium">Upload Product Images</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-5 my-auto">
+            <div class="border border-4">
+                <label for="uploadImage1" class="file-label">
+                    <img
+                      src="https://st4.depositphotos.com/17828278/24401/v/450/depositphotos_244011872-stock-illustration-image-vector-symbol-missing-available.jpg"
+                      class="preview-image" id="preview1" alt="Preview Image" />
+                    <input type="file" class="hidden" id="uploadImage1" onchange="previewImage()" />
+                  </label>
+            </div>
+             
+             
+            </div>
+          </div>
+          <div class="mt-1 p-2 border rounded-md w-full flex flex-col p-3">
+            <p class="font-medium">Upload Thumbnail</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3">
+              <label for="uploadImage1" class="file-label">
+                <img
+                  src="https://st4.depositphotos.com/17828278/24401/v/450/depositphotos_244011872-stock-illustration-image-vector-symbol-missing-available.jpg"
+                  class="preview-image" id="preview1" alt="Preview Image" />
+                <input type="file" class="hidden" id="uploadImage1" onchange="previewImage()" />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-full mb-2 border flex flex-col rounded-lg p-3">
+          <p class="font-medium">Upload Image for Varients</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3">
+            <label for="uploadImage1" class="file-label">
+              <img
+                src="https://st4.depositphotos.com/17828278/24401/v/450/depositphotos_244011872-stock-illustration-image-vector-symbol-missing-available.jpg"
+                class="preview-image" id="preview1" alt="Preview Image" />
+              <input type="file" class="hidden" id="uploadImage1" onchange="previewImage()" />
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="mt-4 flex gap-6 justify-end">
+      <button type="button" class="w-full sm:w-32  h-fit bg-[#545454] text-white px-6 py-2 font-bold rounded-md">
+        Reset
+      </button>
+      <button type="submit" class="w-full sm:w-32 h-fit bg-[#134EA3] text-white px-6 py-2 font-bold rounded-md">
+        Submit
+      </button>
+    </div>
+  </div>
+  <script>
+    // Get all elements with the toggle class
+    const toggleElements = document.querySelectorAll('.toggle-element');
+
+    // Add a click event listener to toggle the state for each element
+    toggleElements.forEach(toggleElement => {
+      toggleElement.addEventListener('click', () => {
+        // Toggle the value between 1 and 0
+        const currentValue = parseInt(toggleElement.getAttribute('data-value'));
+        const newValue = currentValue === 1 ? 0 : 1;
+
+        // Update the value attribute
+        toggleElement.setAttribute('data-value', newValue);
+
+        // Toggle the class for the "on" state
+        toggleElement.classList.toggle('on', newValue === 1);
+
+        // Set the icon based on the value
+        toggleElement.innerText = newValue === 1 ? 'toggle_on' : 'toggle_off';
+      });
+    });
+    function previewImage() {
+      const fileInput = event.target;
+      const previewImage = fileInput.previousElementSibling;
+
+      const file = fileInput.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          previewImage.src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -43,19 +43,24 @@
         </div>
 
         <div class="bg-white shadow-xl p-4 sm:p-8 md:p-10 lg:p-8 mb-8 rounded-md flex-grow">
-            <div class="flex justify-between mb-4">
-                <div class="flex gap-4 text-base">
-                    <h1 class="text-2xl font-bold">Review Table</h1>
-                    <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
+            <div class="flex mb-4 md:flex-row md:items-center md:gap-4 text-base justify-between">
+                <div class="flex items-center gap-4 mb-4 md:mb-0">
+                    <h1 class="text-2xl md:text-lg lg:text-xl font-bold">Review Table</h1>
+                    <p
+                        class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold text-xs md:text-sm lg:text-base">
+                        2</p>
                 </div>
-                <div class="flex">
-                    <div class="flex items-center rounded-l-lg border p-2 gap-2">
+
+                <div class="flex flex-col md:flex-row ">
+                    <div class="flex items-center rounded-l-lg border p-2 ">
                         <span class="material-symbols-outlined text-black">search</span>
-                        <input type="text" placeholder="Search" />
+                        <input type="text" placeholder="Search" class="text-sm md:text-base lg:text-lg" />
                     </div>
-                    <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">Search</button>
+                    <button
+                        class="bg-[#134EA3] rounded-r-lg px-2 text-white text-sm md:text-base lg:text-lg">Search</button>
                 </div>
             </div>
+
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-3">
                 <div class="mb-2">
                     <label for="sku" class="block text-sm font-medium text-black mb-2">Choose Product</label>
@@ -132,44 +137,37 @@
                 </div>
             </div>
         </div>
-        <div class="bg-white rounded-lg">
-            <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
-                <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-md text-gray-500 text-center">
-                    <thead class="bg-[#D2E9FB]">
-                        <tr>
-                            <th class="py-3 px-6 border-b min-w-[box-width]">SL</th>
-                            <th class="py-3 px-6 border-b min-w-[box-width]">Product</th>
-                            <th class="py-3 px-6 border-b min-w-[box-width]">Customer </th>
-                            <th class="py-3 px-6 border-b min-w-[box-width]">Rating</th>
-                            <th class="py-3 px-6 border-b min-w-[box-width]">Review</th>
-                            <th class="py-3 px-6 border-b min-w-[box-width]">Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="py-3 px-6 border-b min-w-[box-width]">1</td>
-                            <td class="py-3 px-6 border-b min-w-[box-width]">0003</td>
-                            <td class="py-3 px-6 border-b min-w-[box-width]">Store Name</td>
-                            <td class="py-3 px-6 border-b min-w-[box-width]">
-                                4 stars
-                            </td>
-                            <td class="py-3 px-6 border-b min-w-[box-width]">Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Consequuntur ex similique hic
-                                reprehenderit
-                                obcaecati fugit, cum mollitia autem atque facilis eius doloremque tempora, quas id minus
-                                deleniti,
-                                unde
-                                placeat? Reiciendis.</td>
-                            <td class="py-3 px-6 border-b min-w-[box-width]">
-                                11/11/2023
-                            </td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
+            <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-md text-gray-500 text-center">
+                <thead class="bg-[#D2E9FB]">
+                    <tr>
+                        <th class="py-3 px-6 border-b min-w-[box-width]">SL</th>
+                        <th class="py-3 px-6 border-b min-w-[box-width]">Product</th>
+                        <th class="py-3 px-6 border-b min-w-[box-width]">Customer </th>
+                        <th class="py-3 px-6 border-b min-w-[box-width]">Rating</th>
+                        <th class="py-3 px-6 border-b min-w-[box-width]">Review</th>
+                        <th class="py-3 px-6 border-b min-w-[box-width]">Date</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white rounded-lg">
+                    <tr>
+                        <td class="py-3 px-6 border-b min-w-[box-width]">1</td>
+                        <td class="py-3 px-6 border-b min-w-[box-width]">0003</td>
+                        <td class="py-3 px-6 border-b min-w-[box-width]">Tamim Fatema</td>
+                        <td class="py-3 px-6 border-b min-w-[box-width]">
+                            4 stars
+                        </td>
+                        <td class="py-3 px-6 border-b min-w-[box-width]">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Consequuntur ex similique hic
+                        </td>
+                        <td class="py-3 px-6 border-b min-w-[box-width]">
+                            11/11/2023
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
     </div>
 
 </body>

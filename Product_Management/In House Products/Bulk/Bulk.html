@@ -23,489 +23,75 @@
       },
     };
   </script>
-  <title>Navbar</title>
+  <title>Bulk Import</title>
 </head>
 
 <body class="h-max bg-gray-100">
-  <!-- Navbar Starts -->
-  <nav
-    class="inset-0 z-10 block h-max w-full max-w-full rounded-none border border-blue-80 bg-white bg-opacity-80 py-2 px-4 text-white backdrop-saturate-200 md:py-4">
-    <div class="flex items-center text-gray-900">
-      <button
-        class="left none relative mr-auto h-6 max-h-[40px] w-6 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-blue-gray-500 transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
-        data-collapse-target="sticky-navar">
-        <span class="absolute top-1/2 right-1\2 -translate-y-1/2 -translate-x-1/2 transform">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </span>
-      </button>
-      <ul class="ml-auto justify-items-end gap-3 flex">
-        <li class="block p-1 justify-items-start font-sans text-sm font-normal leading-normal text-inherit antialiased">
-          <a class="flex items-center gap-1">
-            <span class="material-symbols-outlined">
-              home
-            </span>
-            Home
-          </a>
-        </li>
-        <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-          <a class="flex items-center" href="#">
-            <span class="material-symbols-outlined"> account_circle </span>
-          </a>
-        </li>
-        <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-          <a class="flex items-center" href="#">
-            <span class="material-symbols-outlined">
-              notifications
-            </span>
-          </a>
-        </li>
-        <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-          <div class="language-picker-wrapper">
-            <div class="select-wrapper">
-              <select name="language-picker-select" id="language-picker-select">
-                <option lang="ban" value="bengali">Ban</option>
-                <option lang="en" value="english" selected>Eng</option>
-              </select>
-              <span class="material-symbols-outlined"> globe </span>
-            </div>
-          </div>
-        </li>
-      </ul>
+  <div class="justify-center container mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
+    <div class="flex gap-2">
+      <span class="material-symbols-outlined">
+        package
+      </span>
+      <h3 class="text-xl font-bold mb-4">Bulk Imports</h3>
+    </div>
+    <div class="bg-white overflow-x-auto rounded-lg py-8 px-8">
+      <h2 class="text-black text-2xl font-extrabold mx-2 my-2">Instructions :</h2>
+      <p class="m-2">1. Download the format file and fill it with proper data.</p>
+      <p class="m-2">2. You can download the example file to understand how the data must be filled.</p>
+      <p class="m-2">3. Once you have downloaded and filled the format file upload it in the form below and submit.</p>
+      <p class="m-2">4. After uploading products you need to edit them and set products images and choices.</p>
+      <p class="m-2">5. You can get brand and category id from their list please input the right ids.</p>
+      <p class="m-2">6. You can upload your product images in product folder from gallery and copy image`s path.</p>
 
     </div>
-  </nav>
-  <!-- Navbar ends -->
-
-  <div class="flex">
-    <!-- Sidebar Starts -->
-    <div class="hidden md:flex flex-col w-72 max-h- px-4 py-8 bg-blue-200 border-r" data-collapse="sticky-sidebar">
-      <div class="relative mt-6">
-        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-          <span class="material-symbols-outlined text-gray-700">
-            search
-          </span>
-        </span>
-        <input type="text"
-          class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-3xl shadow-xl focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
-          placeholder="Search" />
-      </div>
-
-      <div class="flex flex-col justify-between flex-1 mt-6 text-sm">
-        <aside>
-          <div>
-            <h3 class="">MENU</h3>
-            <ul>
-              <li>
-                <a id="dashboard-link" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
-                  href="/Menu/Dashboard.html" onclick="changeColor(this, event)">
-                  <span class="material-symbols-outlined"> dashboard </span>
-                  <span class="mx-4 font-medium">Dashboard</span>
-                </a>
-              </li>
-              <li>
-                <a id="pos-link" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="/Menu/POS.html"
-                  onclick="changeColor(this)">
-                  <span class="material-symbols-outlined">
-                    point_of_sale
-                  </span>
-                  <span class="mx-4 font-medium">POS</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="py-2">ORDER MANAGEMENT</h3>
-            <ul class="dropdown">
-              <li>
-                <a id="orders-link" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('orders-dropdown')">
-                  <span class="material-symbols-outlined"> package_2 </span>
-                  <p class="mx-4 font-medium">Orders</p>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-
-                <ul id="orders-dropdown" class="dropdown-content py-1">
-                  <li>
-                    <a href="/Order Management/Orders/Orders.html">All</a>
-                  </li>
-                  <li>
-                    <a href="/Order Management/Orders/PendingOrders.html">Pending</a>
-                  </li>
-                  <li>
-                    <a href="/Order Management/Orders/ConfirmedOrders.html">Confirmed</a>
-                  </li>
-                  <li>
-                    <a href="/Order Management/Orders/PackagedOrders.html">Packaged</a>
-                  </li>
-                  <li>
-                    <a href="/Order Management/Orders/OutforDelivery.html">Out for Delivery</a>
-                  </li>
-                  <li>
-                    <a href="/Order Management/Orders/DeliveredOrders.html">Delivered</a>
-                  </li>
-                  <li>
-                    <a href="/Order Management/Orders/ReturnedOrders.html">Returned</a>
-                  </li>
-                  <li>
-                    <a href="/Order Management/Orders/DeliveryFailedOrders.html">Failed to Deliver</a>
-                  </li>
-                  <li>
-                    <a href="/Order Management/Orders/CancelledOrders.html">Cancelled</a>
-                  </li>
-                </ul>
-              </li>
-
-              <!-- refund requests -->
-              <li>
-                <a id="refund-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('refund-dropdown')">
-                  <span class="material-symbols-outlined">
-                    request_page
-                  </span>
-                  <p class="mx-4 font-medium">Refund Request</p>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-                <ul id="refund-dropdown" class="dropdown-content py-1">
-                  <li>
-                    <a href="/Order Management/Refund/PendingRequest.html">Pending</a>
-                  </li>
-                  <li>
-                    <a href="/Order Management/Refund/ApprovedRequests.html">Approved</a>
-                  </li>
-                  <li>
-                    <a href="/Order Management/Refund/Refunded.html">Refunded</a>
-                  </li>
-                  <li>
-                    <a href="/Order Management/Refund/RejectedRequests.html">Rejected</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="py-2">PRODUCT MANAGEMENT</h3>
-            <ul>
-              <li>
-                <a id="category-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('category-dropdown')">
-                  <span class="material-symbols-outlined"> menu </span>
-                  <p class="mx-4 font-medium">Category Setup</p>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-
-                <ul id="category-dropdown" class="dropdown-content py-1">
-                  <li>
-                    <a href="/Product Management/Category/CategorySetup.html">Category</a>
-                  </li>
-                  <li>
-                    <a href="/Product Management/Category/SubCategorySetup.html">Sub Category</a>
-                  </li>
-                  <li>
-                    <a href="/Product Management/Category/SubSubCategory.html">Sub Sub Category</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a id="brand-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('brand-dropdown')">
-                  <span class="material-symbols-outlined"> star </span>
-                  <p class="mx-4 font-medium">Brands</p>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-                <ul id="brand-dropdown" class="dropdown-content py-1">
-                  <li>
-                    <a href="/Product Management/Brands/AddNew.html"></a>Add
-                    New
-                  </li>
-                  <li>
-                    <a href="/Product Management/Brands/List.html"></a>List
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a id="prodAttributes-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
-                  href="ProductAttributes.html" onclick="changeColor(this)">
-                  <span class="material-symbols-outlined"> sell </span>
-                  <span class="mx-4 font-medium">Product Attributes</span>
-                </a>
-              </li>
-
-              <li>
-                <a id="inhouse-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('inhouse-dropdown')">
-                  <span class="material-symbols-outlined">
-                    location_city
-                  </span>
-                  <p class="mx-4 font-medium">In-house Products</p>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-                <ul id="inhouse-dropdown" class="dropdown-content">
-                  <li>
-                    <a href="/Product Management/In House Products/Products/Products.html">Products</a>
-                  </li>
-                  <li>
-                    <a href="/Product Management/In House Products/Bulk.html">Bulk Imports</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a id="SellerProd-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('sellerprod-dropdown')">
-                  <span class="material-symbols-outlined"> storefront </span>
-                  <p class="mx-4 font-medium">Seller Products</p>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-                <ul id="sellerprod-dropdown" class="dropdown-content py-1">
-                  <li>
-                    <a href="/Product Management/Seller Products/UpdatedProducts.html">Update Product</a>
-                  </li>
-                  <li>
-                    <a href="/Product Management/Seller Products/NewProducts.html">New Product</a>
-                  </li>
-                  <li>
-                    <a href="/Product Management/Seller Products/ApprovedProducts.html">Approved Product</a>
-                  </li>
-                  <li>
-                    <a href="/Product Management/Seller Products/DeclinedProduct.html">Declined Product</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="py-2">PROMOTION MANAGEMENT</h3>
-            <ul>
-              <li>
-                <a id="banner-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
-                  href="/Promotion/Banners.html" onclick="changeColor(this)">
-                  <span class="material-symbols-outlined"> ad_units </span>
-                  <span class="mx-4 font-medium">Banner</span>
-                </a>
-              </li>
-              <li>
-                <a id="offers-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('offers-dropdown')">
-                  <span class="material-symbols-outlined">
-                    notifications
-                  </span>
-                  <p class="mx-4 font-medium">Offers & Deals</p>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-                <ul id="offers-dropdown" class="dropdown-content py-1">
-                  <li><a href="/Promotion/Offers/Offers.html">Coupons</a></li>
-                </ul>
-              </li>
-              <li>
-                <a id="notifications-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
-                  href="/Promotion/PushNotify.html" onclick="changeColor(this)">
-                  <span class="material-symbols-outlined">
-                    notifications
-                  </span>
-                  <span class="mx-4 font-medium">Push Notifications</span>
-                </a>
-              </li>
-              <li>
-                <a id="annoucement-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
-                  href="/Promotion/Announcments.html" onclick="changeColor(this)">
-                  <span class="material-symbols-outlined"> campaign </span>
-                  <span class="mx-4 font-medium">Announcement</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="py-2">HELP & SUPPORT</h3>
-            <ul>
-              <li>
-                <a class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="Messages.html">
-                  <span class="material-symbols-outlined"> mail </span>
-                  <span class="mx-4 font-medium">Messages</span>
-                </a>
-              </li>
-              <li>
-                <a class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="SupportTicket.html">
-                  <span class="material-symbols-outlined">
-                    confirmation_number
-                  </span>
-                  <span class="mx-4 font-medium">Support Ticket</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="py-2">REPORT & ANALYTICS</h3>
-            <ul>
-              <li>
-                <a id="salesReport-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('sales-dropdown')">
-                  <span class="material-symbols-outlined"> monitoring </span>
-                  <span class="mx-4 font-medium">Sales & Transactions Report</span>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-                <ul id="sales-dropdown" class="dropdown-content py-1">
-                  <li>
-                    <a href="/Reports & Analytics/Sales & Transactions/EarningReports.html">Earning Report</a>
-                  </li>
-                  <li>
-                    <a href="/Reports & Analytics/Sales & Transactions/InhouseReport.html">Inhouse Sales</a>
-                  </li>
-                  <li>
-                    <a href="/Reports & Analytics/Sales & Transactions/SellerReport.html">Seller Report</a>
-                  </li>
-                  <li>
-                    <a href="/Reports & Analytics/Sales & Transactions/TransactionReport.html">Transaction Report</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a id="productReport-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
-                  href="/Reports & Analytics/ProductReport.html">
-                  <span class="material-symbols-outlined"> lab_profile </span>
-                  <span class="mx-4 font-medium">Product Report</span>
-                </a>
-              </li>
-              <li>
-                <a id="orderReport-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md"
-                  href="/Reports & Analytics/OrderReport.html">
-                  <span class="material-symbols-outlined">
-                    insert_chart
-                  </span>
-                  <span class="mx-4 font-medium">Order Report</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="py-2">USER MANAGEMENT</h3>
-            <ul>
-              <li>
-                <a id="customer-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('customers-dropdown')">
-                  <span class="material-symbols-outlined"> groups_2 </span>
-                  <span class="mx-4 font-medium">Customers</span>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-                <ul id="customers-dropdown" class="dropdown-content">
-                  <li><a href="/Users/Customers.html">Something</a></li>
-                </ul>
-              </li>
-              <li>
-                <a id="sellers-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('sellers-dropdown')">
-                  <span class="material-symbols-outlined"> groups </span>
-                  <span class="mx-4 font-medium">All Sellers</span>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-                <ul id="sellers-dropdown" class="dropdown-content py-1">
-                  <li><a href="/Users/Sellers.html"></a>Something</li>
-                </ul>
-              </li>
-              <li>
-                <a id="subscribers-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('subscribers-dropdown')">
-                  <span class="material-symbols-outlined"> person </span>
-                  <span class="mx-4 font-medium">Subscribers</span>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-                <ul id="subscribers-dropdown" class="dropdown-content py-1">
-                  <li><a href="/Users/Subscriber.html">Something</a></li>
-                </ul>
-              </li>
-              <li>
-                <a id="deliveryman-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('deliveryman-dropdown')">
-                  <span class="material-symbols-outlined"> person </span>
-                  <span class="mx-4 font-medium">Delivery Man</span>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-                <ul id="deliveryman-dropdown" class="dropdown-content py-1">
-                  <li><a href="/Users/DeliveryMan.html">Something</a></li>
-                  <li><a href="/Users/DeliveryMan.html">Something</a></li>
-                </ul>
-              </li>
-              <li>
-                <a id="employee-list" class="flex items-center px-4 py-1 text-gray-700 rounded-md" href="#"
-                  onclick="toggleDropdown('employee-dropdown')">
-                  <span class="material-symbols-outlined"> person </span>
-                  <span class="mx-4 font-medium">Employees</span>
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </a>
-                <ul id="employee-dropdown" class="dropdown-content py-1">
-                  <li><a href="/Users/Employee.html">Something</a></li>
-                  <li><a href="/Users/Employee.html">Something</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </div>
-    <!--Sidebar ends-->
-
-    <div class="justify-center container mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
-      <div class="flex gap-2">
-        <span class="material-symbols-outlined">
-          package
-        </span>
-        <h3 class="text-xl font-bold mb-4">Bulk Imports</h3>
-      </div>
-      <div class="bg-white overflow-x-auto rounded-lg py-8 px-8">
-        <h2>Instructions:</h2>
-        <p>1. Download the format file and fill it with proper data.</p>
-        <p>2. You can download the example file to understand how the data must be filled.</p>
-        <p>3. Once you have downloaded and filled the format file upload it in the form below and submit.</p>
-        <p>4. After uploading products you need to edit them and set products images and choices.</p>
-        <p>5. You can get brand and category id from their list please input the right ids.</p>
-        <p>6. You can upload your product images in product folder from gallery and copy image`s path.</p>
-
-      </div>
-
-
-      <div class="mt-8 flex flex-col sm:flex-row justify-center items-center">
-        <form id="product-detail" action="#" method="POST" enctype="multipart/form-data"
-          class="bg-white p-6 sm:p-8 md:p-10 lg:p-12 rounded-md w-[811px]">
-          <div class="justify-center flex">
-            <p>Import File</p>
-            <p class="text-blue-500 text-sm">Download Format</p>
-          </div>
-          <div class="flex items-center justify-center w-full">
-            <label for="dropzone-file"
-              class="flex flex-col items-center justify-center w-[411px] h-[232px] border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50">
-              <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                <span class="material-symbols-outlined">
-                  upload
-                </span>
-                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to
-                    upload</span> or drag and drop</p>
-              </div>
-              <input id="dropzone-file" type="file" class="hidden" />
-            </label>
-          </div>
-          <div class="grid justify-items-end">
-            <div class="mt-4 flex gap-3">
-              <button type="button"
-                class="w-[100px] h-[42px] bg-gray-100 text-black px-3 py-2 rounded-md hover:bg-blue-600 hover:text-white focus:outline focus:ring focus:border-blue-300">
-                Reset
-              </button>
-              <button type="submit"
-                class="w-[100px] h-[42px] bg-blue-500 text-white px-3 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-                Submit
-              </button>
+    <div class="mt-8 flex flex-col sm:flex-row justify-center items-center">
+      <form id="product-detail" action="#" method="POST" enctype="multipart/form-data"
+        class="bg-white p-6 sm:p-8 md:p-10 lg:p-12 rounded-md w-full sm:max-w-[811px]">
+        <div class="justify-center flex mb-5 items-center">
+          <p class="mx-5">Import Products File</p>
+          <p class="text-blue-700 font-bold">Download Format</p>
+        </div>
+        <div class="flex items-center justify-center w-full">
+          <label for="dropzone-file"
+            class="flex flex-col items-center justify-center w-[411px] h-[232px] border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50">
+            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+              <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_483_14392)">
+                  <rect x="1" width="60" height="60" rx="10" fill="#39B29D" />
+                  <path
+                    d="M20.3125 45C17.4688 45 15.0391 44.0156 13.0234 42.0469C11.0078 40.0781 10 37.6719 10 34.8281C10 32.3906 10.7344 30.2188 12.2031 28.3125C13.6719 26.4062 15.5937 25.1875 17.9687 24.6562C18.75 21.7812 20.3125 19.4531 22.6563 17.6719C25 15.8906 27.6562 15 30.625 15C34.2812 15 37.3828 16.2734 39.9297 18.8203C42.4766 21.3672 43.75 24.4688 43.75 28.125C45.9062 28.375 47.6953 29.3047 49.1172 30.9141C50.5391 32.5234 51.25 34.4062 51.25 36.5625C51.25 38.9062 50.4297 40.8984 48.7891 42.5391C47.1484 44.1797 45.1562 45 42.8125 45H32.5C31.4688 45 30.5859 44.6328 29.8516 43.8984C29.1172 43.1641 28.75 42.2812 28.75 41.25V31.5938L25.75 34.5L23.125 31.875L30.625 24.375L38.125 31.875L35.5 34.5L32.5 31.5938V41.25H42.8125C44.125 41.25 45.2344 40.7969 46.1406 39.8906C47.0469 38.9844 47.5 37.875 47.5 36.5625C47.5 35.25 47.0469 34.1406 46.1406 33.2344C45.2344 32.3281 44.125 31.875 42.8125 31.875H40V28.125C40 25.5312 39.0859 23.3203 37.2578 21.4922C35.4297 19.6641 33.2188 18.75 30.625 18.75C28.0312 18.75 25.8203 19.6641 23.9922 21.4922C22.1641 23.3203 21.25 25.5312 21.25 28.125H20.3125C18.5 28.125 16.9531 28.7656 15.6719 30.0469C14.3906 31.3281 13.75 32.875 13.75 34.6875C13.75 36.5 14.3906 38.0469 15.6719 39.3281C16.9531 40.6094 18.5 41.25 20.3125 41.25H25V45H20.3125Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <filter id="filter0_d_483_14392" x="0" y="0" width="68" height="68" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dx="3" dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_483_14392" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_483_14392" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+              <p class="my-4 text-sm text-gray-500 dark:text-gray-400">Drag the file here or import the file</p>
             </div>
-          </div>
-        </form>
-      </div>
+            <input id="dropzone-file" type="file" class="hidden" />
+          </label>
+        </div>
+        <div class="mt-4 flex sm:flex-row items-center sm:justify-center gap-3 sm:w-full sm:text-center">
+          <button type="button" class="w-full sm:w-auto h-fit bg-[#D9D9D9] text-black px-6 py-2 font-bold rounded-md">
+            Reset
+          </button>
+          <button type="submit"
+            class="w-full sm:w-auto h-fit bg-[#134EA3] text-white px-6 py-2 font-bold rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </body>

@@ -200,7 +200,7 @@
       </div>
     </div>
     <form id="product-detail" action="#" method="POST" enctype="multipart/form-data"
-      class="bg-white p-6 sm:p-8 md:p-10 lg:p-6 rounded-md w-full">
+      class="bg-white p-6 sm:p-8 md:p-10 lg:p-6  mb-5 rounded-md w-full">
       <div class="flex flex-col sm:flex-row justify-between gap-3">
         <div class="w-full mb-2">
           <div class="flex gap-2">
@@ -255,21 +255,30 @@
           </button>
         </div>
       </div>
-      <div class="flex justify-between mb-2">
-        <div class="w-full flex gap-2">
-          <label class="border rounded-md p-3 text-black">Color </label>
-          <div class="p-2 w-full border rounded-md p-3">
-            <input placeholder="Enter value choices" />
-          </div>
-        </div>
+      <div class="flex items-center gap-3">
+        <button class="border p-2 mb-2 bg-[#134EA3] text-white rounded-md flex items-center" onclick="addRow(event)">
+          <span class="material-symbols-outlined">add</span>
+          <p>Add</p>
+        </button>
       </div>
-      <div class="flex justify-between">
-        <div class="w-full flex gap-2">
-          <label class="border rounded-md p-3 text-black">Size </label>
-          <div class="p-2 w-full border rounded-md p-3">
-            <input placeholder="Enter value choices" />
-          </div>
-        </div>
+
+      <div class="mb-8">
+        <table id="myTable" class="w-full table-auto border-collapse border">
+          <thead>
+            <tr>
+              <th class="border p-2">Color</th>
+              <th class="border p-2">Size</th>
+              <th class="border p-2">Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border p-2">Blue</td>
+              <td class="border p-2">M</td>
+              <td class="border p-2">30</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </form>
 
@@ -576,6 +585,23 @@
         };
 
         reader.readAsDataURL(file);
+      }
+    }
+
+    function addRow() {
+      event.preventDefault();
+      var table = document.getElementById("myTable").getElementsByTagName('tbody')[0];
+      var newRow = table.insertRow(table.rows.length);
+      var cells = [];
+
+      for (var i = 0; i < 3; i++) {
+        cells[i] = newRow.insertCell(i);
+        cells[i].classList.add("border", "p-2");
+
+        // Set initial values for the new row
+        if (i === 0) cells[i].innerHTML = "New Color";
+        else if (i === 1) cells[i].innerHTML = "New Size";
+        else if (i === 2) cells[i].innerHTML = "New Quantity";
       }
     }
   </script>

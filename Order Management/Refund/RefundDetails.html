@@ -37,10 +37,13 @@
             <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
         </div>
         <!--Refund Product Details-->
-        <div class="bg-white rounded-t-lg shadow-xl mb-1 flex justify-between p-3 flex-wrap">
-            <p>Refund ID : 1</p>
-            <p>Refund Status : Refunded</p>
-            <button class="bg-[#134EA3] text-white p-2 rounded-md">Change Refund Status</button>
+        <div class="bg-white rounded-t-lg shadow-xl mb-1 flex justify-between p-3 flex-wrap items-center">
+            <p class="flex-grow">Refund ID : 1</p>
+            <div class="flex flex-col sm:flex-row flex-grow justify-between items-end sm:items-center">
+                <p>Refund Status : Refunded</p>
+                <button class="bg-[#134EA3] w-fit text-white p-2 rounded-md">Change Refund Status</button>
+            </div>
+
         </div>
         <div class="bg-white mb-5">
             <div class="flex justify-between flex-wrap">
@@ -68,7 +71,7 @@
                 </div>
             </div>
             <hr>
-            <div class="flex justify-between p-3">
+            <div class="flex justify-between p-3 sm:flex-row flex-col">
                 <p>Subtotal: 200,000.00 ৳</p>
                 <p>Coupon Discount: 2,000.00 ৳</p>
                 <p>Total Refund Amount: 198,000.00 ৳</p>
@@ -104,8 +107,8 @@
         <div class="bg-white rounded-t-lg shadow-xl mb-1 flex justify-between p-4 flex-wrap">
             <p>Refund Status Changed Log</p>
         </div>
-        <div class="w-full overflow-x-scroll lg:overflow-auto mb-5">
-            <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-md text-gray-500 text-center mb-5">
+        <div class="w-full mb-5">
+            <table class="table-auto w-full text-md text-gray-500 text-center mb-5">
                 <thead class="bg-sky-100 text-left">
                     <th class="py-2 px-4 border-b min-w-[box-width]">SL</th>
                     <th class="py-2 px-4 border-b min-w-[box-width]">Changed by</th>
@@ -138,8 +141,11 @@
         <div class="bg-white rounded-t-lg shadow-xl mb-1 flex justify-between p-4 flex-wrap">
             <p>Attachment</p>
         </div>
-        <div class="bg-white mb-5 p-4">
-            
+        <div class="bg-white mx-auto p-4 flex gap-4 sm:flex flex-wrap">
+
+            <img class="h-[100px] sm:h-fit" src="https://static.thenounproject.com/png/3022241-200.png" />
+
+            <img class="h-[100px] sm:h-fit" src="https://static.thenounproject.com/png/3022241-200.png" />
         </div>
     </div>
 

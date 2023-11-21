@@ -4,7 +4,7 @@
 .dropdown-content {
   display: none;
   padding-left: 70px; /* Adjust the indentation of sub-items */
-  list-style-type: circle;
+  list-style-type: disc;
 }
 
 .dropdown-content a {
@@ -13,10 +13,6 @@
   text-decoration: none;
   display: block;
   animation: 1s linear 0s 1 fadeIn;
-}
-
-.dropdown-content a:hover {
-  color: blue;
 }
 
 .language-picker-wrapper {

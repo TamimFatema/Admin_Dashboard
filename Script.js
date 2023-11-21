@@ -17,41 +17,23 @@ function loadContent(url) {
     });
 }
 
-// Event listener for sidebar item click
-document.querySelectorAll(".sidebar a").forEach((item) => {
-  item.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent the default behavior (e.g., navigating to the href)
-
-    // Update the content based on the clicked item
-    const url = item.getAttribute("href");
-    loadContent(url);
-  });
-});
-
-//when clicked for color change in the sidebar items
-function changeColor(link, event) {
-  event.preventDefault(); // Prevent default navigation behavior
-
-  var allLinks = document.querySelectorAll(".sidebar-nav a");
-  allLinks.forEach(function (otherLink) {
-    otherLink.classList.remove("active");
-  });
-
-  link.classList.add("active");
-
-  window.location.href = link.getAttribute("href");
-}
-
-//
-function changeColor(element) {
-  element.classList.toggle("clicked");
-}
 
 function toggleDropdown(dropdownId) {
   var dropdown = document.getElementById(dropdownId);
-  dropdown.style.display =
-    dropdown.style.display === "block" ? "none" : "block";
+  dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
 }
+
+function toggleIcon(iconId) {
+  var iconElement = document.getElementById(iconId);
+  if (iconElement.innerHTML.trim() === "expand_more") {
+    iconElement.innerHTML =
+      '<span class="material-symbols-outlined"> expand_less </span>';
+  } else {
+    iconElement.innerHTML =
+      '<span class="material-symbols-outlined"> expand_more </span>';
+  }
+}
+
 
 // category
 const imageInput = document.getElementById("image");
@@ -92,23 +74,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //toggle on off:
-   // Get all elements with the toggle class
-   const toggleElements = document.querySelectorAll('.toggle-element');
+// Get all elements with the toggle class
+const toggleElements = document.querySelectorAll(".toggle-element");
 
-   // Add a click event listener to toggle the state for each element
-   toggleElements.forEach(toggleElement => {
-     toggleElement.addEventListener('click', () => {
-       // Toggle the value between 1 and 0
-       const currentValue = parseInt(toggleElement.getAttribute('data-value'));
-       const newValue = currentValue === 1 ? 0 : 1;
+// Add a click event listener to toggle the state for each element
+toggleElements.forEach((toggleElement) => {
+  toggleElement.addEventListener("click", () => {
+    // Toggle the value between 1 and 0
+    const currentValue = parseInt(toggleElement.getAttribute("data-value"));
+    const newValue = currentValue === 1 ? 0 : 1;
 
-       // Update the value attribute
-       toggleElement.setAttribute('data-value', newValue);
+    // Update the value attribute
+    toggleElement.setAttribute("data-value", newValue);
 
-       // Toggle the class for the "on" state
-       toggleElement.classList.toggle('on', newValue === 1);
+    // Toggle the class for the "on" state
+    toggleElement.classList.toggle("on", newValue === 1);
 
-       // Set the icon based on the value
-       toggleElement.innerText = newValue === 1 ? 'toggle_on' : 'toggle_off';
-     });
-   });
+    // Set the icon based on the value
+    toggleElement.innerText = newValue === 1 ? "toggle_on" : "toggle_off";
+  });
+});

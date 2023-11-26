@@ -86,574 +86,574 @@
 
   <div class="flex">
     <!-- Sidebar Starts -->
-    <div class="hidden md:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
-    data-collapse="sticky-sidebar">
-    <div class="relative shadow-xl rounded-3xl">
-      <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-        <span class="material-symbols-outlined text-gray-700">
-          search
+    <div class="hidden lg:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
+      data-collapse="sticky-sidebar">
+      <div class="relative shadow-xl rounded-3xl">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+          <span class="material-symbols-outlined text-gray-700">
+            search
+          </span>
         </span>
-      </span>
-      <input type="text"
-        class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-3xl focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
-        placeholder="Search" />
+        <input type="text"
+          class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-3xl focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
+          placeholder="Search" />
+      </div>
+
+      <div class="flex flex-col justify-between flex-1 mt-6 text-sm font-medium">
+        <aside class="h-screen sticky top-0">
+          <div class="mb-2">
+            <h3 class="p-1">MENU</h3>
+            <ul class="dropdown p-1">
+              <li class="p-1">
+                <a id="dashboard-link"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Menu/Dashboard/Dashboard.html">
+                  <span class="material-symbols-outlined"> dashboard </span>
+                  <p class="mx-4 font-medium">Dashboard</p>
+                </a>
+              </li>
+              <li class="p-1">
+                <a id="pos-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Menu/POS/POS.html">
+                  <span class="material-symbols-outlined">
+                    point_of_sale
+                  </span>
+                  <p class="mx-4 font-medium">POS</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-2">
+            <h3 class="p-1">ORDER MANAGEMENT</h3>
+            <ul class="dropdown">
+              <li class="p-1">
+                <a id="orders-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('orders-dropdown'); toggleIcon('expand-icon-orders')">
+                  <span class="material-symbols-outlined"> package </span>
+                  <p class="mx-4 font-medium">Orders</p>
+                  <span id="expand-icon-orders" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+
+                <ul id="orders-dropdown" class="dropdown-content pl-12">
+                  <a href="/Order Management/Orders/All/Orders.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>All</li>
+                  </a>
+
+                  <a href="/Order Management/Orders/Pending Orders/PendingOrders.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li> Pending</li>
+                  </a>
+
+                  <a href="/Order Management/Orders/Confirmed Orders/ConfirmedOrders.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Confirmed</li>
+                  </a>
+
+                  <a href="/Order Management/Orders/Packaged Orders/PackagedOrders.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>PackagedOrders</li>
+                  </a>
+
+                  <a href="/Order Management/Orders/Out for Delivery/OutforDelivery.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Out for Delivery</li>
+                  </a>
+
+                  <a href="/Order Management/Orders/Delivered Orders/DeliveredOrders.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Delivered</li>
+                  </a>
+
+                  <a href="/Order Management/Orders/Returned Orders/ReturnedOrders.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Returned</li>
+                  </a>
+
+                  <a href="/Order Management/Orders/Delivery Failed/DeliveryFailedOrders.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Failed to Deliver</li>
+                  </a>
+
+                  <a href="/Order Management/Orders/Cancelled Orders/CancelledOrders.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Cancelled</li>
+                  </a>
+
+                </ul>
+              </li>
+
+              <!-- refund requests -->
+              <li class="p-1">
+                <a id="refund-list" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('refund-dropdown'); toggleIcon('expand-icon-refund')">
+                  <span class="material-symbols-outlined"> change_circle </span>
+                  <p class="mx-4 font-medium">Refund Requests</p>
+                  <span id="expand-icon-refund" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+                <ul id="refund-dropdown" class="dropdown-content pl-12">
+
+                  <a href="/Order Management/Refund/Pending Refund/PendingRequest.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Pending</li>
+                  </a>
+
+                  <a href="/Order Management/Refund/Approved Refunds/ApprovedRequests.html"
+                    class="=mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Approved</li>
+                  </a>
+
+                  <a href="/Order Management/Refund/Refunded/Refunded.html"
+                    class="=mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Refunded</li>
+                  </a>
+
+                  <a href="/Order Management/Refund/Rejected Refund Requests/RejectedRequests.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Rejected</li>
+                  </a>
+
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-2">
+            <h3 class="p-1">PRODUCT MANAGEMENT</h3>
+            <ul class="dropdown p-1">
+              <li class="p-1">
+                <a id="category-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('category-dropdown'); toggleIcon('expand-icon-category')">
+                  <span class="material-symbols-outlined"> menu </span>
+                  <p class="mx-4 font-medium">Category Setup</p>
+                  <span id="expand-icon-category" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+
+                <ul id="category-dropdown" class="dropdown-content pl-12">
+
+                  <a href="/Product_Management/Category/CategorySetup/CategorySetup.html"
+                    class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Category</li>
+                  </a>
+
+                  <a href="/Product_Management/Category/SubCategory Setup/SubCategorySetup.html"
+                    class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Sub Category
+                    </li>
+                  </a>
+
+                  <a href="/Product_Management/Category/SubSub Category/SubSubCategory.html"
+                    class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Sub Sub Category</li>
+                  </a>
+                </ul>
+              </li>
+
+              <li class="p-1">
+                <a id="brand-list" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)" onclick="toggleDropdown('brand-dropdown'); toggleIcon('expand-icon-brand')">
+                  <span class="material-symbols-outlined"> star </span>
+                  <p class="mx-4 font-medium">Brands</p>
+                  <span id="expand-icon-brand" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+                <ul id="brand-dropdown" class="dropdown-content pl-12">
+
+                  <a href="/Product_Management/Brands/New/AddNew.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Add New</li>
+                  </a>
+
+                  <a href="/Product_Management/Brands/List/List.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>List</li>
+                  </a>
+                </ul>
+              </li>
+
+              <li class="p-1">
+                <a id="prodAttributes-list" href="/Product_Management/Product Attribute/ProductAttributes.html"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                  <span class="material-symbols-outlined"> sell </span>
+                  <p class="mx-4 font-medium">Product Attributes</p>
+                </a>
+              </li>
+
+              <li class="p-1">
+                <a id="inhouse-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('inhouse-dropdown'); toggleIcon('expand-icon-inhouse')">
+                  <span class="material-symbols-outlined">
+                    home
+                  </span>
+                  <p class="mx-4 font-medium">In-house Products</p>
+                  <span id="expand-icon-inhouse" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+                <ul id="inhouse-dropdown" class="dropdown-content pl-12">
+
+                  <a href="/Product_Management/In House Products/Products/Products.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Products</li>
+                  </a>
+
+                  <a href="/Product_Management/In House Products/Bulk/Bulk.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Bulk Imports</li>
+                  </a>
+
+                </ul>
+              </li>
+
+              <li class="p-1">
+                <a id="sellerprod-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('sellerprod-dropdown'); toggleIcon('expand-icon-sellerprod')">
+                  <span class="material-symbols-outlined">
+                    approval_delegation
+                  </span>
+                  <p class="mx-4 font-medium">Seller Products</p>
+                  <span id="expand-icon-sellerprod" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+
+                <ul id="sellerprod-dropdown" class="dropdown-content pl-12">
+                  <a href="/Product_Management/Seller Products/Updated Products/UpdatedProducts.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Update Product</li>
+                  </a>
+
+
+                  <a href="/Product_Management/Seller Products/New Products/NewProducts.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>New Product</li>
+                  </a>
+
+                  <a href="/Product_Management/Seller Products/Approved Products/ApprovedProducts.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Approved Product</li>
+                  </a>
+
+
+                  <a href="/Product_Management/Seller Products/Declined Products/DeclinedProduct.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">Declined
+                    <li>Product </li>
+                  </a>
+
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="py-2">PROMOTION MANAGEMENT</h3>
+            <ul class="dropdown p-1">
+              <li class="p-1">
+                <a id="banner-list" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('banner-dropdown'); toggleIcon('expand-icon-banner')">
+                  <span class="material-symbols-outlined">planner_banner_ad_pt</span>
+                  <p class="mx-4 font-medium">Banner</p>
+                  <span id="expand-icon-banner" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+                <ul id="banner-dropdown" class="dropdown-content pl-12">
+                  <a href="/Promotion/Banners/Top Banner/TopBanners.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Top Banner </li>
+                  </a>
+
+                  <a href="/Promotion/Banners/Side Banner/SidebarBanner.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Sidebar Banner</li>
+                  </a>
+
+                  <a href="/Promotion/Banners/Header Banner/HeaderBanner.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Header Banner</li>
+                  </a>
+
+                  <a href="/Promotion/Banners/Main Banner/MainSectionBanner.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Main Section Banner</li>
+                  </a>
+
+                  <a href="/Promotion/Banners/Popup Banner/PopupBanner.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Popup Banner</li>
+                  </a>
+
+                  <a href="/Promotion/Banners/Footer Banner/Footerbanner.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Footer Banner</li>
+                  </a>
+
+                </ul>
+              </li>
+              <li class="p-1">
+                <a id="offers-list" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('offers-dropdown'); toggleIcon('expand-icon-offers')">
+                  <span class="material-symbols-outlined">redeem</span>
+                  <p class="mx-4 font-medium">Offers & Deals</p>
+                  <span id="expand-icon-offers" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+                <ul id="offers-dropdown" class="dropdown-content pl-12">
+
+                  <a href="/Promotion/Offers/Coupon/Coupons.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Coupon</li>
+                  </a>
+                  <a href="/Promotion/Offers/FlashDeal/FlashDeals.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Flash Deals</li>
+                  </a>
+                  <a href="/Promotion/Offers/FeaturedDeal/FeaturedDeals.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Featured Deals</li>
+                  </a>
+                  <a href="/Promotion/Offers/DealoftheDay/DealoftheDay.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Deal of the Day</li>
+                  </a>
+
+                </ul>
+              </li>
+              <li class="p-1">
+                <a id="notifications-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Promotion/Push Notifications/PushNotify.html">
+                  <span class="material-symbols-outlined">
+                    notifications
+                  </span>
+                  <span class="mx-4 font-medium">Push Notifications</span>
+                </a>
+              </li>
+              <li class="p-1">
+                <a id="annoucement-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href=" /Promotion/Announcements/Announcments.html">
+                  <span class="material-symbols-outlined"> campaign </span>
+                  <span class="mx-4 font-medium">Announcement</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="py-2">HELP & SUPPORT</h3>
+            <ul class="dropdown p-1">
+              <li class="p-1">
+                <a class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Help and Support/Messages/Messages.html">
+                  <span class="material-symbols-outlined"> mail </span>
+                  <p class="mx-4 font-medium">Messages</p>
+                </a>
+              </li>
+              <li class="p-1">
+                <a class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Help and Support/Support Ticket/SupportTicket.html">
+                  <span class="material-symbols-outlined">flag</span>
+                  <p class="mx-4 font-medium">Support Ticket</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="py-2">REPORT & ANALYTICS</h3>
+            <ul class="dropdown p-1">
+              <li class="p-1">
+                <a id="salesReport-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)" onclick="toggleDropdown('sales-dropdown'); toggleIcon('expand-icon-sales')">
+                  <span class="material-symbols-outlined">
+                    receipt_long
+                  </span>
+                  <p class="mx-4 font-medium">Sales & Transactions Report</p>
+                  <span id="expand-icon-sales" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+
+                <ul id="sales-dropdown" class="dropdown-content pl-12">
+                  <a href="/Reports and Analytics/Sales and Transactions/Earning Reports/EarningReports.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Earning Report</li>
+                  </a>
+
+                  <a href="/Reports and Analytics/Sales and Transactions/in-house Reports/InhouseReport.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Inhouse Sales</li>
+                  </a>
+                  <a href="/Reports and Analytics/Sales and Transactions/Seller Reports/SellerReport.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li> Seller Report</li>
+                  </a>
+                  <a href="/Reports and Analytics/Sales and Transactions/Transaction Reports/TransactionReport.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Transaction Report</li>
+                  </a>
+                </ul>
+              </li>
+
+              <li class="p-1">
+                <a id="productReport-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Reports and Analytics/Product Reports/ProductReport.html">
+                  <span class="material-symbols-outlined">
+                    summarize
+                  </span>
+                  <span class="mx-4 font-medium">Product Report</span>
+                </a>
+              </li>
+              <li class="p-1">
+                <a id="orderReport-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Reports and Analytics/Orders Reports/OrderReport.html">
+                  <span class="material-symbols-outlined">
+                    fact_check
+                  </span>
+                  <span class="mx-4 font-medium">Order Report</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="py-2">USER MANAGEMENT</h3>
+            <ul class="dropdown p-1">
+              <li class="p-1">
+                <a id="customer-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('customers-dropdown'); toggleIcon('expand-icon-customers')">
+                  <span class="material-symbols-outlined">account_circle</span>
+                  <p class="mx-4 font-medium">Customers</p>
+                  <span id="expand-icon-customers" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+                <ul id="customers-dropdown" class="dropdown-content pl-12">
+
+                  <a href="/Users/Customers/Lists/Customers.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Customer List</li>
+                  </a>
+                  <a href="/Users/Customers/Reviews/CustomerReview.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Review</li>
+                  </a>
+                  <a href="/Users/Customers/Loyalty Points/LoyaltyPoints.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Customer loyalty point report</li>
+                  </a>
+                  <a href="/Users/Customers/Wallet/customerWallet.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Customer’s wallet</li>
+                  </a>
+
+                </ul>
+              </li>
+
+              <li class="p-1">
+                <a id="sellers-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('sellers-dropdown'); toggleIcon('expand-icon-sellers')">
+                  <span class="material-symbols-outlined"> groups </span>
+                  <p class="mx-4 font-medium">All Sellers</p>
+                  <span id="expand-icon-sellers" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+                <ul id="sellers-dropdown" class="dropdown-content pl-12">
+
+                  <a href="/Users/Sellers/New Sellers/AddNewSellers.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Add New Seller
+                    </li>
+                  </a>
+
+                  <a href="/Users/Sellers/Seller List/Sellers.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Seller List</li>
+                  </a>
+
+                  <a href="/Users/Sellers/Withdraws/withdraws.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Withdraws</li>
+                  </a>
+                  <a href="/Users/Sellers/Withdrawal Methods/methods.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Withdraw Methods</li>
+                  </a>
+                </ul>
+              </li>
+
+              <li class="p-1">
+                <a id="subscribers-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('subscribers-dropdown'); toggleIcon('expand-icon-subscribers')">
+                  <span class="material-symbols-outlined"> person </span>
+                  <p class="mx-4 font-medium">Subscribers</p>
+                  <span id="expand-icon-subscribers" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+                <ul id="subscribers-dropdown" class="dropdown-content pl-12">
+
+                  <a href="/Users/Subscriber.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Something</li>
+                  </a>
+                </ul>
+              </li>
+
+              <li class="p-1">
+                <a id="deliveryman-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('deliveryman-dropdown'); toggleIcon('expand-icon-deliveryman')">
+                  <span class="material-symbols-outlined"> person </span>
+                  <p class="mx-4 font-medium">Delivery Man</p>
+                  <span id="expand-icon-deliveryman" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+                <ul id="deliveryman-dropdown" class="dropdown-content pl-12">
+
+                  <a href="/Users/DeliveryMan.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Something</li>
+                  </a>
+
+                  <a href="/Users/DeliveryMan.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Something</li>
+                  </a>
+                </ul>
+              </li>
+
+              <li class="p-1">
+                <a id="employee-list"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="javascript:void(0)"
+                  onclick="toggleDropdown('employee-dropdown'); toggleIcon('expand-icon-employees')">
+                  <span class="material-symbols-outlined"> person </span>
+                  <p class="mx-4 font-medium">Employees</p>
+                  <span id="expand-icon-employees" class="material-symbols-outlined ml-auto"> expand_more </span>
+                </a>
+
+                <ul id="employee-dropdown" class="dropdown-content pl-12">
+
+                  <a href="/Users/Employee/List/Employee.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Employees</li>
+                  </a>
+                  <a href="/Users/Employee/Role Setup/RoleSetupEmployee.html"
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Employee Role Setup</li>
+                  </a>
+
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
     </div>
-
-    <div class="flex flex-col justify-between flex-1 mt-6 text-sm font-medium">
-      <aside class="h-screen sticky top-0">
-        <div class="mb-2">
-          <h3 class="p-1">MENU</h3>
-          <ul class="dropdown p-1">
-            <li class="p-1">
-              <a id="dashboard-link"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="/Menu/Dashboard/Dashboard.html">
-                <span class="material-symbols-outlined"> dashboard </span>
-                <p class="mx-4 font-medium">Dashboard</p>
-              </a>
-            </li>
-            <li class="p-1">
-              <a id="pos-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="/Menu/POS/POS.html">
-                <span class="material-symbols-outlined">
-                  point_of_sale
-                </span>
-                <p class="mx-4 font-medium">POS</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="mb-2">
-          <h3 class="p-1">ORDER MANAGEMENT</h3>
-          <ul class="dropdown">
-            <li class="p-1">
-              <a id="orders-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('orders-dropdown'); toggleIcon('expand-icon-orders')">
-                <span class="material-symbols-outlined"> package </span>
-                <p class="mx-4 font-medium">Orders</p>
-                <span id="expand-icon-orders" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-
-              <ul id="orders-dropdown" class="dropdown-content pl-12">
-                <a href="/Order Management/Orders/All/Orders.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>All</li>
-                </a>
-
-                <a href="/Order Management/Orders/Pending Orders/PendingOrders.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li> Pending</li>
-                </a>
-
-                <a href="/Order Management/Orders/Confirmed Orders/ConfirmedOrders.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Confirmed</li>
-                </a>
-
-                <a href="/Order Management/Orders/Packaged Orders/PackagedOrders.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>PackagedOrders</li>
-                </a>
-
-                <a href="/Order Management/Orders/Out for Delivery/OutforDelivery.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Out for Delivery</li>
-                </a>
-
-                <a href="/Order Management/Orders/Delivered Orders/DeliveredOrders.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Delivered</li>
-                </a>
-
-                <a href="/Order Management/Orders/Returned Orders/ReturnedOrders.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Returned</li>
-                </a>
-
-                <a href="/Order Management/Orders/Delivery Failed/DeliveryFailedOrders.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Failed to Deliver</li>
-                </a>
-
-                <a href="/Order Management/Orders/Cancelled Orders/CancelledOrders.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Cancelled</li>
-                </a>
-
-              </ul>
-            </li>
-
-            <!-- refund requests -->
-            <li class="p-1">
-              <a id="refund-list" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('refund-dropdown'); toggleIcon('expand-icon-refund')">
-                <span class="material-symbols-outlined"> change_circle </span>
-                <p class="mx-4 font-medium">Refund Requests</p>
-                <span id="expand-icon-refund" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-              <ul id="refund-dropdown" class="dropdown-content pl-12">
-
-                <a href="/Order Management/Refund/Pending Refund/PendingRequest.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Pending</li>
-                </a>
-
-                <a href="/Order Management/Refund/Approved Refunds/ApprovedRequests.html"
-                  class="=mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Approved</li>
-                </a>
-
-                <a href="/Order Management/Refund/Refunded/Refunded.html"
-                  class="=mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Refunded</li>
-                </a>
-
-                <a href="/Order Management/Refund/Rejected Refund Requests/RejectedRequests.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Rejected</li>
-                </a>
-
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div class="mb-2">
-          <h3 class="p-1">PRODUCT MANAGEMENT</h3>
-          <ul class="dropdown p-1">
-            <li class="p-1">
-              <a id="category-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('category-dropdown'); toggleIcon('expand-icon-category')">
-                <span class="material-symbols-outlined"> menu </span>
-                <p class="mx-4 font-medium">Category Setup</p>
-                <span id="expand-icon-category" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-
-              <ul id="category-dropdown" class="dropdown-content pl-12">
-
-                <a href="/Product_Management/Category/CategorySetup/CategorySetup.html"
-                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Category</li>
-                </a>
-
-                <a href="/Product_Management/Category/SubCategory Setup/SubCategorySetup.html"
-                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Sub Category
-                  </li>
-                </a>
-
-                <a href="/Product_Management/Category/SubSub Category/SubSubCategory.html"
-                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Sub Sub Category</li>
-                </a>
-              </ul>
-            </li>
-
-            <li class="p-1">
-              <a id="brand-list" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)" onclick="toggleDropdown('brand-dropdown'); toggleIcon('expand-icon-brand')">
-                <span class="material-symbols-outlined"> star </span>
-                <p class="mx-4 font-medium">Brands</p>
-                <span id="expand-icon-brand" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-              <ul id="brand-dropdown" class="dropdown-content pl-12">
-
-                <a href="/Product_Management/Brands/New/AddNew.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Add New</li>
-                </a>
-
-                <a href="/Product_Management/Brands/List/List.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>List</li>
-                </a>
-              </ul>
-            </li>
-
-            <li class="p-1">
-              <a id="prodAttributes-list" href="/Product_Management/Product Attribute/ProductAttributes.html"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                <span class="material-symbols-outlined"> sell </span>
-                <p class="mx-4 font-medium">Product Attributes</p>
-              </a>
-            </li>
-
-            <li class="p-1">
-              <a id="inhouse-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('inhouse-dropdown'); toggleIcon('expand-icon-inhouse')">
-                <span class="material-symbols-outlined">
-                  home
-                </span>
-                <p class="mx-4 font-medium">In-house Products</p>
-                <span id="expand-icon-inhouse" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-              <ul id="inhouse-dropdown" class="dropdown-content pl-12">
-
-                <a href="/Product_Management/In House Products/Products/Products.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Products</li>
-                </a>
-
-                <a href="/Product_Management/In House Products/Bulk/Bulk.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Bulk Imports</li>
-                </a>
-
-              </ul>
-            </li>
-
-            <li class="p-1">
-              <a id="sellerprod-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('sellerprod-dropdown'); toggleIcon('expand-icon-sellerprod')">
-                <span class="material-symbols-outlined">
-                  approval_delegation
-                </span>
-                <p class="mx-4 font-medium">Seller Products</p>
-                <span id="expand-icon-sellerprod" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-
-              <ul id="sellerprod-dropdown" class="dropdown-content pl-12">
-                <a href="/Product_Management/Seller Products/Updated Products/UpdatedProducts.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Update Product</li>
-                </a>
-
-
-                <a href="/Product_Management/Seller Products/New Products/NewProducts.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>New Product</li>
-                </a>
-
-                <a href="/Product_Management/Seller Products/Approved Products/ApprovedProducts.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Approved Product</li>
-                </a>
-
-
-                <a href="/Product_Management/Seller Products/Declined Products/DeclinedProduct.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">Declined
-                  <li>Product </li>
-                </a>
-
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="py-2">PROMOTION MANAGEMENT</h3>
-          <ul class="dropdown p-1">
-            <li class="p-1">
-              <a id="banner-list" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('banner-dropdown'); toggleIcon('expand-icon-banner')">
-                <span class="material-symbols-outlined">planner_banner_ad_pt</span>
-                <p class="mx-4 font-medium">Banner</p>
-                <span id="expand-icon-banner" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-              <ul id="banner-dropdown" class="dropdown-content pl-12">
-                <a href="/Promotion/Banners/Top Banner/TopBanners.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Top Banner </li>
-                </a>
-
-                <a href="/Promotion/Banners/Side Banner/SidebarBanner.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Sidebar Banner</li>
-                </a>
-
-                <a href="/Promotion/Banners/Header Banner/HeaderBanner.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Header Banner</li>
-                </a>
-
-                <a href="/Promotion/Banners/Main Banner/MainSectionBanner.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Main Section Banner</li>
-                </a>
-
-                <a href="/Promotion/Banners/Popup Banner/PopupBanner.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Popup Banner</li>
-                </a>
-
-                <a href="/Promotion/Banners/Footer Banner/Footerbanner.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Footer Banner</li>
-                </a>
-
-              </ul>
-            </li>
-            <li class="p-1">
-              <a id="offers-list" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('offers-dropdown'); toggleIcon('expand-icon-offers')">
-                <span class="material-symbols-outlined">redeem</span>
-                <p class="mx-4 font-medium">Offers & Deals</p>
-                <span id="expand-icon-offers" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-              <ul id="offers-dropdown" class="dropdown-content pl-12">
-
-                <a href="/Promotion/Offers/Coupon/Coupons.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Coupon</li>
-                </a>
-                <a href="/Promotion/Offers/FlashDeal/FlashDeals.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Flash Deals</li>
-                </a>
-                <a href="/Promotion/Offers/FeaturedDeal/FeaturedDeals.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Featured Deals</li>
-                </a>
-                <a href="/Promotion/Offers/DealoftheDay/DealoftheDay.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Deal of the Day</li>
-                </a>
-
-              </ul>
-            </li>
-            <li class="p-1">
-              <a id="notifications-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="/Promotion/Push Notifications/PushNotify.html">
-                <span class="material-symbols-outlined">
-                  notifications
-                </span>
-                <span class="mx-4 font-medium">Push Notifications</span>
-              </a>
-            </li>
-            <li class="p-1">
-              <a id="annoucement-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href=" /Promotion/Announcements/Announcments.html">
-                <span class="material-symbols-outlined"> campaign </span>
-                <span class="mx-4 font-medium">Announcement</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="py-2">HELP & SUPPORT</h3>
-          <ul class="dropdown p-1">
-            <li class="p-1">
-              <a class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="/Help and Support/Messages/Messages.html">
-                <span class="material-symbols-outlined"> mail </span>
-                <p class="mx-4 font-medium">Messages</p>
-              </a>
-            </li>
-            <li class="p-1">
-              <a class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="/Help and Support/Support Ticket/SupportTicket.html">
-                <span class="material-symbols-outlined">flag</span>
-                <p class="mx-4 font-medium">Support Ticket</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="py-2">REPORT & ANALYTICS</h3>
-          <ul class="dropdown p-1">
-            <li class="p-1">
-              <a id="salesReport-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)" onclick="toggleDropdown('sales-dropdown'); toggleIcon('expand-icon-sales')">
-                <span class="material-symbols-outlined">
-                  receipt_long
-                </span>
-                <p class="mx-4 font-medium">Sales & Transactions Report</p>
-                <span id="expand-icon-sales" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-
-              <ul id="sales-dropdown" class="dropdown-content pl-12">
-                <a href="/Reports and Analytics/Sales and Transactions/Earning Reports/EarningReports.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Earning Report</li>
-                </a>
-
-                <a href="/Reports and Analytics/Sales and Transactions/in-house Reports/InhouseReport.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Inhouse Sales</li>
-                </a>
-                <a href="/Reports and Analytics/Sales and Transactions/Seller Reports/SellerReport.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li> Seller Report</li>
-                </a>
-                <a href="/Reports and Analytics/Sales and Transactions/Transaction Reports/TransactionReport.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Transaction Report</li>
-                </a>
-              </ul>
-            </li>
-
-            <li class="p-1">
-              <a id="productReport-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="/Reports and Analytics/Product Reports/ProductReport.html">
-                <span class="material-symbols-outlined">
-                  summarize
-                </span>
-                <span class="mx-4 font-medium">Product Report</span>
-              </a>
-            </li>
-            <li class="p-1">
-              <a id="orderReport-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="/Reports and Analytics/Orders Reports/OrderReport.html">
-                <span class="material-symbols-outlined">
-                  fact_check
-                </span>
-                <span class="mx-4 font-medium">Order Report</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="py-2">USER MANAGEMENT</h3>
-          <ul class="dropdown p-1">
-            <li class="p-1">
-              <a id="customer-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('customers-dropdown'); toggleIcon('expand-icon-customers')">
-                <span class="material-symbols-outlined">account_circle</span>
-                <p class="mx-4 font-medium">Customers</p>
-                <span id="expand-icon-customers" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-              <ul id="customers-dropdown" class="dropdown-content pl-12">
-
-                <a href="/Users/Customers/Lists/Customers.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Customer List</li>
-                </a>
-                <a href="/Users/Customers/Reviews/CustomerReview.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Review</li>
-                </a>
-                <a href="/Users/Customers/Loyalty Points/LoyaltyPoints.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Customer loyalty point report</li>
-                </a>
-                <a href="/Users/Customers/Wallet/customerWallet.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Customer’s wallet</li>
-                </a>
-
-              </ul>
-            </li>
-
-            <li class="p-1">
-              <a id="sellers-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('sellers-dropdown'); toggleIcon('expand-icon-sellers')">
-                <span class="material-symbols-outlined"> groups </span>
-                <p class="mx-4 font-medium">All Sellers</p>
-                <span id="expand-icon-sellers" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-              <ul id="sellers-dropdown" class="dropdown-content pl-12">
-
-                <a href="/Users/Sellers/New Sellers/AddNewSellers.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Add New Seller
-                  </li>
-                </a>
-
-                <a href="/Users/Sellers/Seller List/Sellers.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Seller List</li>
-                </a>
-
-                <a href="/Users/Sellers/Withdraws/withdraws.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Withdraws</li>
-                </a>
-                <a href="/Users/Sellers/Withdrawal Methods/methods.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Withdraw Methods</li>
-                </a>
-              </ul>
-            </li>
-
-            <li class="p-1">
-              <a id="subscribers-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('subscribers-dropdown'); toggleIcon('expand-icon-subscribers')">
-                <span class="material-symbols-outlined"> person </span>
-                <p class="mx-4 font-medium">Subscribers</p>
-                <span id="expand-icon-subscribers" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-              <ul id="subscribers-dropdown" class="dropdown-content pl-12">
-
-                <a href="/Users/Subscriber.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Something</li>
-                </a>
-              </ul>
-            </li>
-
-            <li class="p-1">
-              <a id="deliveryman-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('deliveryman-dropdown'); toggleIcon('expand-icon-deliveryman')">
-                <span class="material-symbols-outlined"> person </span>
-                <p class="mx-4 font-medium">Delivery Man</p>
-                <span id="expand-icon-deliveryman" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-              <ul id="deliveryman-dropdown" class="dropdown-content pl-12">
-
-                <a href="/Users/DeliveryMan.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Something</li>
-                </a>
-
-                <a href="/Users/DeliveryMan.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Something</li>
-                </a>
-              </ul>
-            </li>
-
-            <li class="p-1">
-              <a id="employee-list"
-                class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                href="javascript:void(0)"
-                onclick="toggleDropdown('employee-dropdown'); toggleIcon('expand-icon-employees')">
-                <span class="material-symbols-outlined"> person </span>
-                <p class="mx-4 font-medium">Employees</p>
-                <span id="expand-icon-employees" class="material-symbols-outlined ml-auto"> expand_more </span>
-              </a>
-
-              <ul id="employee-dropdown" class="dropdown-content pl-12">
-
-                <a href="/Users/Employee/List/Employee.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Employees</li>
-                </a>
-                <a href="/Users/Employee/Role Setup/RoleSetupEmployee.html"
-                  class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <li>Employee Role Setup</li>
-                </a>
-
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-  </div>
     <!--Sidebar ends-->
     <div class="flex flex-col mx-auto w-full p-4 sm:p-6 md:p-8 lg:p-10">
       <div class="flex gap-2">
@@ -663,7 +663,7 @@
         <h1 class="text-2xl font-bold mb-4">Admin's Dashboard </h1>
       </div>
       <p class="mb-2 ">Welcome to admin's dashboard</p>
-      <div class="bg-white p-5 md:p-10 lg:p-5 rounded-lg flex flex-col ">
+      <div class="bg-white p-5 md:p-10 lg:p-5 rounded-lg flex flex-col text-sm sm:text-base">
         <div class="flex gap-3">
           <span class="material-symbols-outlined">
             monitoring
@@ -671,9 +671,9 @@
           <h2 class="px-1 py-1">Business Analytics</h2>
         </div>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6 my-4 md:mx-10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6 my-4 md:px-2">
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between p-4 ">
             <div class="flex gap-3">
               <span class="material-symbols-outlined">
                 deployed_code_history
@@ -685,7 +685,7 @@
             <p>0</p>
           </div>
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between p-4">
             <div class="flex gap-3">
               <span class="material-symbols-outlined">
                 check_circle
@@ -697,7 +697,7 @@
             <p>0</p>
           </div>
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between p-4">
             <div class="flex gap-3">
               <span class="material-symbols-outlined">
                 package_2
@@ -709,7 +709,7 @@
             <p>0</p>
           </div>
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between p-4">
             <div class="flex gap-3">
               <span class="material-symbols-outlined">
                 local_shipping
@@ -721,7 +721,7 @@
             <p>0</p>
           </div>
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5 ">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between p-4">
             <div class="flex gap-3">
               <span class="material-symbols-outlined">
                 select_check_box
@@ -733,7 +733,7 @@
             <p>0</p>
           </div>
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between p-4">
             <div class="flex gap-3">
               <span class="material-symbols-outlined">
                 cancel
@@ -745,7 +745,7 @@
             <p>0</p>
           </div>
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between p-4">
             <div class="flex gap-3">
               <span class="material-symbols-outlined">
                 sync
@@ -757,7 +757,7 @@
             <p>0</p>
           </div>
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between px-7 py-5">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between p-4">
             <div class="flex gap-3">
               <span class="material-symbols-outlined">
                 close
@@ -769,8 +769,8 @@
             <p>0</p>
           </div>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6 w-grow md:mx-10 mt-3">
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center px-5 py-5">
+        <div class="grid grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6 w-grow mt-3 md:px-2">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center p-5">
             <div>
               <h3>Total Sale</h3>
               <p>1000.00</p>
@@ -782,7 +782,7 @@
             </div>
           </div>
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center px-5 py-5">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center p-5">
             <div>
               <h3>Total Stores</h3>
               <p>10</p>
@@ -794,7 +794,7 @@
             </div>
           </div>
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center px-5 py-5">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center p-5">
             <div>
               <h3>Total Products</h3>
               <p>10</p>
@@ -805,7 +805,7 @@
               </span>
             </div>
           </div>
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center px-5 py-5">
+          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center p-5">
             <div>
               <h3>Total Customers</h3>
               <p>50</p>
@@ -819,14 +819,14 @@
         </div>
       </div>
 
-      <div class="bg-white p-5 mt-5 sm:p-8 md:p-10 lg:p-5 rounded-lg flex flex-col flex-grow">
+      <div class="bg-white p-5 mt-5 sm:p-8 md:p-10 lg:p-5 rounded-lg flex flex-col flex-grow text-sm sm:text-base">
         <div class="flex gap-3">
           <span class="material-symbols-outlined">
             wallet
           </span>
           <h2>Admin Wallet</h2>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 my-3">
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 my-3 px-2">
           <div
             class="col-span-2 lg:col-span-1 lg:row-span-2 bg-[#D2E9FB] flex flex-col gap-3 justify-around rounded-lg shadow-xl items-center px-5 py-5 mx-auto w-[50%] lg:w-[90%] lg:mx-0">
             <span class="material-symbols-outlined text-3xl">
@@ -877,7 +877,7 @@
       </div>
 
 
-      <div class="flex flex-col bg-white p-5 mt-5 sm:p-8 md:p-10 lg:p-5 rounded-lg">
+      <div class="flex flex-col bg-white p-5 mt-5 sm:p-8 md:p-10 lg:p-5 rounded-lg text-xs sm:text-md">
         <div class="flex justify-between">
           <div class="flex gap-3">
             <span class="material-symbols-outlined">
@@ -885,19 +885,19 @@
             </span>
             <h2>Earning Statistics</h2>
           </div>
-          <div class="flex border-2 border-gray rounded-md my-3">
+          <div class="flex border-2 border-gray rounded-md my-3 px-2">
             <!-- This Year Button -->
-            <button id="thisYearBtn" class="bg-white border-2 rounded-md font-bold py-2 px-4 my-2 mx-2">
+            <button id="thisYearBtn" class="bg-white border-2 rounded-md font-bold py-2 px-3 my-2">
               This Year
             </button>
 
             <!-- This Month Button -->
-            <button id="thisMonthBtn" class="bg-white border-2 rounded-md text-black font-bold py-2 px-4 my-2 mx-2">
+            <button id="thisMonthBtn" class="bg-white border-2 rounded-md text-black font-bold py-2 px-3 my-2 mx-2">
               This Month
             </button>
 
             <!-- This Week Button -->
-            <button id="thisWeekBtn" class="bg-white border-2 rounded-md text-black font-bold py-2 px-4 my-2 mx-2">
+            <button id="thisWeekBtn" class="bg-white border-2 rounded-md text-black font-bold py-2 px-3 my-2">
               This Week
             </button>
           </div>
@@ -911,10 +911,10 @@
       </div>
 
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 mt-5 lg:p-5">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 mt-5">
 
         <!--Top Customers-->
-        <div class="bg-white rounded-lg">
+        <div class="bg-white rounded-lg flex flex-col">
           <div class="flex justify-between m-3">
             <h3 class="font-bold">Top Customer</h3>
             <a href="#">
@@ -922,21 +922,21 @@
             </a>
           </div>
           <div class="border-2 shadow-xl"></div>
-          <div class="flex justify-between space-x-5 items-center mx-3 my-4 text-sm ">
-            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border rounded-lg">
+          <div class="flex justify-between space-x-3 self-stretch my-auto mx-2 py-2 text-[12px] overflow-x-auto">
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-4 border rounded-lg">
               <span class="material-symbols-outlined">account_circle </span>
               <p class="text-center">First Name</p>
-              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+              <p class="px-3 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
             </div>
-            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border rounded-lg">
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-4 border rounded-lg">
               <span class="material-symbols-outlined">account_circle </span>
               <p class="text-center">First Name</p>
-              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+              <p class="px-3 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
             </div>
-            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border rounded-lg">
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-4 border rounded-lg">
               <span class="material-symbols-outlined">account_circle </span>
               <p class="text-center">First Name</p>
-              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+              <p class="px-3 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
             </div>
           </div>
         </div>
@@ -949,7 +949,7 @@
             </a>
           </div>
           <div class="border-2"></div>
-          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-sm">
+          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-[12px]">
             <div class="flex justify-between items-center border-2 rounded-lg py-2 px-2">
               <div class="flex gap-2 items-center">
                 <div class="border-2 py-1 px-1 rounded-md">
@@ -1003,7 +1003,7 @@
             </a>
           </div>
           <div class="border-2"></div>
-          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-sm">
+          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-[12px]">
             <div class="flex justify-between border-2 items-center rounded-lg py-2 px-2">
               <div class="flex gap-2 items-center">
                 <div class="border-2 py-1 px-1 rounded-md">
@@ -1064,7 +1064,7 @@
             </a>
           </div>
           <div class="border-2"></div>
-          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-sm">
+          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-[12px]">
             <div class="flex justify-between items-center border-2 rounded-lg py-2 px-2">
               <div class="flex gap-2 items-center">
                 <div class="border-2 py-1 px-1 rounded-md">
@@ -1121,7 +1121,7 @@
             </a>
           </div>
           <div class="border-2"></div>
-          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-sm">
+          <div class="flex flex-col justify-around flex-grow gap-2 mx-3 my-4 text-[12px]">
             <div class="flex justify-between border-2 items-center rounded-lg py-2 px-2">
               <div class="flex gap-2 items-center">
                 <div class="border-2 py-1 px-1 rounded-md">
@@ -1162,7 +1162,7 @@
         </div>
 
         <!--Top Delivery Man-->
-        <div class="bg-white rounded-lg">
+        <div class="bg-white rounded-lg flex flex-col">
           <div class="flex justify-between m-3">
             <h3 class="font-bold">Top Delivery Man</h3>
             <a href="#">
@@ -1170,21 +1170,21 @@
             </a>
           </div>
           <div class="border-2"></div>
-          <div class="flex justify-between space-x-5 items-center mx-4 my-10 text-sm ">
-            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border-2 rounded-lg">
+          <div class="flex justify-between space-x-3 self-stretch my-auto mx-2 py-2 text-[12px] overflow-x-auto">
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-4 border rounded-lg">
               <span class="material-symbols-outlined">account_circle </span>
               <p class="text-center">First Name</p>
-              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+              <p class="px-3 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
             </div>
-            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border-2 rounded-lg">
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-4 border rounded-lg">
               <span class="material-symbols-outlined">account_circle </span>
               <p class="text-center">First Name</p>
-              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+              <p class="px-3 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
             </div>
-            <div class="flex flex-col justify-between items-center gap-2 py-6 px-5 border-2 rounded-lg">
+            <div class="flex flex-col justify-between items-center gap-2 py-6 px-4 border rounded-lg">
               <span class="material-symbols-outlined">account_circle </span>
               <p class="text-center">First Name</p>
-              <p class="px-4 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
+              <p class="px-3 py-2 rounded-md bg-[#134EA3] text-white text-center text-md">Orders: 10</p>
             </div>
           </div>
         </div>

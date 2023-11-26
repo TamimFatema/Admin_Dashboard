@@ -44,45 +44,47 @@
       <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
     </div>
     <div class="bg-white overflow-x-auto rounded-lg">
-      <div class="flex justify-between p-5 flex-wrap">
-        <div class="flex">
-          <div class="flex items-center rounded-l-lg border p-2 gap-2">
-            <span class="material-symbols-outlined text-gray-700">
-              search
-            </span>
-            <input type="text" placeholder="Search by Order:ID" />
+      <div class="flex flex-col lg:flex-row text-xs flex-nowrap p-5 gap-3">
+        <div class="flex flex-grow justify-between flex-wrap gap-2">
+          <div class="flex h-fit">
+            <div class="flex items-center rounded-l-lg border p-2 gap-2">
+              <span class="material-symbols-outlined text-gray-700">
+                search
+              </span>
+              <input type="text" placeholder="Search by Order:ID" style="outline: none;" />
+            </div>
+            <button class="bg-visible rounded-r-lg px-2 text-white">
+              Search
+            </button>
           </div>
-          <button class="bg-visible rounded-r-lg px-2 text-white">
-            Search
-          </button>
+          <div class="flex gap-3">
+            <a>
+              <button class="flex items-center text-visible border border-visible rounded-lg p-2 gap-1">
+                <span class="material-symbols-outlined">
+                  sort
+                </span>
+                Sort by: Default
+                <span class="material-symbols-outlined">
+                  keyboard_arrow_down
+                </span>
+              </button>
+            </a>
+            <a>
+              <button class="flex items-center text-visible border border-visible rounded-lg py-2 p-2 gap-1">
+                <span class="material-symbols-outlined">
+                  download
+                </span>
+                Export
+                <span class="material-symbols-outlined">
+                  keyboard_arrow_down
+                </span>
+              </button>
+            </a>
+          </div>
         </div>
-
-        <div class="flex justify-between gap-6">
-          <a>
-            <button class="flex items-center text-visible border border-visible rounded-lg py-2 px-2 gap-2">
-              <span class="material-symbols-outlined">
-                sort
-              </span>
-              Sort by: Default
-              <span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span>
-            </button>
-          </a>
-          <a>
-            <button class="flex items-center text-visible border border-visible rounded-lg py-2 px-2 gap-2">
-              <span class="material-symbols-outlined">
-                download
-              </span>
-              Export
-              <span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span>
-            </button>
-          </a>
-
+        <div class="flex gap-3 sm:self-end">
           <a href="Stock.html">
-            <button class="flex items-center text-white bg-visible rounded-lg py-2 px-4 gap-2">
+            <button class="flex items-center text-white bg-visible rounded-lg p-2 gap-1">
               <span class="material-symbols-outlined">
                 timer
               </span>
@@ -91,157 +93,168 @@
           </a>
 
           <a href="/Product_Management/In House Products/Products/AddNewProducts.html">
-            <button class="flex items-center text-white bg-visible rounded-lg py-2 px-4 gap-2">
+            <button class="flex items-center text-white bg-visible rounded-lg p-2 gap-1">
               <span class="material-symbols-outlined">
                 add_circle
               </span>
               Add New Products
             </button>
           </a>
-
         </div>
-
       </div>
 
-      <table class="w-full text-sm text-gray-500 text-center">
-        <thead class="text-xs text-gray-700 uppercase bg-blue-100">
-          <tr>
-            <th scope="col" class="px-6 py-3">SL</th>
-            <th scope="col" class="px-6 py-3">Product Name</th>
-            <th scope="col" class="px-6 py-3">Product Type</th>
-            <th scope="col" class="px-6 py-3">Product Price</th>
-            <th scope="col" class="px-6 py-3">Selling Price</th>
-            <th scope="col" class="px-6 py-3">Verify Status</th>
-            <th scope="col" class="px-6 py-3">Active Status</th>
-            <th scope="col" class="px-6 py-3">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="bg-white border-b">
-            <td class="px-6 py-4">1</td>
-            <td class="px-6 py-4">Somename</td>
-            <td class="px-6 py-4">Physical</td>
-            <td class="px-6 py-4">$100.00</td>
-            <td class="px-6 py-4">$150.00</td>
-            <td class="px-6 py-4">
-              <button class="bg-approval text-green shadow-lg py-2 px-4">
-                Approved
-              </button>
-            </td>
-            <td class="py-2 px-4 border-b min-w-[box-width] toggle-row">
-              <a href="#">
-                <span class="material-icons toggle-element" data-value="0">
-                  toggle_off
-                </span>
-              </a>
-            </td>
-            <td class="px-6 py-4 flex gap-2 justify-center">
-              <a href="/Product_Management/In House Products/Products/GeneradeBarcode.html">
-                <span class="material-symbols-outlined border border-[#E86B35] rounded-md text-[#E86B35]">
-                  barcode
-                </span>
-              </a>
-              <a href="/Product_Management/In House Products/Products/ProductDetails.html">
-                <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
-                  visibility
-                </span>
-              </a>
-              <a href="/Product_Management/In House Products/Products/ProductUpdate.html">
-                <span class="material-symbols-outlined border border-[#24C7FB] rounded-md text-[#24C7FB]">
-                  edit
-                </span>
-              </a>
-              <a href="#">
-                <span class="material-symbols-outlined border border-[#D34D4D] rounded-md text-[#D34D4D]">
-                  delete
-                </span>
-              </a>
-            </td>
-          </tr>
-          <tr class="bg-white border-b">
-            <td class="px-6 py-4">1</td>
-            <td class="px-6 py-4">Somename</td>
-            <td class="px-6 py-4">Physical</td>
-            <td class="px-6 py-4">$100.00</td>
-            <td class="px-6 py-4">$150.00</td>
-            <td class="px-6 py-4">
-              <button class="bg-approval text-green shadow-lg py-2 px-4">
-                Approved
-              </button>
-            </td>
-            <td class="py-2 px-4 border-b min-w-[box-width] toggle-row">
-              <a href="#">
-                <span class="material-icons toggle-element" data-value="0">
-                  toggle_off
-                </span>
-              </a>
-            </td>
-            <td class="px-6 py-4 flex gap-2 justify-center">
-              <a href="/Product_Management/In House Products/Products/GeneradeBarcode.html">
-                <span class="material-symbols-outlined border border-[#E86B35] rounded-md text-[#E86B35]">
-                  barcode
-                </span>
-              </a>
-              <a href="/Product_Management/In House Products/Products/ProductDetails.html">
-                <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
-                  visibility
-                </span>
-              </a>
-              <a href="/Product_Management/In House Products/Products/ProductUpdate.html">
-                <span class="material-symbols-outlined border border-[#24C7FB] rounded-md text-[#24C7FB]">
-                  edit
-                </span>
-              </a>
-              <a href="#">
-                <span class="material-symbols-outlined border border-[#D34D4D] rounded-md text-[#D34D4D]">
-                  delete
-                </span>
-              </a>
-            </td>
-          </tr>
-          <tr class="bg-white border-b">
-            <td class="px-6 py-4">1</td>
-            <td class="px-6 py-4">Somename</td>
-            <td class="px-6 py-4">Physical</td>
-            <td class="px-6 py-4">$100.00</td>
-            <td class="px-6 py-4">$150.00</td>
-            <td class="px-6 py-4">
-              <button class="bg-approval text-green shadow-lg py-2 px-4">
-                Approved
-              </button>
-            </td>
-            <td class="py-2 px-4 border-b min-w-[box-width] toggle-row">
-              <a href="#">
-                <span class="material-icons toggle-element" data-value="0">
-                  toggle_off
-                </span>
-              </a>
-            </td>
-            <td class="px-6 py-4 flex gap-2 justify-center">
-              <a href="/Product_Management/In House Products/Products/GeneradeBarcode.html">
-                <span class="material-symbols-outlined border border-[#E86B35] rounded-md text-[#E86B35]">
-                  barcode
-                </span>
-              </a>
-              <a href="/Product_Management/In House Products/Products/ProductDetails.html">
-                <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
-                  visibility
-                </span>
-              </a>
-              <a href="/Product_Management/In House Products/Products/ProductUpdate.html">
-                <span class="material-symbols-outlined border border-[#24C7FB] rounded-md text-[#24C7FB]">
-                  edit
-                </span>
-              </a>
-              <a href="#">
-                <span class="material-symbols-outlined border border-[#D34D4D] rounded-md text-[#D34D4D]">
-                  delete
-                </span>
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
+        <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-gray-500 text-center">
+          <thead class="text-xs text-gray-700 uppercase bg-blue-100 text-left">
+            <tr>
+              <th scope="col" class="px-6 py-3 w-[20%] lg:w-fit">SL</th>
+              <th scope="col" class="px-6 py-3 w-[30%] lg:w-fit">Product Name</th>
+              <th scope="col" class="px-6 py-3 w-[30%] lg:w-fit">Product Type</th>
+              <th scope="col" class="px-6 py-3 w-[20%] lg:w-fit">Product Price</th>
+              <th scope="col" class="px-6 py-3 w-[20%] lg:w-fit">Selling Price</th>
+              <th scope="col" class="px-6 py-3 w-[20%] lg:w-fit">Verify Status</th>
+              <th scope="col" class="px-6 py-3 w-[20%] lg:w-fit">Active Status</th>
+              <th scope="col" class="px-6 py-3 w-[40%] lg:w-fit">Action</th>
+            </tr>
+          </thead>
+          <tbody class="text-left">
+            <tr class="bg-white border-b">
+              <td class="px-6 py-4">1</td>
+              <td class="px-6 py-4">Somename</td>
+              <td class="px-6 py-4">Physical</td>
+              <td class="px-6 py-4">$100.00</td>
+              <td class="px-6 py-4">$150.00</td>
+              <td class="px-6 py-4">
+                <button class="bg-approval text-green shadow-lg p-2">
+                  Approved
+                </button>
+              </td>
+              <td class="px-6 py-4 border-b min-w-[box-width] toggle-row">
+                <a href="#">
+                  <span class="material-icons toggle-element" data-value="0">
+                    toggle_off
+                  </span>
+                </a>
+              </td>
+              <td class="px-6 py-4 flex gap-2">
+                <a href="/Product_Management/In House Products/Products/GeneradeBarcode.html">
+                  <span class="material-symbols-outlined border border-[#E86B35] rounded-md text-[#E86B35]">
+                    barcode
+                  </span>
+                </a>
+                <a href="/Product_Management/In House Products/Products/ProductDetails.html">
+                  <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
+                    visibility
+                  </span>
+                </a>
+                <a href="/Product_Management/In House Products/Products/ProductUpdate.html">
+                  <span class="material-symbols-outlined border border-[#24C7FB] rounded-md text-[#24C7FB]">
+                    edit
+                  </span>
+                </a>
+                <a href="#">
+                  <span class="material-symbols-outlined border border-[#D34D4D] rounded-md text-[#D34D4D]">
+                    delete
+                  </span>
+                </a>
+              </td>
+            </tr>
+            <tr class="bg-white border-b">
+              <td class="px-6 py-4">1</td>
+              <td class="px-6 py-4">Somename</td>
+              <td class="px-6 py-4">Physical</td>
+              <td class="px-6 py-4">$100.00</td>
+              <td class="px-6 py-4">$150.00</td>
+              <td class="px-6 py-4">
+                <button class="bg-approval text-green shadow-lg p-2">
+                  Approved
+                </button>
+              </td>
+              <td class="px-6 py-4 border-b min-w-[box-width] toggle-row">
+                <a href="#">
+                  <span class="material-icons toggle-element" data-value="0">
+                    toggle_off
+                  </span>
+                </a>
+              </td>
+              <td class="px-6 py-4 flex gap-2">
+                <a href="/Product_Management/In House Products/Products/GeneradeBarcode.html">
+                  <span class="material-symbols-outlined border border-[#E86B35] rounded-md text-[#E86B35]">
+                    barcode
+                  </span>
+                </a>
+                <a href="/Product_Management/In House Products/Products/ProductDetails.html">
+                  <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
+                    visibility
+                  </span>
+                </a>
+                <a href="/Product_Management/In House Products/Products/ProductUpdate.html">
+                  <span class="material-symbols-outlined border border-[#24C7FB] rounded-md text-[#24C7FB]">
+                    edit
+                  </span>
+                </a>
+                <a href="#">
+                  <span class="material-symbols-outlined border border-[#D34D4D] rounded-md text-[#D34D4D]">
+                    delete
+                  </span>
+                </a>
+              </td>
+            </tr>
+            <tr class="bg-white border-b">
+              <td class="px-6 py-4">1</td>
+              <td class="px-6 py-4">Somename</td>
+              <td class="px-6 py-4">Physical</td>
+              <td class="px-6 py-4">$100.00</td>
+              <td class="px-6 py-4">$150.00</td>
+              <td class="px-6 py-4">
+                <button class="bg-approval text-green shadow-lg p-2">
+                  Approved
+                </button>
+              </td>
+              <td class="px-6 py-4 border-b min-w-[box-width] toggle-row">
+                <a href="#">
+                  <span class="material-icons toggle-element" data-value="0">
+                    toggle_off
+                  </span>
+                </a>
+              </td>
+              <td class="px-6 py-4 flex gap-2">
+                <a href="/Product_Management/In House Products/Products/GeneradeBarcode.html">
+                  <span class="material-symbols-outlined border border-[#E86B35] rounded-md text-[#E86B35]">
+                    barcode
+                  </span>
+                </a>
+                <a href="/Product_Management/In House Products/Products/ProductDetails.html">
+                  <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
+                    visibility
+                  </span>
+                </a>
+                <a href="/Product_Management/In House Products/Products/ProductUpdate.html">
+                  <span class="material-symbols-outlined border border-[#24C7FB] rounded-md text-[#24C7FB]">
+                    edit
+                  </span>
+                </a>
+                <a href="#">
+                  <span class="material-symbols-outlined border border-[#D34D4D] rounded-md text-[#D34D4D]">
+                    delete
+                  </span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="md:hidden flex items-center justify-end space-x-4 my-6 mx-3">
+        <span class="material-symbols-outlined border py-2 px-2 rounded">
+          chevron_left
+        </span>
+        <button class="page-btn text-black border py-2 px-4 rounded">1</button>
+        <button class="page-btn text-black border py-2 px-4 rounded">2</button>
+        <button class="page-btn text-black border py-2 px-4 rounded">3</button>
+        <span class="material-symbols-outlined border py-2 px-2 rounded">
+          chevron_right
+        </span>
+      </div>
     </div>
   </div>
   <script>

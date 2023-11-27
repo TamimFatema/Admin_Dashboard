@@ -652,7 +652,7 @@
       </div>
     </div>
     <!--Sidebar ends-->
-    <div class="mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
+    <div class="justify-center container mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
       <div class="flex items-center gap-2 mb-4">
         <span class="material-symbols-outlined">
           monitoring
@@ -660,9 +660,13 @@
         <h2 class="text-2xl font-bold">Earning Reports</h2>
       </div>
 
-      <div class="flex gap-10 mb-4">
-        <p>Admin</p>
-        <p>Seller</p>
+      <div class="flex gap-10 mb-4 text-md font-semibold">
+        <a href="/Reports and Analytics/Sales and Transactions/Earning Reports/EarningReports.html">
+          <p class="underline text-[#134EA3]">Admin Earning</p>
+        </a>
+        <a href="/Reports and Analytics/Sales and Transactions/Earning Reports/SellerEarningReport.html">
+          <p class="underline">Seller Earning</p>
+        </a>
       </div>
 
       <!--Filter-->
@@ -671,12 +675,13 @@
         <div class="flex gap-10 pt-2">
           <div class="flex flex-col w-96">
             <select id="selector" name="selector" class="mt-1 w-full p-2 border border-gray-300 rounded-md">
-              <option value="option1">All</option>
-              <option value="option2">In-House</option>
-              <option value="option3">Seller</option>
+              <option value="option1">This Year</option>
+              <option value="option2">This Month</option>
+              <option value="option3">This Week</option>
+              <option value="option3">Custom</option>
             </select>
           </div>
-          <button class="bg-[#134EA3] text-white center-container gap-1 sm:p-2 rounded-md">
+          <button class="bg-[#134EA3] text-white center-container gap-2 mt-1 py-2 px-4 sm:p-2 rounded-md">
             <span class="material-symbols-outlined">
               filter_alt
             </span>
@@ -691,7 +696,7 @@
         <div
           class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 lg:mb-0 lg:gap-2 lg:flex lg:flex-col lg:justify-between lg:w-[30%]">
           <!--Earnings-->
-          <div class="row-span-2 bg-white py-3 px-5 rounded-lg shadow-lg">
+          <div class="row-span-2 bg-white py-4 px-5 rounded-lg shadow-lg">
             <div class="flex gap-5 items-center">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -719,7 +724,7 @@
             </div>
           </div>
 
-          <div class="bg-white flex py-3 px-5 rounded-lg shadow-lg items-center gap-3">
+          <div class="bg-white flex py-6 px-5 rounded-lg shadow-lg items-center gap-3">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M18.3333 32.375V20.9583L8.33333 15.1667V26.5833L18.3333 32.375ZM21.6667 32.375L31.6667 26.5833V15.1667L21.6667 20.9583V32.375ZM18.3333 36.2083L6.66667 29.5C6.13889 29.1945 5.72917 28.7917 5.4375 28.2917C5.14583 27.7917 5 27.2361 5 26.625V13.375C5 12.7639 5.14583 12.2083 5.4375 11.7083C5.72917 11.2083 6.13889 10.8056 6.66667 10.5L18.3333 3.79168C18.8611 3.48612 19.4167 3.33334 20 3.33334C20.5833 3.33334 21.1389 3.48612 21.6667 3.79168L33.3333 10.5C33.8611 10.8056 34.2708 11.2083 34.5625 11.7083C34.8542 12.2083 35 12.7639 35 13.375V26.625C35 27.2361 34.8542 27.7917 34.5625 28.2917C34.2708 28.7917 33.8611 29.1945 33.3333 29.5L21.6667 36.2083C21.1389 36.5139 20.5833 36.6667 20 36.6667C19.4167 36.6667 18.8611 36.5139 18.3333 36.2083ZM26.6667 14.2083L29.875 12.375L20 6.66668L16.75 8.54168L26.6667 14.2083ZM20 18.0833L23.25 16.2083L13.375 10.5L10.125 12.375L20 18.0833Z"
@@ -731,7 +736,7 @@
             </div>
           </div>
 
-          <div class="bg-white flex py-3 px-5 rounded-lg shadow-lg items-center gap-3">
+          <div class="bg-white flex py-6 px-5 rounded-lg shadow-lg items-center gap-3">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M35.0418 18.4167V31.6667C35.0418 32.5833 34.7154 33.3681 34.0626 34.0208C33.4098 34.6736 32.6251 35 31.7084 35H8.37511C7.45844 35 6.67372 34.6736 6.02094 34.0208C5.36816 33.3681 5.04177 32.5833 5.04177 31.6667V18.4167C4.40288 17.8333 3.90983 17.0833 3.56261 16.1667C3.21538 15.25 3.20844 14.25 3.54177 13.1667L5.29177 7.5C5.514 6.77778 5.90983 6.18056 6.47927 5.70833C7.04872 5.23611 7.70844 5 8.45844 5H31.6251C32.3751 5 33.0279 5.22917 33.5834 5.6875C34.139 6.14583 34.5418 6.75 34.7918 7.5L36.5418 13.1667C36.8751 14.25 36.8682 15.2361 36.5209 16.125C36.1737 17.0139 35.6807 17.7778 35.0418 18.4167ZM23.7084 16.6667C24.4584 16.6667 25.0279 16.4097 25.4168 15.8958C25.8057 15.3819 25.9584 14.8056 25.8751 14.1667L24.9584 8.33333H21.7084V14.5C21.7084 15.0833 21.9029 15.5903 22.2918 16.0208C22.6807 16.4514 23.1529 16.6667 23.7084 16.6667ZM16.2084 16.6667C16.8473 16.6667 17.3682 16.4514 17.7709 16.0208C18.1737 15.5903 18.3751 15.0833 18.3751 14.5V8.33333H15.1251L14.2084 14.1667C14.0973 14.8333 14.2432 15.4167 14.6459 15.9167C15.0487 16.4167 15.5696 16.6667 16.2084 16.6667ZM8.79177 16.6667C9.29177 16.6667 9.72927 16.4861 10.1043 16.125C10.4793 15.7639 10.7084 15.3056 10.7918 14.75L11.7084 8.33333H8.45844L6.79177 13.9167C6.62511 14.4722 6.71538 15.0694 7.06261 15.7083C7.40983 16.3472 7.98622 16.6667 8.79177 16.6667ZM31.2918 16.6667C32.0973 16.6667 32.6807 16.3472 33.0418 15.7083C33.4029 15.0694 33.4862 14.4722 33.2918 13.9167L31.5418 8.33333H28.3751L29.2918 14.75C29.3751 15.3056 29.6043 15.7639 29.9793 16.125C30.3543 16.4861 30.7918 16.6667 31.2918 16.6667Z"
@@ -763,19 +768,19 @@
             </div>
             <ul class="space-y-2">
               <li class="font-bold text-xs whitespace-nowrap">
-                <span class="material-icons text-xs text-blue-500 align-middle">circle</span>
+                <span class="material-icons text-xs text-[#134EA3] align-middle">circle</span>
                 Cash Payment (BDT 52,967.00)
               </li>
               <li class="font-bold text-xs whitespace-nowrap">
-                <span class="material-icons text-xs text-blue-400 align-middle">circle</span>
+                <span class="material-icons text-xs text-[#5A9CFB] align-middle">circle</span>
                 Digital Payment (BDT 0.00)
               </li>
               <li class="font-bold text-xs whitespace-nowrap">
-                <span class="material-icons text-xs text-blue-300 align-middle">circle</span>
+                <span class="material-icons text-xs text-[#ACCEFF] align-middle">circle</span>
                 Wallet (BDT 0.00)
               </li>
               <li class="font-bold text-xs whitespace-nowrap">
-                <span class="material-icons text-xs text-blue-900 align-middle">circle</span>
+                <span class="material-icons text-xs text-[#3C4C62] align-middle">circle</span>
                 Offline Payment (BDT 0.00)
               </li>
             </ul>
@@ -793,29 +798,29 @@
           <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
             <thead class="bg-[#D2E9FB] text-left">
               <tr>
-                <th class="px-4 py-3 w-[10%] lg:w-fit">SL</th>
-                <th class="px-4 py-3 w-[30%] lg:w-fit">Duration</th>
-                <th class="px-4 py-3 w-[20%] lg:w-fit">In-House Earning</th>
-                <th class="px-4 py-3 w-[20%] lg:w-fit">Commission Earning</th>
-                <th class="px-4 py-3 w-[20%] lg:w-fit">Earn from Shipping</th>
-                <th class="px-4 py-3 w-[20%] lg:w-fit">Discount Given</th>
-                <th class="px-4 py-3 w-[20%] lg:w-fit">VAT/TAX</th>
-                <th class="px-4 py-3 w-[20%] lg:w-fit">Refund Given</th>
-                <th class="px-4 py-3 w-[20%] lg:w-fit">Total Earning</th>
-                <th class="px-4 py-3 w-[20%] lg:w-fit">Action</th>
+                <th class="px-5 py-3 w-[10%] lg:w-fit">SL</th>
+                <th class="px-5 py-3 w-[30%] lg:w-fit">Duration</th>
+                <th class="px-5 py-3 w-[20%] lg:w-fit">In-House Earning</th>
+                <th class="px-5 py-3 w-[30%] lg:w-fit">Commission Earning</th>
+                <th class="px-5 py-3 w-[20%] lg:w-fit">Earn from Shipping</th>
+                <th class="px-5 py-3 w-[20%] lg:w-fit">Discount Given</th>
+                <th class="px-5 py-3 w-[20%] lg:w-fit">VAT/TAX</th>
+                <th class="px-5 py-3 w-[20%] lg:w-fit">Refund Given</th>
+                <th class="px-5 py-3 w-[20%] lg:w-fit">Total Earning</th>
+                <th class="px-5 py-3 w-[20%] lg:w-fit">Action</th>
               </tr>
             </thead>
             <tbody class="text-left">
               <tr>
-                <td class="py-2 px-4 min-w-[box-width]">1</td>
-                <td class="py-2 px-4 min-w-[box-width]">January-2023</td>
-                <td class="py-2 px-4 min-w-[box-width]">BDT 0.00</td>
-                <td class="py-2 px-4 min-w-[box-width]">BDT 0.00</td>
-                <td class="py-2 px-4 min-w-[box-width]">BDT 0.00</td>
-                <td class="py-2 px-4 min-w-[box-width]">BDT 0.00</td>
-                <td class="py-2 px-4 min-w-[box-width]">BDT 0.00</td>
-                <td class="py-2 px-4 min-w-[box-width]">BDT 0.00</td>
-                <td class="py-2 px-4 min-w-[box-width]">BDT 0.00</td>
+                <td class="py-3 px-5 min-w-[box-width]">1</td>
+                <td class="py-3 px-5 min-w-[box-width]">January-2023</td>
+                <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
+                <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
+                <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
+                <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
+                <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
+                <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
+                <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
 
                 <td class="py-2 px-4 min-w-[box-width] gap-2">
                   <a href="#">
@@ -895,7 +900,7 @@
       datasets: [{
         data: [300, 0, 0, 0],
         backgroundColor: [
-          'rgb(10, 120, 255)',
+          'rgb(19, 78, 163, 1)',
           'rgb(54, 162, 235)',
           'rgb(255, 205, 86)',
           'rgb(255, 205, 255)'

@@ -1,10 +1,7 @@
 //Navbar  and Sidebar  starts
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the button and the mobile menu
   var button = document.querySelector(".left");
   var mobileMenu = document.querySelector('[data-collapse="sticky-sidebar"]');
-
-  // Toggle the mobile menu when the button is clicked
   button.addEventListener("click", function () {
     mobileMenu.classList.toggle("hidden");
   });

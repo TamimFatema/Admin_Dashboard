@@ -41,47 +41,23 @@
                 class="bg-white shadow-xl p-4 sm:p-8 md:p-10 lg:p-8 rounded-md flex-grow">
                 <h1 class="underline text-[#134EA3] text-2xl font-bold mb-3">English (EN)</h1>
                 <!-- Category Name -->
-                <div class="flex flex-col sm:flex-row justify-between">
+                <div class="flex flex-col lg:flex-row justify-between">
                     <div class="flex flex-col gap-2">
-                        <div class="lg:w-80 xl:w-96 mb-2">
-                            <label for="priority" class="block text-sm font-medium text-black mb-2"
-                                placeholder="Select Location">Banner Location</label>
-                            <select id="priority" name="priority" class="mt-1 p-2 w-full rounded-md custom-dropdown">
-                                <option value="1">Top</option>
-                                <option value="2">Side</option>
-                                <option value="3">Pop Up</option>
-                                <option value="4">Header</option>
-                                <option value="5">Main</option>
-                                <option value="6">Footer</option>
-                            </select>
-                        </div>
-
                         <div class="w-full lg:w-80 xl:w-96 mb-2 ">
                             <div class="flex items-center gap-2">
-                                <label for="categoryName" class="block text-sm font-medium text-black">Custom Link
-                                </label>
-                                <input type="checkbox" id="customLinkCheckbox" name="customLinkCheckbox" class="mr-2">
+                                <label for="categoryName" class="block text-sm font-medium text-black">Banner
+                                    Title</label>
                             </div>
                             <input type="text" id="categoryName" name="categoryName"
                                 class="mt-1 p-2 w-full border border-black rounded-md" required />
                         </div>
 
-                        <!-- Priority -->
-                        <div class="lg:w-80 xl:w-96 mb-2">
-                            <label for="priority" class="block text-sm font-medium text-black mb-2">Choose
-                                Product</label>
-                            <select id="priority" name="priority" class="mt-1 p-2 w-full rounded-md custom-dropdown">
-                                <option value="1">iPhone</option>
-                                <option value="2">Galaxy</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select>
+                        <!-- Status -->
+                        <div class="flex items-center gap-2 mb-2">
+                            <label for="link-checkbox" class="block text-sm font-medium text-black">
+                                Status</label>
+                            <input name="featured" id="link-checkbox" type="checkbox" value="1"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded ">
                         </div>
 
                         <!-- Image Upload -->
@@ -94,7 +70,7 @@
 
                     <!-- Image Preview -->
                     <img id="preview" src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg"
-                        alt="Preview" class="h-[220px] w-auto self-center rounded-md" />
+                        alt="Preview" class="h-[220px] w-auto self-end rounded-md" />
 
                     <!-- Submit Buttons -->
                     <div class="mt-4 flex gap-3 items-end">
@@ -104,7 +80,7 @@
                         </button>
                         <button type="submit"
                             class="w-full h-fit bg-[#134EA3] text-white px-6 py-2 font-bold rounded-md">
-                            Update
+                            Submit
                         </button>
                     </div>
                 </div>

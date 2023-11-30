@@ -41,45 +41,22 @@
         class="bg-white shadow-xl p-4 sm:p-8 md:p-10 lg:p-8 rounded-md flex-grow">
         <h1 class="underline text-[#134EA3] text-2xl font-bold mb-3">English (EN)</h1>
         <!-- Category Name -->
-        <div class="flex flex-col sm:flex-row justify-between">
+        <div class="flex flex-col lg:flex-row justify-between">
           <div class="flex flex-col gap-2">
-            <div class="lg:w-80 xl:w-96 mb-2">
-              <label for="priority" class="block text-sm font-medium text-black mb-2"
-                placeholder="Select Location">Banner Location</label>
-              <select id="priority" name="priority" class="mt-1 p-2 w-full rounded-md custom-dropdown">
-                <option value="1">Top</option>
-                <option value="2">Side</option>
-                <option value="3">Pop Up</option>
-                <option value="4">Header</option>
-                <option value="5">Main</option>
-                <option value="6">Footer</option>
-              </select>
-            </div>
-
             <div class="w-full lg:w-80 xl:w-96 mb-2 ">
               <div class="flex items-center gap-2">
-                <label for="categoryName" class="block text-sm font-medium text-black">Custom Link </label>
-                <input type="checkbox" id="customLinkCheckbox" name="customLinkCheckbox" class="mr-2">
+                <label for="categoryName" class="block text-sm font-medium text-black">Banner Title</label>
               </div>
               <input type="text" id="categoryName" name="categoryName"
                 class="mt-1 p-2 w-full border border-black rounded-md" required />
             </div>
 
-            <!-- Priority -->
-            <div class="lg:w-80 xl:w-96 mb-2">
-              <label for="priority" class="block text-sm font-medium text-black mb-2">Choose Product</label>
-              <select id="priority" name="priority" class="mt-1 p-2 w-full rounded-md custom-dropdown">
-                <option value="1">iPhone</option>
-                <option value="2">Galaxy</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
+            <!-- Status -->
+            <div class="flex items-center gap-2 mb-2">
+              <label for="link-checkbox" class="block text-sm font-medium text-black">
+                Status</label>
+              <input name="featured" id="link-checkbox" type="checkbox" value="1"
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded ">
             </div>
 
             <!-- Image Upload -->
@@ -92,7 +69,7 @@
 
           <!-- Image Preview -->
           <img id="preview" src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg" alt="Preview"
-            class="h-[220px] w-auto self-center rounded-md" />
+            class="h-[220px] w-auto self-end rounded-md" />
 
           <!-- Submit Buttons -->
           <div class="mt-4 flex gap-3 items-end">
@@ -109,96 +86,100 @@
 
     <!-- Table Section -->
     <div class="bg-white shadow-xl overflow-x-auto rounded-lg">
-      <div class="flex justify-between p-5 flex-wrap">
+      <div class="flex justify-between p-5 gap-2 flex-col sm:flex-row">
         <div class="flex gap-4 text-base">
           <h1 class="text-2xl font-bold mb-2">Top Banner</h1>
           <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
         </div>
 
-        <div class="flex gap-4">
-          <div class="flex">
+        <div class="flex flex-wrap self-end gap-4">
+          <div class="flex border border-gray-800 shadow-md rounded-lg">
             <div class="flex items-center rounded-l-lg border p-2 gap-2">
               <span class="material-symbols-outlined text-gray-700">
                 search
               </span>
-              <input type="text" placeholder="Search" />
+              <input type="text" placeholder="Search by order id" class="w-[75px] md:w-[150px]"
+                style="outline: none;" />
             </div>
             <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">
               Search
             </button>
           </div>
-          <div class="button-container">
-            <button class="border-2 border-[#134EA3] center-container gap-1 p-1 sm:p-2 rounded-md">
-              <span class="material-symbols-outlined text-[#134EA3]">
-                download
-              </span>
-              <p class="text-[#134EA3]">Export</p>
-              <span class="material-symbols-outlined  text-[#134EA3]">
-                keyboard_arrow_down
-              </span>
-            </button>
-          </div>
+          <button class="flex items-center border-2 border-[#134EA3] gap-1 p-1 sm:p-2 rounded-md">
+            <span class="material-symbols-outlined text-[#134EA3]">
+              download
+            </span>
+            <span class="text-[#134EA3]">Export</span>
+            <span class="material-symbols-outlined  text-[#134EA3]">
+              keyboard_arrow_down
+            </span>
+          </button>
         </div>
 
       </div>
 
       <!-- Table -->
-      <table id="categoryTable" class="w-full text-sm text-black text-center">
-        <thead class="text-xs text-black uppercase bg-[#D2E9FB]">
-          <tr>
-            <th scope="col" class="px-6 py-3">ID</th>
-            <th scope="col" class="px-6 py-3">Banner Image</th>
-            <th scope="col" class="px-6 py-3">Banner Status</th>
-            <th scope="col" class="px-6 py-3">Time</th>
-            <th scope="col" class="px-6 py-3">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <td class="py-2 px-4 border-b min-w-[box-width]">1</td>
-          <td class="py-2 px-4 border-b min-w-[box-width]">
-            <img
-              src="https://img.freepik.com/free-vector/abstract-yellow-blue-geometric-banner-half-tone-design_1017-39620.jpg"
-              alt="" style="width: auto; height: 50px;" class="mx-auto" />
-          </td>
-          <td class="py-2 px-4 border-b min-w-[box-width] toggle-row">
-            <a href="#">
-              <span class="material-icons toggle-element" data-value="0">
-                toggle_off
-              </span>
-            </a>
-          </td>
-          <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
-            <div class="flex flex-col">
-              <p>26th November 2023 10:00am -</p>
-              <p>26th November 2023 10:00pm </p>
-            </div>
+      <div class="w-full overflow-x-scroll md:overflow-auto">
+        <table id="categoryTable" class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
+          <thead class="text-xs text-black uppercase text-left bg-[#D2E9FB]">
+            <tr>
+              <th scope="col" class="px-6 py-3 w-[10%] lg:w-fit">ID</th>
+              <th scope="col" class="px-6 py-3 w-[50%] lg:w-fit">Banner Image</th>
+              <th scope="col" class="px-6 py-3 w-[40%] lg:w-fit">Banner Status</th>
+              <th scope="col" class="px-6 py-3 w-[50%] lg:w-fit">Time</th>
+              <th scope="col" class="px-6 py-3 w-[50%] lg:w-fit">Action</th>
+            </tr>
+          </thead>
+          <tbody class="text-left">
+            <td class="px-6 py-3 border-b min-w-[box-width]">1</td>
+            <td class="px-6 py-3 border-b min-w-[box-width]">
+              <img
+                src="https://img.freepik.com/free-vector/abstract-yellow-blue-geometric-banner-half-tone-design_1017-39620.jpg"
+                alt="" style="width: auto; height: 50px;" />
+            </td>
+            <td class="px-6 py-3 border-b min-w-[box-width] toggle-row">
+              <a href="#">
+                <label class="relative inline-flex items-center mb-5 cursor-pointer">
+                  <input type="checkbox" value="" class="sr-only peer">
+                  <div
+                    class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                  </div>
+                </label>
+              </a>
+            </td>
+            <td class="px-6 py-3 border-b min-w-[box-width] gap-2">
+              <div class="flex flex-col">
+                <p>26th November 2023 10:00am -</p>
+                <p>26th November 2023 10:00pm </p>
+              </div>
 
-          <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
-            <a href="/Promotion/Banners/Top Banner/TopUpdate.html">
-              <span class="material-symbols-outlined border border-[#46D7BD] rounded-md text-[#46D7BD]">
-                edit
-              </span>
-            </a>
-            <a href="#">
-              <span class="material-symbols-outlined border border-red-500 rounded-md text-red-500">
-                delete
-              </span>
-            </a>
+            <td class="px-6 py-3 border-b min-w-[box-width] gap-2">
+              <a href="/Promotion/Banners/Top Banner/TopUpdate.html">
+                <span class="material-symbols-outlined border border-[#46D7BD] rounded-md text-[#46D7BD]">
+                  edit
+                </span>
+              </a>
+              <a href="#">
+                <span class="material-symbols-outlined border border-red-500 rounded-md text-red-500">
+                  delete
+                </span>
+              </a>
 
-          </td>
-        </tbody>
-      </table>
-      <!-- <div class="flex items-center justify-end space-x-4 mb-6 mx-3">
-          <span class="material-symbols-outlined border py-2 px-2 rounded">
-            chevron_left
-          </span>
-          <button class="page-btn text-black border py-2 px-4 rounded">1</button>
-          <button class="page-btn text-black border py-2 px-4 rounded">2</button>
-          <button class="page-btn text-black border py-2 px-4 rounded">3</button>
-          <span class="material-symbols-outlined border py-2 px-2 rounded">
-            chevron_right
-          </span>
-        </div> -->
+            </td>
+          </tbody>
+        </table>
+      </div>
+      <div class="flex items-center justify-end md:hidden space-x-4 my-6 mx-3">
+        <span class="material-symbols-outlined border py-2 px-2 rounded">
+          chevron_left
+        </span>
+        <button class="page-btn text-black border py-2 px-4 rounded">1</button>
+        <button class="page-btn text-black border py-2 px-4 rounded">2</button>
+        <button class="page-btn text-black border py-2 px-4 rounded">3</button>
+        <span class="material-symbols-outlined border py-2 px-2 rounded">
+          chevron_right
+        </span>
+      </div>
     </div>
   </div>
   <script>

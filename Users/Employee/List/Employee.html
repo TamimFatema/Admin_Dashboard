@@ -48,32 +48,34 @@
           <h1 class="text-xl font-bold mb-4">Employee Table</h1>
           <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
         </div>
-        <div class="flex">
-          <div class="flex items-center rounded-l-lg border p-2 gap-2">
-            <span class="material-symbols-outlined text-gray-700">
-              search
-            </span>
-            <input type="text" placeholder="Search" class="w-[100px] md:w-[150px]" />
+        <div class="flex gap-10">
+          <div class="flex">
+            <div class="flex justify-items-end rounded-l-lg border p-2 gap-2">
+              <span class="material-symbols-outlined text-gray-700">
+                search
+              </span>
+              <input type="text" placeholder="Search by employee’s name" class="w-[100px] md:w-[300px]"
+                style="outline:none;" />
+            </div>
+            <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">
+              Search
+            </button>
           </div>
-          <button class="bg-visible rounded-r-lg px-2 text-white">
-            Search
+          <button class="border-2 border-[#134EA3] center-container gap-1 p-1 sm:p-2 rounded-md shadow-lg">
+            <span class="material-symbols-outlined text-[#134EA3]">download</span>
+            <p class="text-[#134EA3]">Export</p>
+            <span class="material-symbols-outlined text-[#134EA3]">keyboard_arrow_down</span>
           </button>
         </div>
-        <button class="bg-[#134EA3] center-container gap-1 p-1 sm:p-2 rounded-md">
-          <span class="material-symbols-outlined text-white">
-            add
-          </span>
-          <p class="text-white">Add New</p>
-        </button>
       </div>
 
       <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
-        <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-md text-gray-500 text-center">
+        <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
           <thead class="bg-[#D2E9FB]">
             <tr>
               <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">SL</th>
               <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Name</th>
-              <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Email</th>
+              <th class="py-2 w-[50%] md:w-[40%] lg:w-fit">Email</th>
               <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Phone</th>
               <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Role</th>
               <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Status</th>
@@ -81,65 +83,22 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="py-2 px-4 border-b min-w-[box-width]">1</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">Tamim Fatema</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">tamimfatema@gmail.com</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">0188000000</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">FrontEnd Developer</td>
-              <td class="py-2 px-4 border-b min-w-[box-width] toggle-row">
-                <a href="#">
-                  <span class="material-icons toggle-element" data-value="1">
-                    toggle_off
-                  </span>
-                </a>
+            <tr class="border-b items-center">
+              <td class="py-2 px-4 min-w-[box-width]">1</td>
+              <td class="py-2 px-4 min-w-[box-width]">Tamim Fatema</td>
+              <td class="py-2 px-4 min-w-[box-width]">tamimfatema@gmail.com</td>
+              <td class="py-2 px-4 min-w-[box-width]">0188000000</td>
+              <td class="py-2 px-4 min-w-[box-width]">FrontEnd Developer</td>
+              <td class="py-2 px-4 min-w-[box-width] toggle-row">
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" value="" class="sr-only peer">
+                  <div
+                    class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#134EA3]">
+                  </div>
+                </label>
               </td>
-              <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
-                <a href="/Product_Management/Brands/List/BrandUpdate.html">
-                  <span class="material-symbols-outlined border border-[#46D7BD] rounded-md text-[#46D7BD]">
-                    edit
-                  </span>
-                </a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="py-2 px-4 border-b min-w-[box-width]">1</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">Tamim Fatema</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">tamimfatema@gmail.com</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">0188000000</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">FrontEnd Developer</td>
-              <td class="py-2 px-4 border-b min-w-[box-width] toggle-row">
-                <a href="#">
-                  <span class="material-icons toggle-element" data-value="1">
-                    toggle_off
-                  </span>
-                </a>
-              </td>
-              <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
-                <a href="/Product_Management/Brands/List/BrandUpdate.html">
-                  <span class="material-symbols-outlined border border-[#46D7BD] rounded-md text-[#46D7BD]">
-                    edit
-                  </span>
-                </a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="py-2 px-4 border-b min-w-[box-width]">1</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">Tamim Fatema</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">tamimfatema@gmail.com</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">0188000000</td>
-              <td class="py-2 px-4 border-b min-w-[box-width]">FrontEnd Developer</td>
-              <td class="py-2 px-4 border-b min-w-[box-width] toggle-row">
-                <a href="#">
-                  <span class="material-icons toggle-element" data-value="1">
-                    toggle_off
-                  </span>
-                </a>
-              </td>
-              <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
-                <a href="/Product_Management/Brands/List/BrandUpdate.html">
+              <td class="py-2 px-4 min-w-[box-width] gap-2">
+                <a href="/Users/Employee/Role Setup/RoleSetupEmployee.html">
                   <span class="material-symbols-outlined border border-[#46D7BD] rounded-md text-[#46D7BD]">
                     edit
                   </span>
@@ -149,44 +108,9 @@
           </tbody>
         </table>
       </div>
-
-      <!-- <div class="md:hidden flex items-center justify-end space-x-4 mb-6 mx-3">
-        <span class="material-symbols-outlined border py-2 px-2 rounded">
-          chevron_left
-        </span>
-        <button class="page-btn text-black border py-2 px-4 rounded">1</button>
-        <button class="page-btn text-black border py-2 px-4 rounded">2</button>
-        <button class="page-btn text-black border py-2 px-4 rounded">3</button>
-        <span class="material-symbols-outlined border py-2 px-2 rounded">
-          chevron_right
-        </span>
-      </div> -->
     </div>
   </div>
-
-  <script>
-    // Get all elements with the toggle class
-    const toggleElements = document.querySelectorAll('.toggle-element');
-
-    // Add a click event listener to toggle the state for each element
-    toggleElements.forEach(toggleElement => {
-      toggleElement.addEventListener('click', () => {
-        // Toggle the value between 1 and 0
-        const currentValue = parseInt(toggleElement.getAttribute('data-value'));
-        const newValue = currentValue === 1 ? 0 : 1;
-
-        // Update the value attribute
-        toggleElement.setAttribute('data-value', newValue);
-
-        // Toggle the class for the "on" state
-        toggleElement.classList.toggle('on', newValue === 1);
-
-        // Set the icon based on the value
-        toggleElement.innerText = newValue === 1 ? 'toggle_on' : 'toggle_off';
-      });
-    });
-  </script>
-
 </body>
+<script src="/Script.js"></script>
 
 </html>

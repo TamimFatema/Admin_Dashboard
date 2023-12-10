@@ -692,8 +692,31 @@
 
       <div class="bg-white p-5 md:p-10 lg:p-5 rounded-lg shadow-xl flex flex-col mb-6">
         <h1 class="font-bold text-lg mb-2">Filter Data</h1>
-        <div class="flex flex-col md:flex-row space-x-6 justify-stretch">
+        <div class="flex flex-col md:flex-row space-x-6">
           <div class="flex w-full md:w-96 gap-2">
+
+            <div class="flex w-full md:w-96 gap-2">
+
+              <select class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md">
+                <option value="option1">This Year</option>
+                <option value="option2">This Month</option>
+                <option value="option3">This Week</option>
+              </select>
+
+              <select class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md">
+                <option value="option1">This Year</option>
+                <option value="option2">This Month</option>
+                <option value="option3">This Week</option>
+              </select>
+
+              <select class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md">
+                <option value="option1">This Year</option>
+                <option value="option2">This Month</option>
+                <option value="option3">This Week</option>
+              </select>
+            </div>
+
+
             <select id="selector" name="selector"
               class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md "
               onchange="showDateFields()">
@@ -702,6 +725,7 @@
               <option value="option3">This Week</option>
               <option value="custom">Custom</option>
             </select>
+
 
             <div class="flex flex-col md:flex-row gap-2 flex-grow" id="dateFields" style="display: none;">
               <div class="flex flex-col flex-1 flex-grow">
@@ -716,8 +740,7 @@
                   class="p-2 border border-gray-300 rounded-md w-full md:96">
               </div>
             </div>
-            <button
-              class="bg-[#134EA3] h-fit self-end text-white center-container gap-2  py-2 px-4 sm:p-2 rounded-md flex-grow">
+            <button class="bg-[#134EA3] h-fit self-end text-white center-container gap-2  py-2 px-4 sm:p-2 rounded-md">
               <span class="material-symbols-outlined">
                 filter_alt
               </span>
@@ -847,9 +870,11 @@
                 Search
               </button>
             </div>
-            <button  class="flex items-center border-2 border-[#134EA3] gap-1 p-1 sm:p-2 rounded-md">
+            <button class="flex items-center border-2 border-[#134EA3] gap-1 p-1 sm:p-2 rounded-md">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 18H16V16H8V18ZM8 14H16V12H8V14ZM6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V4C4 3.45 4.19583 2.97917 4.5875 2.5875C4.97917 2.19583 5.45 2 6 2H14L20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6ZM13 9V4H6V20H18V9H13Z" fill="#134EA3"/>
+                <path
+                  d="M8 18H16V16H8V18ZM8 14H16V12H8V14ZM6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V4C4 3.45 4.19583 2.97917 4.5875 2.5875C4.97917 2.19583 5.45 2 6 2H14L20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6ZM13 9V4H6V20H18V9H13Z"
+                  fill="#134EA3" />
               </svg>
               <span class="text-[#134EA3]">Download PDF</span>
             </button>

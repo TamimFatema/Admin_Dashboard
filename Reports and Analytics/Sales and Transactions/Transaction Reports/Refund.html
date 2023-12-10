@@ -25,8 +25,9 @@
       },
     };
   </script>
-  <title>Earnings</title>
+  <title>Transaction Report</title>
 </head>
+
 
 <body class="h-max bg-gray-100">
   <!-- Navbar Starts -->
@@ -674,15 +675,18 @@
         <span class="material-symbols-outlined">
           monitoring
         </span>
-        <h2 class="text-2xl font-bold">Earning Reports</h2>
+        <h2 class="text-2xl font-bold">Transaction Report</h2>
       </div>
 
       <div class="flex gap-10 mb-4 text-md font-semibold">
-        <a href="/Reports and Analytics/Sales and Transactions/Earning Reports/EarningReports.html">
-          <p class="underline text-[#134EA3]">Admin Earning</p>
+        <a href="/Reports and Analytics/Sales and Transactions/Transaction Reports/TransactionReport.html">
+          <p class="">Order Transaction</p>
         </a>
-        <a href="/Reports and Analytics/Sales and Transactions/Earning Reports/SellerEarningReport.html">
-          <p class="underline">Seller Earning</p>
+        <a href="/Reports and Analytics/Sales and Transactions/Transaction Reports/Expense.html">
+          <p class="">Expense Transaction</p>
+        </a>
+        <a href="/Reports and Analytics/Sales and Transactions/Transaction Reports/Refund.html">
+          <p class="underline text-[#134EA3]">Refund Transaction</p>
         </a>
       </div>
 
@@ -738,35 +742,35 @@
                   fill="#134EA3" />
               </svg>
               <div class="flex flex-col mb-4">
-                <p class="font-bold text-2xl mb-2">BDT 53,675.00</p>
+                <p class="font-bold text-2xl mb-2">6</p>
                 <p class="text-sm">Total Earnings</p>
               </div>
             </div>
-            <div class="flex justify-between text-sm mb-2">
+            <div class="flex justify-around text-sm mb-2">
               <div class="flex flex-col items-center">
-                <p class="text-[#FF6291] font-bold">BDT 0.00</p>
-                <p>Commission</p>
+                <p class="text-[#257BF6] font-bold whitespace-nowrap">1</p>
+                <p>Seller Orders</p>
               </div>
               <div class="flex flex-col items-center">
-                <p class="text-[#257BF6] font-bold whitespace-nowrap">BDT 53,675.00</p>
-                <p>In-House</p>
-              </div>
-              <div class="flex flex-col items-center">
-                <p class="text-[#16E198] font-bold">BDT 0.00</p>
-                <p>Shipping</p>
+                <p class="text-[#16E198] font-bold">0</p>
+                <p>Seller Orders</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-white flex py-6 px-5 rounded-lg shadow-lg items-center gap-3">
+          <div class="bg-white flex py-6 px-5 rounded-lg shadow-lg items-center gap-3 justify-between">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M18.3333 32.375V20.9583L8.33333 15.1667V26.5833L18.3333 32.375ZM21.6667 32.375L31.6667 26.5833V15.1667L21.6667 20.9583V32.375ZM18.3333 36.2083L6.66667 29.5C6.13889 29.1945 5.72917 28.7917 5.4375 28.2917C5.14583 27.7917 5 27.2361 5 26.625V13.375C5 12.7639 5.14583 12.2083 5.4375 11.7083C5.72917 11.2083 6.13889 10.8056 6.66667 10.5L18.3333 3.79168C18.8611 3.48612 19.4167 3.33334 20 3.33334C20.5833 3.33334 21.1389 3.48612 21.6667 3.79168L33.3333 10.5C33.8611 10.8056 34.2708 11.2083 34.5625 11.7083C34.8542 12.2083 35 12.7639 35 13.375V26.625C35 27.2361 34.8542 27.7917 34.5625 28.2917C34.2708 28.7917 33.8611 29.1945 33.3333 29.5L21.6667 36.2083C21.1389 36.5139 20.5833 36.6667 20 36.6667C19.4167 36.6667 18.8611 36.5139 18.3333 36.2083ZM26.6667 14.2083L29.875 12.375L20 6.66668L16.75 8.54168L26.6667 14.2083ZM20 18.0833L23.25 16.2083L13.375 10.5L10.125 12.375L20 18.0833Z"
                 fill="#FF7008" />
             </svg>
-            <div class="flex flex-col">
-              <p class="font-bold text-2xl">20</p>
-              <p class="text-sm">Total In-House Products</p>
+            <div class="flex flex-col items-center">
+              <p class="text-[#257BF6] font-bold whitespace-nowrap">1</p>
+              <p>In-House Products</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <p class="text-[#16E198] font-bold">0</p>
+              <p>Seller Products</p>
             </div>
           </div>
 
@@ -778,7 +782,7 @@
             </svg>
             <div class="flex flex-col">
               <p class="font-bold text-2xl">20</p>
-              <p class="text-sm">Total Shop</p>
+              <p class="text-sm">Total Store</p>
             </div>
           </div>
         </div>
@@ -824,24 +828,54 @@
 
       <!--Table-->
       <div class="bg-white shadow-xl overflow-x-auto rounded-lg">
-        <div class="flex gap-4 text-base px-4 pt-2">
-          <h1 class="text-2xl font-bold mb-4">Total Earnings</h1>
-          <p class="w-8 h-8 rounded-full bg-[#D2E9FB] flex items-center justify-center font-bold">2</p>
+        <div class="flex justify-between p-5 gap-2 flex-col sm:flex-row">
+          <div class="flex gap-4 text-base">
+            <h1 class="text-2xl font-bold mb-2">Total Products</h1>
+            <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
+          </div>
+
+          <div class="flex flex-wrap self-end gap-4">
+            <div class="flex border border-gray-800 shadow-md rounded-lg">
+              <div class="flex items-center rounded-l-lg border p-2 gap-2">
+                <span class="material-symbols-outlined text-gray-700">
+                  search
+                </span>
+                <input type="text" placeholder="Search by order id" class="w-[170px] md:w-[200px]"
+                  style="outline: none;" />
+              </div>
+              <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">
+                Search
+              </button>
+            </div>
+            <button  class="flex items-center border-2 border-[#134EA3] gap-1 p-1 sm:p-2 rounded-md">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 18H16V16H8V18ZM8 14H16V12H8V14ZM6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V4C4 3.45 4.19583 2.97917 4.5875 2.5875C4.97917 2.19583 5.45 2 6 2H14L20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6ZM13 9V4H6V20H18V9H13Z" fill="#134EA3"/>
+              </svg>
+              <span class="text-[#134EA3]">Download PDF</span>
+            </button>
+            <button class="flex items-center border-2 border-[#134EA3] gap-1 p-1 sm:p-2 rounded-md">
+              <span class="material-symbols-outlined text-[#134EA3]">
+                download
+              </span>
+              <span class="text-[#134EA3]">Export</span>
+              <span class="material-symbols-outlined  text-[#134EA3]">
+                keyboard_arrow_down
+              </span>
+            </button>
+          </div>
+
         </div>
         <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
           <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
             <thead class="bg-[#D2E9FB] text-left">
               <tr>
                 <th class="px-5 py-3 w-[10%] lg:w-fit">SL</th>
-                <th class="px-5 py-3 w-[30%] lg:w-fit">Duration</th>
-                <th class="px-5 py-3 w-[20%] lg:w-fit">In-House Earning</th>
-                <th class="px-5 py-3 w-[30%] lg:w-fit">Commission Earning</th>
-                <th class="px-5 py-3 w-[20%] lg:w-fit">Earn from Shipping</th>
-                <th class="px-5 py-3 w-[20%] lg:w-fit">Discount Given</th>
-                <th class="px-5 py-3 w-[20%] lg:w-fit">VAT/TAX</th>
-                <th class="px-5 py-3 w-[20%] lg:w-fit">Refund Given</th>
-                <th class="px-5 py-3 w-[20%] lg:w-fit">Total Earning</th>
-                <th class="px-5 py-3 w-[20%] lg:w-fit">Action</th>
+                <th class="px-5 py-3 w-[20%] lg:w-fit">XID</th>
+                <th class="px-5 py-3 w-[20%] lg:w-fit">Transaction Date</th>
+                <th class="px-5 py-3 w-[70%] lg:w-fit">Order ID</th>
+                <th class="px-5 py-3 w-[50%] lg:w-fit">Expense Amount</th>
+                <th class="px-5 py-3 w-[50%] lg:w-fit">Expense Type</th>
+                <th class="px-5 py-3 w-[50%] lg:w-fit">Action</th>
               </tr>
             </thead>
             <tbody class="text-left">
@@ -852,10 +886,6 @@
                 <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
                 <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
                 <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
-                <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
-                <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
-                <td class="py-3 px-5 min-w-[box-width]">BDT 0.00</td>
-
                 <td class="py-2 px-4 min-w-[box-width] gap-2">
                   <a href="#">
                     <span class="material-symbols-outlined border border-green-300 rounded-md text-green-300">
@@ -871,6 +901,7 @@
 
     </div>
   </div>
+
   <script>
     const ctx = document.getElementById('myChart');
 

@@ -84,10 +84,9 @@
 
   <div class="flex">
     <!-- Sidebar Starts -->
-    <div
-      class="hidden absolute md:static md:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
+    <div class="hidden md:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
       data-collapse="sticky-sidebar">
-      <div class="relative shadow-xl rounded-3xl">
+      <div class="relative shadow-xl rounded-3xl absolute">
         <span class="absolute inset-y-0 left-0 flex items-center pl-3">
           <span class="material-symbols-outlined text-gray-700">
             search
@@ -127,7 +126,7 @@
             <h3 class="p-1">ORDER MANAGEMENT</h3>
             <ul class="dropdown">
               <li class="p-1">
-                <a id="orders-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500 duration-300 ease-in-out"
+                <a id="orders-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500 ease-in-out"
                   href="javascript:void(0)"
                   onclick="toggleDropdown('orders-dropdown'); toggleIcon('expand-icon-orders')">
                   <span class="material-symbols-outlined"> package </span>
@@ -153,7 +152,7 @@
 
                   <a href="/Order Management/Orders/Packaged Orders/PackagedOrders.html"
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>PackagedOrders</li>
+                    <li>Packaged Orders</li>
                   </a>
 
                   <a href="/Order Management/Orders/Out for Delivery/OutforDelivery.html"
@@ -339,8 +338,7 @@
 
 
                   <a href="/Product_Management/Seller Products/Declined Products/DeclinedProduct.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">Declined
-                    <li>Product </li>
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"><li>Declined Product </li>
                   </a>
 
                 </ul>
@@ -348,7 +346,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">PROMOTION MANAGEMENT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -442,7 +440,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">HELP & SUPPORT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -462,7 +460,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">REPORT & ANALYTICS</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -520,7 +518,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">USER MANAGEMENT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">

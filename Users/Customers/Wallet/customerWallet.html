@@ -42,8 +42,8 @@
                 </span>
             </button>
             <!-- <div class="flex">
-          <img src="/Images/Blue Illustrative E-Commerce Online Shop Logo(2).png" alt="upon logo" style="width: auto; height: 40px;"/>
-        </div> -->
+        <img src="/Images/Blue Illustrative E-Commerce Online Shop Logo(2).png" alt="upon logo" style="width: auto; height: 40px;"/>
+      </div> -->
             <ul class="ml-auto justify-items-end gap-3 flex">
                 <li
                     class="block p-1 justify-items-start font-sans text-sm font-normal leading-normal text-inherit antialiased">
@@ -85,9 +85,9 @@
 
     <div class="flex">
         <!-- Sidebar Starts -->
-        <div class="hidden absolute md:static md:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
+        <div class="hidden md:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
             data-collapse="sticky-sidebar">
-            <div class="relative shadow-xl rounded-3xl">
+            <div class="relative shadow-xl rounded-3xl absolute">
                 <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                     <span class="material-symbols-outlined text-gray-700">
                         search
@@ -129,7 +129,7 @@
                         <ul class="dropdown">
                             <li class="p-1">
                                 <a id="orders-link"
-                                    class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500 duration-300 ease-in-out"
+                                    class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500 ease-in-out"
                                     href="javascript:void(0)"
                                     onclick="toggleDropdown('orders-dropdown'); toggleIcon('expand-icon-orders')">
                                     <span class="material-symbols-outlined"> package </span>
@@ -156,7 +156,7 @@
 
                                     <a href="/Order Management/Orders/Packaged Orders/PackagedOrders.html"
                                         class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                                        <li>PackagedOrders</li>
+                                        <li>Packaged Orders</li>
                                     </a>
 
                                     <a href="/Order Management/Orders/Out for Delivery/OutforDelivery.html"
@@ -351,8 +351,8 @@
 
 
                                     <a href="/Product_Management/Seller Products/Declined Products/DeclinedProduct.html"
-                                        class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">Declined
-                                        <li>Product </li>
+                                        class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                                        <li>Declined Product </li>
                                     </a>
 
                                 </ul>
@@ -360,7 +360,7 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="mb-2">
                         <h3 class="py-2">PROMOTION MANAGEMENT</h3>
                         <ul class="dropdown p-1">
                             <li class="p-1">
@@ -458,7 +458,7 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="mb-2">
                         <h3 class="py-2">HELP & SUPPORT</h3>
                         <ul class="dropdown p-1">
                             <li class="p-1">
@@ -478,7 +478,7 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="mb-2">
                         <h3 class="py-2">REPORT & ANALYTICS</h3>
                         <ul class="dropdown p-1">
                             <li class="p-1">
@@ -538,7 +538,7 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="mb-2">
                         <h3 class="py-2">USER MANAGEMENT</h3>
                         <ul class="dropdown p-1">
                             <li class="p-1">
@@ -671,6 +671,7 @@
                                         class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
                                         <li>Employee Role Setup</li>
                                     </a>
+
                                 </ul>
                             </li>
                         </ul>
@@ -682,8 +683,10 @@
         <div class="justify-center container w-full mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
             <div class="flex gap-3 items-center mb-4">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.00015 20.2033C4.84037 20.2033 3.84987 19.7927 3.02867 18.9715C2.20747 18.1503 1.79688 17.1598 1.79688 16V8C1.79688 6.84021 2.20747 5.84972 3.02867 5.02852C3.84987 4.20732 4.84037 3.79672 6.00015 3.79672H18.0002C19.1599 3.79672 20.1504 4.20732 20.9716 5.02852C21.7928 5.84972 22.2034 6.84021 22.2034 8V16C22.2034 17.1598 21.7928 18.1503 20.9716 18.9715C20.1504 19.7927 19.1599 20.2033 18.0002 20.2033H6.00015ZM6.19743 7.92227H17.8387C18.2213 7.92227 18.5873 7.96593 18.9366 8.05325C19.2858 8.14058 19.6164 8.27591 19.9284 8.45925V8C19.9284 7.46595 19.7405 7.01106 19.3648 6.63532C18.9891 6.25961 18.5342 6.07175 18.0002 6.07175H6.00015C5.4661 6.07175 5.01121 6.25961 4.63547 6.63532C4.25976 7.01106 4.0719 7.46595 4.0719 8V8.47717C4.39182 8.28587 4.72841 8.14556 5.08168 8.05625C5.43494 7.96693 5.80686 7.92227 6.19743 7.92227ZM4.36537 11.4054L15.1914 14.0337C15.3654 14.075 15.5383 14.076 15.7102 14.0367C15.8821 13.9974 16.0407 13.9197 16.186 13.8038L19.4757 11.0592C19.2924 10.8013 19.058 10.5931 18.7727 10.4348C18.4874 10.2764 18.176 10.1973 17.8387 10.1973H6.19743C5.77606 10.1973 5.40387 10.3058 5.08085 10.5228C4.75785 10.7399 4.51936 11.0341 4.36537 11.4054Z" fill="black"/>
-                  </svg>
+                    <path
+                        d="M6.00015 20.2033C4.84037 20.2033 3.84987 19.7927 3.02867 18.9715C2.20747 18.1503 1.79688 17.1598 1.79688 16V8C1.79688 6.84021 2.20747 5.84972 3.02867 5.02852C3.84987 4.20732 4.84037 3.79672 6.00015 3.79672H18.0002C19.1599 3.79672 20.1504 4.20732 20.9716 5.02852C21.7928 5.84972 22.2034 6.84021 22.2034 8V16C22.2034 17.1598 21.7928 18.1503 20.9716 18.9715C20.1504 19.7927 19.1599 20.2033 18.0002 20.2033H6.00015ZM6.19743 7.92227H17.8387C18.2213 7.92227 18.5873 7.96593 18.9366 8.05325C19.2858 8.14058 19.6164 8.27591 19.9284 8.45925V8C19.9284 7.46595 19.7405 7.01106 19.3648 6.63532C18.9891 6.25961 18.5342 6.07175 18.0002 6.07175H6.00015C5.4661 6.07175 5.01121 6.25961 4.63547 6.63532C4.25976 7.01106 4.0719 7.46595 4.0719 8V8.47717C4.39182 8.28587 4.72841 8.14556 5.08168 8.05625C5.43494 7.96693 5.80686 7.92227 6.19743 7.92227ZM4.36537 11.4054L15.1914 14.0337C15.3654 14.075 15.5383 14.076 15.7102 14.0367C15.8821 13.9974 16.0407 13.9197 16.186 13.8038L19.4757 11.0592C19.2924 10.8013 19.058 10.5931 18.7727 10.4348C18.4874 10.2764 18.176 10.1973 17.8387 10.1973H6.19743C5.77606 10.1973 5.40387 10.3058 5.08085 10.5228C4.75785 10.7399 4.51936 11.0341 4.36537 11.4054Z"
+                        fill="black" />
+                </svg>
                 <h1 class="text-2xl font-bold">Wallet</h1>
             </div>
             <div class="bg-white shadow-xl rounded-lg mb-6">

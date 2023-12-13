@@ -44,8 +44,8 @@
         </span>
       </button>
       <!-- <div class="flex">
-   <img src="/Images/Blue Illustrative E-Commerce Online Shop Logo(2).png" alt="upon logo" style="width: auto; height: 40px;"/>
- </div> -->
+        <img src="/Images/Blue Illustrative E-Commerce Online Shop Logo(2).png" alt="upon logo" style="width: auto; height: 40px;"/>
+      </div> -->
       <ul class="ml-auto justify-items-end gap-3 flex">
         <li class="block p-1 justify-items-start font-sans text-sm font-normal leading-normal text-inherit antialiased">
           <a href="#" class="flex items-center gap-1">
@@ -86,10 +86,9 @@
 
   <div class="flex">
     <!-- Sidebar Starts -->
-    <div
-      class="hidden absolute md:static md:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
+    <div class="hidden md:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
       data-collapse="sticky-sidebar">
-      <div class="relative shadow-xl rounded-3xl">
+      <div class="relative shadow-xl rounded-3xl absolute">
         <span class="absolute inset-y-0 left-0 flex items-center pl-3">
           <span class="material-symbols-outlined text-gray-700">
             search
@@ -129,13 +128,13 @@
             <h3 class="p-1">ORDER MANAGEMENT</h3>
             <ul class="dropdown">
               <li class="p-1">
-                <a id="orders-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                <a id="orders-link"
+                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500 ease-in-out"
                   href="javascript:void(0)"
                   onclick="toggleDropdown('orders-dropdown'); toggleIcon('expand-icon-orders')">
                   <span class="material-symbols-outlined"> package </span>
                   <p class="mx-4 font-medium">Orders</p>
-                  <span id="expand-icon-orders" class="material-symbols-outlined ml-auto"> expand_more
-                  </span>
+                  <span id="expand-icon-orders" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
 
                 <ul id="orders-dropdown" class="dropdown-content pl-12">
@@ -156,7 +155,7 @@
 
                   <a href="/Order Management/Orders/Packaged Orders/PackagedOrders.html"
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>PackagedOrders</li>
+                    <li>Packaged Orders</li>
                   </a>
 
                   <a href="/Order Management/Orders/Out for Delivery/OutforDelivery.html"
@@ -194,8 +193,7 @@
                   onclick="toggleDropdown('refund-dropdown'); toggleIcon('expand-icon-refund')">
                   <span class="material-symbols-outlined"> change_circle </span>
                   <p class="mx-4 font-medium">Refund Requests</p>
-                  <span id="expand-icon-refund" class="material-symbols-outlined ml-auto"> expand_more
-                  </span>
+                  <span id="expand-icon-refund" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
                 <ul id="refund-dropdown" class="dropdown-content pl-12">
 
@@ -234,8 +232,7 @@
                   onclick="toggleDropdown('category-dropdown'); toggleIcon('expand-icon-category')">
                   <span class="material-symbols-outlined"> menu </span>
                   <p class="mx-4 font-medium">Category Setup</p>
-                  <span id="expand-icon-category" class="material-symbols-outlined ml-auto">
-                    expand_more </span>
+                  <span id="expand-icon-category" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
 
                 <ul id="category-dropdown" class="dropdown-content pl-12">
@@ -263,8 +260,7 @@
                   href="javascript:void(0)" onclick="toggleDropdown('brand-dropdown'); toggleIcon('expand-icon-brand')">
                   <span class="material-symbols-outlined"> star </span>
                   <p class="mx-4 font-medium">Brands</p>
-                  <span id="expand-icon-brand" class="material-symbols-outlined ml-auto"> expand_more
-                  </span>
+                  <span id="expand-icon-brand" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
                 <ul id="brand-dropdown" class="dropdown-content pl-12">
 
@@ -297,8 +293,7 @@
                     home
                   </span>
                   <p class="mx-4 font-medium">In-house Products</p>
-                  <span id="expand-icon-inhouse" class="material-symbols-outlined ml-auto">
-                    expand_more </span>
+                  <span id="expand-icon-inhouse" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
                 <ul id="inhouse-dropdown" class="dropdown-content pl-12">
 
@@ -324,8 +319,7 @@
                     approval_delegation
                   </span>
                   <p class="mx-4 font-medium">Seller Products</p>
-                  <span id="expand-icon-sellerprod" class="material-symbols-outlined ml-auto">
-                    expand_more </span>
+                  <span id="expand-icon-sellerprod" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
 
                 <ul id="sellerprod-dropdown" class="dropdown-content pl-12">
@@ -347,8 +341,8 @@
 
 
                   <a href="/Product_Management/Seller Products/Declined Products/DeclinedProduct.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">Declined
-                    <li>Product </li>
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Declined Product </li>
                   </a>
 
                 </ul>
@@ -356,7 +350,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">PROMOTION MANAGEMENT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -365,8 +359,7 @@
                   onclick="toggleDropdown('banner-dropdown'); toggleIcon('expand-icon-banner')">
                   <span class="material-symbols-outlined">planner_banner_ad_pt</span>
                   <p class="mx-4 font-medium">Banner</p>
-                  <span id="expand-icon-banner" class="material-symbols-outlined ml-auto"> expand_more
-                  </span>
+                  <span id="expand-icon-banner" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
                 <ul id="banner-dropdown" class="dropdown-content pl-12">
                   <a href="/Promotion/Banners/Top Banner/TopBanners.html"
@@ -407,8 +400,7 @@
                   onclick="toggleDropdown('offers-dropdown'); toggleIcon('expand-icon-offers')">
                   <span class="material-symbols-outlined">redeem</span>
                   <p class="mx-4 font-medium">Offers & Deals</p>
-                  <span id="expand-icon-offers" class="material-symbols-outlined ml-auto"> expand_more
-                  </span>
+                  <span id="expand-icon-offers" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
                 <ul id="offers-dropdown" class="dropdown-content pl-12">
 
@@ -452,7 +444,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">HELP & SUPPORT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -472,7 +464,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">REPORT & ANALYTICS</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -483,8 +475,7 @@
                     receipt_long
                   </span>
                   <p class="mx-4 font-medium">Sales & Transactions Report</p>
-                  <span id="expand-icon-sales" class="material-symbols-outlined ml-auto"> expand_more
-                  </span>
+                  <span id="expand-icon-sales" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
 
                 <ul id="sales-dropdown" class="dropdown-content pl-12">
@@ -531,7 +522,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">USER MANAGEMENT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -541,8 +532,7 @@
                   onclick="toggleDropdown('customers-dropdown'); toggleIcon('expand-icon-customers')">
                   <span class="material-symbols-outlined">account_circle</span>
                   <p class="mx-4 font-medium">Customers</p>
-                  <span id="expand-icon-customers" class="material-symbols-outlined ml-auto">
-                    expand_more </span>
+                  <span id="expand-icon-customers" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
                 <ul id="customers-dropdown" class="dropdown-content pl-12">
 
@@ -573,8 +563,7 @@
                   onclick="toggleDropdown('sellers-dropdown'); toggleIcon('expand-icon-sellers')">
                   <span class="material-symbols-outlined"> groups </span>
                   <p class="mx-4 font-medium">All Sellers</p>
-                  <span id="expand-icon-sellers" class="material-symbols-outlined ml-auto">
-                    expand_more </span>
+                  <span id="expand-icon-sellers" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
                 <ul id="sellers-dropdown" class="dropdown-content pl-12">
 
@@ -607,8 +596,7 @@
                   onclick="toggleDropdown('subscribers-dropdown'); toggleIcon('expand-icon-subscribers')">
                   <span class="material-symbols-outlined"> person </span>
                   <p class="mx-4 font-medium">Subscribers</p>
-                  <span id="expand-icon-subscribers" class="material-symbols-outlined ml-auto">
-                    expand_more </span>
+                  <span id="expand-icon-subscribers" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
                 <ul id="subscribers-dropdown" class="dropdown-content pl-12">
 
@@ -625,8 +613,7 @@
                   onclick="toggleDropdown('deliveryman-dropdown'); toggleIcon('expand-icon-deliveryman')">
                   <span class="material-symbols-outlined"> person </span>
                   <p class="mx-4 font-medium">Delivery Man</p>
-                  <span id="expand-icon-deliveryman" class="material-symbols-outlined ml-auto">
-                    expand_more </span>
+                  <span id="expand-icon-deliveryman" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
                 <ul id="deliveryman-dropdown" class="dropdown-content pl-12">
 
@@ -647,8 +634,7 @@
                   onclick="toggleDropdown('employee-dropdown'); toggleIcon('expand-icon-employees')">
                   <span class="material-symbols-outlined"> person </span>
                   <p class="mx-4 font-medium">Employees</p>
-                  <span id="expand-icon-employees" class="material-symbols-outlined ml-auto">
-                    expand_more </span>
+                  <span id="expand-icon-employees" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
 
                 <ul id="employee-dropdown" class="dropdown-content pl-12">

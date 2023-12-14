@@ -37,7 +37,7 @@
     class="inset-0 z-10 block h-max w-full max-w-full rounded-none border border-blue-80 bg-white bg-opacity-80 py-2 px-4 text-white backdrop-saturate-200 md:py-4">
     <div class="flex items-center text-gray-900">
       <button
-        class="left none relative mr-auto h-6 max-h-[40px] w-6 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-blue-gray-500 transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
+        class="left none relative mr-auto h-6 max-h-[40px] w-6 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-blue-gray-500 transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none md:hidden"
         data-collapse-target="sticky-navar">
         <span class="absolute top-1/2 right-1\2 -translate-y-1/2 -translate-x-1/2 transform">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
@@ -88,9 +88,10 @@
 
   <div class="flex">
     <!-- Sidebar Starts -->
-    <div class="hidden md:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
+    <div
+      class="hidden absolute md:static md:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
       data-collapse="sticky-sidebar">
-      <div class="relative shadow-xl rounded-3xl absolute">
+      <div class="relative shadow-xl rounded-3xl">
         <span class="absolute inset-y-0 left-0 flex items-center pl-3">
           <span class="material-symbols-outlined text-gray-700">
             search
@@ -130,8 +131,7 @@
             <h3 class="p-1">ORDER MANAGEMENT</h3>
             <ul class="dropdown">
               <li class="p-1">
-                <a id="orders-link"
-                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500 ease-in-out"
+                <a id="orders-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
                   href="javascript:void(0)"
                   onclick="toggleDropdown('orders-dropdown'); toggleIcon('expand-icon-orders')">
                   <span class="material-symbols-outlined"> package </span>
@@ -157,7 +157,7 @@
 
                   <a href="/Order Management/Orders/Packaged Orders/PackagedOrders.html"
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Packaged Orders</li>
+                    <li>PackagedOrders</li>
                   </a>
 
                   <a href="/Order Management/Orders/Out for Delivery/OutforDelivery.html"
@@ -343,8 +343,8 @@
 
 
                   <a href="/Product_Management/Seller Products/Declined Products/DeclinedProduct.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Declined Product </li>
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">Declined
+                    <li>Product </li>
                   </a>
 
                 </ul>
@@ -352,7 +352,7 @@
             </ul>
           </div>
 
-          <div class="mb-2">
+          <div>
             <h3 class="py-2">PROMOTION MANAGEMENT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -446,7 +446,7 @@
             </ul>
           </div>
 
-          <div class="mb-2">
+          <div>
             <h3 class="py-2">HELP & SUPPORT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -466,7 +466,7 @@
             </ul>
           </div>
 
-          <div class="mb-2">
+          <div>
             <h3 class="py-2">REPORT & ANALYTICS</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -524,7 +524,7 @@
             </ul>
           </div>
 
-          <div class="mb-2">
+          <div>
             <h3 class="py-2">USER MANAGEMENT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">

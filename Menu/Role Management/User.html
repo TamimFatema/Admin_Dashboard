@@ -9,11 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="/Styles.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -25,7 +24,7 @@
             },
         };
     </script>
-    <title>Earnings</title>
+    <title>User Management</title>
 </head>
 
 <body class="h-max bg-gray-100">
@@ -121,16 +120,6 @@
                                         point_of_sale
                                     </span>
                                     <p class="mx-4 font-medium">POS</p>
-                                </a>
-                            </li>
-                            <li class="p-1">
-                                <a id="pos-link"
-                                    class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                                    href="/Menu/Role Management/User.html">
-                                    <span class="material-symbols-outlined">
-                                        point_of_sale
-                                    </span>
-                                    <p class="mx-4 font-medium">User Management</p>
                                 </a>
                             </li>
                         </ul>
@@ -695,256 +684,97 @@
         <div class="justify-center container mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
             <div class="flex items-center gap-2 mb-4">
                 <span class="material-symbols-outlined">
-                    package
+                    person
                 </span>
-                <h2 class="text-2xl font-bold">Order Details</h2>
-                <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
+                <h2 class="text-xl font-bold">User Management</h2>
             </div>
-
-            <div class="bg-white p-5 md:p-10 lg:p-5 rounded-lg shadow-lg mb-6">
-                <div class="flex flex-col lg:flex-row gap-3">
-                    <div class="border border-2 shadow-lg rounded-lg p-2 lg:w-3/4">
-                        <div class="flex justify-between px-2">
-                            <div class="flex flex-col gap-2">
-                                <p class="font-bold text-lg">Order ID #100002</p>
-                                <div class="flex">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M4.16667 18.3334C3.70833 18.3334 3.31597 18.1702 2.98958 17.8438C2.66319 17.5174 2.5 17.1251 2.5 16.6667V5.00008C2.5 4.54175 2.66319 4.14939 2.98958 3.823C3.31597 3.49661 3.70833 3.33341 4.16667 3.33341H5V1.66675H6.66667V3.33341H13.3333V1.66675H15V3.33341H15.8333C16.2917 3.33341 16.684 3.49661 17.0104 3.823C17.3368 4.14939 17.5 4.54175 17.5 5.00008V16.6667C17.5 17.1251 17.3368 17.5174 17.0104 17.8438C16.684 18.1702 16.2917 18.3334 15.8333 18.3334H4.16667ZM4.16667 16.6667H15.8333V8.33341H4.16667V16.6667ZM4.16667 6.66675H15.8333V5.00008H4.16667V6.66675ZM10 11.6667C9.76389 11.6667 9.56597 11.5869 9.40625 11.4272C9.24653 11.2674 9.16667 11.0695 9.16667 10.8334C9.16667 10.5973 9.24653 10.3994 9.40625 10.2397C9.56597 10.0799 9.76389 10.0001 10 10.0001C10.2361 10.0001 10.434 10.0799 10.5938 10.2397C10.7535 10.3994 10.8333 10.5973 10.8333 10.8334C10.8333 11.0695 10.7535 11.2674 10.5938 11.4272C10.434 11.5869 10.2361 11.6667 10 11.6667ZM6.66667 11.6667C6.43056 11.6667 6.23264 11.5869 6.07292 11.4272C5.91319 11.2674 5.83333 11.0695 5.83333 10.8334C5.83333 10.5973 5.91319 10.3994 6.07292 10.2397C6.23264 10.0799 6.43056 10.0001 6.66667 10.0001C6.90278 10.0001 7.10069 10.0799 7.26042 10.2397C7.42014 10.3994 7.5 10.5973 7.5 10.8334C7.5 11.0695 7.42014 11.2674 7.26042 11.4272C7.10069 11.5869 6.90278 11.6667 6.66667 11.6667ZM13.3333 11.6667C13.0972 11.6667 12.8993 11.5869 12.7396 11.4272C12.5799 11.2674 12.5 11.0695 12.5 10.8334C12.5 10.5973 12.5799 10.3994 12.7396 10.2397C12.8993 10.0799 13.0972 10.0001 13.3333 10.0001C13.5694 10.0001 13.7674 10.0799 13.9271 10.2397C14.0868 10.3994 14.1667 10.5973 14.1667 10.8334C14.1667 11.0695 14.0868 11.2674 13.9271 11.4272C13.7674 11.5869 13.5694 11.6667 13.3333 11.6667ZM10 15.0001C9.76389 15.0001 9.56597 14.9202 9.40625 14.7605C9.24653 14.6008 9.16667 14.4029 9.16667 14.1667C9.16667 13.9306 9.24653 13.7327 9.40625 13.573C9.56597 13.4133 9.76389 13.3334 10 13.3334C10.2361 13.3334 10.434 13.4133 10.5938 13.573C10.7535 13.7327 10.8333 13.9306 10.8333 14.1667C10.8333 14.4029 10.7535 14.6008 10.5938 14.7605C10.434 14.9202 10.2361 15.0001 10 15.0001ZM6.66667 15.0001C6.43056 15.0001 6.23264 14.9202 6.07292 14.7605C5.91319 14.6008 5.83333 14.4029 5.83333 14.1667C5.83333 13.9306 5.91319 13.7327 6.07292 13.573C6.23264 13.4133 6.43056 13.3334 6.66667 13.3334C6.90278 13.3334 7.10069 13.4133 7.26042 13.573C7.42014 13.7327 7.5 13.9306 7.5 14.1667C7.5 14.4029 7.42014 14.6008 7.26042 14.7605C7.10069 14.9202 6.90278 15.0001 6.66667 15.0001ZM13.3333 15.0001C13.0972 15.0001 12.8993 14.9202 12.7396 14.7605C12.5799 14.6008 12.5 14.4029 12.5 14.1667C12.5 13.9306 12.5799 13.7327 12.7396 13.573C12.8993 13.4133 13.0972 13.3334 13.3333 13.3334C13.5694 13.3334 13.7674 13.4133 13.9271 13.573C14.0868 13.7327 14.1667 13.9306 14.1667 14.1667C14.1667 14.4029 14.0868 14.6008 13.9271 14.7605C13.7674 14.9202 13.5694 15.0001 13.3333 15.0001Z"
-                                            fill="#1E1E1E" fill-opacity="0.7" />
-                                    </svg>
-                                    <p>10 August 2023 9:55:17 am</p>
-                                </div>
-                            </div>
-                            <button class="bg-[#134EA3] text-white flex gap-2 rounded-md px-4 py-2 h-fit items-center">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14.9998 5.83333H4.99984V2.5H14.9998V5.83333ZM14.9998 10.4167C15.2359 10.4167 15.4339 10.3368 15.5936 10.1771C15.7533 10.0174 15.8332 9.81944 15.8332 9.58333C15.8332 9.34722 15.7533 9.14931 15.5936 8.98958C15.4339 8.82986 15.2359 8.75 14.9998 8.75C14.7637 8.75 14.5658 8.82986 14.4061 8.98958C14.2464 9.14931 14.1665 9.34722 14.1665 9.58333C14.1665 9.81944 14.2464 10.0174 14.4061 10.1771C14.5658 10.3368 14.7637 10.4167 14.9998 10.4167ZM13.3332 15.8333V12.5H6.6665V15.8333H13.3332ZM14.9998 17.5H4.99984V14.1667H1.6665V9.16667C1.6665 8.45833 1.90956 7.86458 2.39567 7.38542C2.88178 6.90625 3.47206 6.66667 4.1665 6.66667H15.8332C16.5415 6.66667 17.1353 6.90625 17.6144 7.38542C18.0936 7.86458 18.3332 8.45833 18.3332 9.16667V14.1667H14.9998V17.5Z"
-                                        fill="white" />
-                                </svg>
-                                Print Invoice
-                            </button>
+            <div class="bg-white shadow-xl overflow-x-auto rounded-lg">
+                <div class="flex justify-end p-4 gap-4 flex-wrap">
+                    <div class="flex">
+                        <div class="flex items-center rounded-l-lg border p-2 gap-2">
+                            <span class="material-symbols-outlined text-gray-700">
+                                search
+                            </span>
+                            <input type="text" placeholder="Search user" class="w-[100px] md:w-[200px]"
+                                style="outline: none;" />
                         </div>
+                        <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">
+                            Search
+                        </button>
+                    </div>
+                    <a href="/Menu/Role Management/AddUser.html">
+                        <button type="submit"
+                            class="h-fit bg-[#134EA3] text-white px-6 py-3 font-bold rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                            Add User
+                        </button>
+                    </a>
+                </div>
 
-                        <div class="flex flex-col items-end w-full">
-                            <div class="flex mt-2 gap-1">
-                                <p class="p-1">Status: </p>
-                                <button class="bg-gray-100 text-[#46D7BD] p-1 border-2 rounded-xl shadow-2xl">
-                                    confirmed
+                <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
+                    <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-md text-gray-500 text-center">
+                        <thead class="bg-[#D2E9FB] text-left">
+                            <tr>
+                                <th class="py-2 px-4 w-[25%] lg:w-fit">SL</th>
+                                <th class="py-2 px-4 w-[25%] lg:w-fit">Name</th>
+                                <th class="py-2 px-4 w-[25%] lg:w-fit">User Role</th>
+                                <th class="py-2 px-4 w-[33.33%] lg:w-fit">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-left">
+                            <tr>
+                                <td class="py-2 px-4 border-b min-w-[box-width]">1</td>
+                                <td class="py-2 px-4 border-b min-w-[box-width] ">
+                                    <div class="flex flex-col sm:flex-row gap-4">
+                                        <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg"
+                                            alt="phone pic" style="width:50px; height: 50px;"
+                                            class="border rounded-full" />
+                                        <div class="flex-col justify-items-start">
+                                            <p class="text-black">dew</p>
+                                            <p class="text-gray-500">name@ctsgroupbd.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-2 px-4 border-b min-w-[box-width] gap-3">
+                                    <button
+                                        class="bg-green-100 text-green-600 p-1 border border-1 rounded-xl shadow-2xl text-sm">
+                                        Admin
+                                    </button>
+                                    <button
+                                        class="bg-purple-100 text-purple-600 p-1 border border-1 rounded-xl shadow-2xl text-sm">
+                                        Manager
+                                    </button>
+                                    <button
+                                    class="bg-orange-100 text-orange-600 p-1 border border-1 rounded-xl shadow-2xl text-sm">
+                                    Auditor
                                 </button>
-                            </div>
-                            <div class="flex gap-1">
-                                <p class="whitespace-nowrap">Payment Method: Cash on Delivery</p>
-                            </div>
-                            <div class="flex gap-1">
-                                <p>Payment Status: </p>
-                                <p class="text-red-500 font-bold">Unpaid</p>
-                            </div>
-                        </div>
+                                </td>
+                                <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
+                                    <a>
+                                        <span
+                                            class="material-symbols-outlined border border-blue-400 rounded-md text-blue-400">
+                                            manage_accounts
+                                        </span>
+                                    </a>
+                                    <a href="#">
+                                        <span
+                                            class="material-symbols-outlined border border-red-500 rounded-md text-red-500 delete-category">delete</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-                        <!--Table-->
-                        <div class="w-full overflow-x-scroll lg:overflow-auto px-2 py-2 mb-2 border-b-2">
-                            <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
-                                <thead class="bg-[#D2E9FB] text-left">
-                                    <tr>
-                                        <th class="px-3 py-3 w-[15%] lg:w-fit">SL</th>
-                                        <th class="px-3 py-3 w-[35%] lg:w-fit">Item details</th>
-                                        <th class="px-3 py-3 w-[25%] lg:w-fit">Variations</th>
-                                        <th class="px-3 py-3 w-[25%] lg:w-fit">Size</th>
-                                        <th class="px-3 py-3 w-[30%] lg:w-fit">Tax</th>
-                                        <th class="px-3 py-3 w-[30%] lg:w-fit">Discount</th>
-                                        <th class="px-3 py-3 w-[40%] lg:w-fit">Price</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-left">
-                                    <tr>
-                                        <td class="py-3 px-3 min-w-[box-width]">1</td>
-                                        <td class="py-3 px-3 min-w-[box-width]">
-                                            <div class="flex flex-wrap">
-                                                <img src="https://www.optus.com.au/content/dam/optus/images/shop/mobile/phones/apple/iphone-15/carousel/SD-PDP-01-iphone-15-pink-front-back.jpg/renditions/version-1694741183491/original.jpeg"
-                                                    class=" border" style="width: 50px; height: 60px;" />
-                                                <div class="flex-col px-1">
-                                                    <p>Phone </p>
-                                                    <p>price: 100.00 ৳</p>
-                                                    <p>Qty: 5</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="py-3 px-3 min-w-[box-width]">Black</td>
-                                        <td class="py-3 px-3 min-w-[box-width]"></td>
-                                        <td class="py-3 px-3 min-w-[box-width]">100 ৳</td>
-                                        <td class="py-3 px-3 min-w-[box-width]">0 ৳</td>
-                                        <td class="py-3 px-3 min-w-[box-width]">500 ৳</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="flex px-7 py-1">
-                            <div class="flex flex-col items-end flex-grow">
-                                <p>Shipping:</p>
-                                <p>Coupon Discount:</p>
-                                <p>Total:</p>
-                            </div>
-                            <div class="flex flex-col items-end flex-grow">
-                                <p>50.00 ৳</p>
-                                <p>0.00 ৳</p>
-                                <p>1550.00 ৳</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col w-auto">
-                        <div class="bg-white flex flex-col py-6 px-3 mb-4 rounded-lg shadow-lg items-start  gap-3">
-                            <p class="font-bold text-lg">Order & Shipping Info</p>
-                            <div class="flex flex-col w-full">
-                                <label class="text-md">Order Status</label>
-                                <select id="selector" name="selector"
-                                    class="mt-1 w-full p-2 border border-gray-300 rounded-md">
-                                    <option value="option1">Pending</option>
-                                    <option value="option2">This Month</option>
-                                    <option value="option3">This Week</option>
-                                    <option value="option3">Custom</option>
-                                </select>
-                            </div>
-                            <div class="flex flex-col w-full">
-                                <label>Payment Status</label>
-                                <select id="selector" name="selector"
-                                    class="mt-1 w-full p-2 border border-gray-300 rounded-md">
-                                    <option value="option1">Unpaid</option>
-                                    <option value="option2">This Month</option>
-                                    <option value="option3">This Week</option>
-                                    <option value="option3">Custom</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
-                            <div class="bg-white flex py-6 px-5 rounded-lg shadow-lg items-start flex flex-col gap-3">
-                                <div class="flex items-center gap-2 font-bold text-lg">
-                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 12.5C10.9 12.5 9.95833 12.1083 9.175 11.325C8.39167 10.5417 8 9.6 8 8.5C8 7.4 8.39167 6.45833 9.175 5.675C9.95833 4.89167 10.9 4.5 12 4.5C13.1 4.5 14.0417 4.89167 14.825 5.675C15.6083 6.45833 16 7.4 16 8.5C16 9.6 15.6083 10.5417 14.825 11.325C14.0417 12.1083 13.1 12.5 12 12.5ZM4 20.5V17.7C4 17.1333 4.14583 16.6125 4.4375 16.1375C4.72917 15.6625 5.11667 15.3 5.6 15.05C6.63333 14.5333 7.68333 14.1458 8.75 13.8875C9.81667 13.6292 10.9 13.5 12 13.5C13.1 13.5 14.1833 13.6292 15.25 13.8875C16.3167 14.1458 17.3667 14.5333 18.4 15.05C18.8833 15.3 19.2708 15.6625 19.5625 16.1375C19.8542 16.6125 20 17.1333 20 17.7V20.5H4Z"
-                                            fill="black" />
-                                    </svg>
-                                    <p>Customer Information</p>
-                                </div>
-                                <div class="flex flex-wrap gap-6">
-                                    <img class="rounded-full"
-                                        src="https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY="
-                                        alt="Rounded avatar" style="width: 60px; height: 60px;">
-                                    <div class="flex flex-col text-sm">
-                                        <p>Mosraful Habib</p>
-                                        <p>3 orders</p>
-                                        <p>+8801254789632</p>
-                                        <p>habib@ctsgroupbd.com</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white flex py-6 px-5 rounded-lg shadow-lg items-start flex flex-col gap-3">
-                                <div class="flex items-center gap-2">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 12C12.55 12 13.0208 11.8042 13.4125 11.4125C13.8042 11.0208 14 10.55 14 10C14 9.45 13.8042 8.97917 13.4125 8.5875C13.0208 8.19583 12.55 8 12 8C11.45 8 10.9792 8.19583 10.5875 8.5875C10.1958 8.97917 10 9.45 10 10C10 10.55 10.1958 11.0208 10.5875 11.4125C10.9792 11.8042 11.45 12 12 12ZM12 22C9.31667 19.7167 7.3125 17.5958 5.9875 15.6375C4.6625 13.6792 4 11.8667 4 10.2C4 7.7 4.80417 5.70833 6.4125 4.225C8.02083 2.74167 9.88333 2 12 2C14.1167 2 15.9792 2.74167 17.5875 4.225C19.1958 5.70833 20 7.7 20 10.2C20 11.8667 19.3375 13.6792 18.0125 15.6375C16.6875 17.5958 14.6833 19.7167 12 22Z"
-                                            fill="black" />
-                                    </svg>
-                                    <p>Shipping Address</p>
-                                </div>
-                                <div class="flex flex-col text-sm">
-                                    <div class="flex gap-2">
-                                        <span>Contact person:</span>
-                                        <p> Nafid Alam</p>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <span>Phone: </span>
-                                        <p> +8801254789632</p>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <span>House no.: </span>
-                                        <p>04</p>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <span>Road no.:</span>
-                                        <p>06</p>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <span>Area: </span>
-                                        <p>DUIP Residential Area, Mirpur 2, Dhaka</p>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <span>Zip Code: </span>
-                                        <p>1216</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white flex py-6 px-5 rounded-lg shadow-lg items-start flex flex-col gap-3">
-                                <div class="flex items-center gap-2">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 12C12.55 12 13.0208 11.8042 13.4125 11.4125C13.8042 11.0208 14 10.55 14 10C14 9.45 13.8042 8.97917 13.4125 8.5875C13.0208 8.19583 12.55 8 12 8C11.45 8 10.9792 8.19583 10.5875 8.5875C10.1958 8.97917 10 9.45 10 10C10 10.55 10.1958 11.0208 10.5875 11.4125C10.9792 11.8042 11.45 12 12 12ZM12 22C9.31667 19.7167 7.3125 17.5958 5.9875 15.6375C4.6625 13.6792 4 11.8667 4 10.2C4 7.7 4.80417 5.70833 6.4125 4.225C8.02083 2.74167 9.88333 2 12 2C14.1167 2 15.9792 2.74167 17.5875 4.225C19.1958 5.70833 20 7.7 20 10.2C20 11.8667 19.3375 13.6792 18.0125 15.6375C16.6875 17.5958 14.6833 19.7167 12 22Z"
-                                            fill="black" />
-                                    </svg>
-                                    <p>Billing Address</p>
-                                </div>
-                                <div class="flex flex-col text-sm">
-                                    <div class="flex gap-2">
-                                        <span>Contact person:</span>
-                                        <p> Nafid Alam</p>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <span>Phone: </span>
-                                        <p> +8801254789632</p>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <span>House no.: </span>
-                                        <p>04</p>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <span>Road no.:</span>
-                                        <p>06</p>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <span>Area: </span>
-                                        <p>DUIP Residential Area, Mirpur 2, Dhaka</p>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <span>Zip Code: </span>
-                                        <p>1216</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white flex py-6 px-5 rounded-lg shadow-lg items-start flex flex-col gap-3">
-                                <div class="flex items-center gap-2">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M21.025 11.05V19C21.025 19.55 20.8291 20.0208 20.4375 20.4125C20.0458 20.8042 19.575 21 19.025 21H5.02497C4.47497 21 4.00413 20.8042 3.61247 20.4125C3.2208 20.0208 3.02497 19.55 3.02497 19V11.05C2.64163 10.7 2.3458 10.25 2.13747 9.7C1.92913 9.15 1.92497 8.55 2.12497 7.9L3.17497 4.5C3.3083 4.06667 3.5458 3.70833 3.88747 3.425C4.22913 3.14167 4.62497 3 5.07497 3H18.975C19.425 3 19.8166 3.1375 20.15 3.4125C20.4833 3.6875 20.725 4.05 20.875 4.5L21.925 7.9C22.125 8.55 22.1208 9.14167 21.9125 9.675C21.7041 10.2083 21.4083 10.6667 21.025 11.05ZM14.225 10C14.675 10 15.0166 9.84583 15.25 9.5375C15.4833 9.22917 15.575 8.88333 15.525 8.5L14.975 5H13.025V8.7C13.025 9.05 13.1416 9.35417 13.375 9.6125C13.6083 9.87083 13.8916 10 14.225 10ZM9.72497 10C10.1083 10 10.4208 9.87083 10.6625 9.6125C10.9041 9.35417 11.025 9.05 11.025 8.7V5H9.07497L8.52497 8.5C8.4583 8.9 8.5458 9.25 8.78747 9.55C9.02913 9.85 9.34163 10 9.72497 10ZM5.27497 10C5.57497 10 5.83747 9.89167 6.06247 9.675C6.28747 9.45833 6.42497 9.18333 6.47497 8.85L7.02497 5H5.07497L4.07497 8.35C3.97497 8.68333 4.02913 9.04167 4.23747 9.425C4.4458 9.80833 4.79163 10 5.27497 10ZM18.775 10C19.2583 10 19.6083 9.80833 19.825 9.425C20.0416 9.04167 20.0916 8.68333 19.975 8.35L18.925 5H17.025L17.575 8.85C17.625 9.18333 17.7625 9.45833 17.9875 9.675C18.2125 9.89167 18.475 10 18.775 10Z"
-                                            fill="black" />
-                                    </svg>
-                                    <p>Store Information</p>
-                                </div>
-                                <div class="flex flex-wrap gap-6">
-                                    <img class="rounded-full"
-                                        src="data:image/jpeg;base64,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"
-                                        alt="Rounded avatar" style="width: 60px; height: 60px;">
-                                    <div class="flex flex-col text-sm">
-                                        <p>Mosraful Habib</p>
-                                        <p>3 orders</p>
-                                        <p>+8801254789632</p>
-                                        <p>habib@ctsgroupbd.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="md:hidden flex items-center justify-end space-x-4 mb-6 mx-3">
+                    <span class="material-symbols-outlined border py-2 px-2 rounded">
+                        chevron_left
+                    </span>
+                    <button class="page-btn text-black border py-2 px-4 rounded">1</button>
+                    <button class="page-btn text-black border py-2 px-4 rounded">2</button>
+                    <button class="page-btn text-black border py-2 px-4 rounded">3</button>
+                    <span class="material-symbols-outlined border py-2 px-2 rounded">
+                        chevron_right
+                    </span>
                 </div>
             </div>
         </div>

@@ -18,10 +18,6 @@
         extend: {
           colors: {
             clifford: "#da373d",
-            green: "rgba(49, 189, 122, 1)",
-            gb: "rgba(42, 198, 188, 1)",
-            reset: "rgba(236, 40, 111, 1)",
-            newb: "rgba(16, 129, 224, 1)",
           },
         },
       },
@@ -657,6 +653,83 @@
       </div>
     </div>
     <!--Sidebar ends-->
+    <div class="justify-center container mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="material-symbols-outlined">
+          mail
+        </span>
+        <h2 class="text-xl font-bold">Customer Message</h2>
+      </div>
+      <div class="bg-white shadow-xl overflow-x-auto rounded-lg">
+        <div class="flex justify-between p-2 gap-2 flex-wrap">
+          <div class="flex p-2 gap-4 text-base">
+            <h1 class="text-lg font-bold ">Customer Message Table</h1>
+            <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
+          </div>
+          <div class="flex">
+            <div class="flex items-center rounded-l-lg border p-2 gap-2">
+              <span class="material-symbols-outlined text-gray-700">
+                search
+              </span>
+              <input type="text" placeholder="Search by name or email or phone" class="w-[150px] md:w-[300px]"
+                style="outline: none;" />
+            </div>
+            <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">
+              Search
+            </button>
+          </div>
+        </div>
+
+        <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
+          <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-md text-black text-center">
+            <thead class="bg-[#D2E9FB] text-center">
+              <tr>
+                <th class="py-2 px-4 w-[25%] lg:w-fit">SL</th>
+                <th class="py-2 px-4 w-[25%] lg:w-fit">Customer Name</th>
+                <th class="py-2 px-4 w-[25%] lg:w-fit">Contact Info</th>
+                <th class="py-2 px-4 w-[25%] lg:w-fit">Subject</th>
+                <th class="py-2 px-4 w-[33.33%] lg:w-fit">Action</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr>
+                <td class="py-2 px-4 border-b min-w-[box-width]">1</td>
+                <td class="py-2 px-4 border-b min-w-[box-width]">Full Name</td>
+                <td class="py-2 px-4 border-b min-w-[box-width] gap-3">
+                  <div>
+                    <p>0123456789</p>
+                    <p>abc@gmail.com</p>
+                  </div>
+                </td>
+                <td class="py-2 px-4 border-b min-w-[box-width]">Message subject</td>
+                <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
+                  <a href="/Help and Support/Messages/MessageView.html">
+                    <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
+                      visibility
+                    </span>
+                  </a>
+                  <a href="#">
+                    <span class="material-symbols-outlined border border-red-500 rounded-md text-red-500">delete</span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="md:hidden flex items-center justify-end space-x-4 mb-6 mx-3">
+          <span class="material-symbols-outlined border py-2 px-2 rounded">
+            chevron_left
+          </span>
+          <button class="page-btn text-black border py-2 px-4 rounded">1</button>
+          <button class="page-btn text-black border py-2 px-4 rounded">2</button>
+          <button class="page-btn text-black border py-2 px-4 rounded">3</button>
+          <span class="material-symbols-outlined border py-2 px-2 rounded">
+            chevron_right
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 <script src="/Script.js"></script>

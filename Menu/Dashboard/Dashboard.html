@@ -13,7 +13,7 @@
   <link href="/Styles.css" rel="stylesheet" />
   <link href="Dashboard.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -999,11 +999,9 @@
             </button>
           </div>
         </div>
-
-
-
-        <div class="w-[400px] sm:w-[500px] lg:w-[600px] xl:w-[800px] 2xl:w-[1000px] self-center py-5">
-          <canvas id="myChart"></canvas>
+        <div class="w-[300px] sm:w-[700px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1300px] self-center py-5">
+          <div id="chart">
+          </div>
         </div>
       </div>
 
@@ -1197,45 +1195,42 @@
 
   </div>
   <script>
-    const ctx = document.getElementById('myChart');
-
-    const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const data = {
-      labels: labels,
-      datasets: [
-        {
-          type: 'line',
-          label: 'In House',
-          data: [80, 20, 60, 70, 20, 30, 10, 20, 60, 50, 20, 60],
+    var options = {
+      series: [{
+        name: 'In House',
+        data: [31, 40, 28, 51, 42, 109, 100]
+      }, {
+        name: 'Seller',
+        data: [11, 32, 45, 32, 34, 52, 41]
+      },
+      {
+        name: 'Commission',
+        data: [17, 22, 35, 46, 10, 15, 17]
+      }],
+      chart: {
+        height: 350,
+        type: 'area'
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        curve: 'smooth'
+      },
+      colors: ['#8E9FE6', '#7AC0E3', '#6CE6DD'],
+      xaxis: {
+        type: 'datetime',
+        categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+      },
+      tooltip: {
+        x: {
+          format: 'dd/MM/yy HH:mm'
         },
-        {
-          type: 'line',
-          label: 'Seller',
-          data: [10, 40, 30, 10, 40, 30, 10, 40, 30, 10, 40, 30],
-        },
-        {
-          type: 'line',
-          label: 'Commissioner',
-          data: [50, 20, 50, 50, 20, 50, 50, 20, 50, 50, 20, 50],
-        }
-      ]
+      },
     };
 
-
-    const config = {
-      type: 'scatter',
-      data: data,
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'top',
-          }
-        }
-      }
-    };
-
-    new Chart(ctx, config);
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
 
     const buttons = document.querySelectorAll('button');
 

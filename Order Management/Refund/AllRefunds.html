@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="/Styles.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +24,7 @@
             },
         };
     </script>
-    <title>Customer Reviews</title>
+    <title>Approved Refund Requests</title>
 </head>
 
 <body class="h-max bg-gray-100">
@@ -42,8 +43,8 @@
                 </span>
             </button>
             <!-- <div class="flex">
-       <img src="/Images/Blue Illustrative E-Commerce Online Shop Logo(2).png" alt="upon logo" style="width: auto; height: 40px;"/>
-     </div> -->
+        <img src="/Images/Blue Illustrative E-Commerce Online Shop Logo(2).png" alt="upon logo" style="width: auto; height: 40px;"/>
+      </div> -->
             <ul class="ml-auto justify-items-end gap-3 flex">
                 <li
                     class="block p-1 justify-items-start font-sans text-sm font-normal leading-normal text-inherit antialiased">
@@ -85,9 +86,9 @@
 
     <div class="flex">
         <!-- Sidebar Starts -->
-        <div class="hidden md:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
+        <div class="hidden absolute md:static md:flex flex-col w-72 max-h-full px-4 py-8 bg-[#D4ECFF] border-r overflow-y-auto"
             data-collapse="sticky-sidebar">
-            <div class="relative shadow-xl rounded-3xl absolute">
+            <div class="relative shadow-xl rounded-3xl">
                 <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                     <span class="material-symbols-outlined text-gray-700">
                         search
@@ -680,193 +681,146 @@
             </div>
         </div>
         <!--Sidebar ends-->
-        <div class="justify-center container w-full mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
-            <div class="flex gap-3 items-center mb-4">
+        <div class="justify-center container mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
+            <div class="flex items-center gap-2 mb-4">
                 <span class="material-symbols-outlined">
-                    account_circle
+                    change_circle
                 </span>
-                <h1 class="text-2xl font-bold">Customer Reviews</h1>
-                <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
+                <h2 class="text-xl font-bold">All Refund Requests</h2>
+            </div>
+            <div class="bg-white rounded-lg flex gap-3 mb-3">
+                <div class="grid grid-cols-2 lg:grid-cols-4 my-4 md:px-2  gap-6">
+                    <div class="shadow-xl rounded-lg flex flex-col p-4 bg-[#A6E3E9] flex-grow w-fit">
+                        <div class="flex justify-between">
+                            <p>Pending refund requests</p>
+                            <span class="material-symbols-outlined">
+                                deployed_code_history
+                            </span>
+                        </div>
+                        <p class="font-extrabold">0</p>
+                    </div>
+                    <div class="shadow-xl rounded-lg flex flex-col p-4 bg-[#CBF1F5] flex-grow w-fit">
+                        <div class="flex justify-between">
+                            <p>Approved refund request</p>
+                            <span class="material-symbols-outlined">
+                                check_circle
+                            </span>
+                        </div>
+                        <p class="font-extrabold">0</p>
+                    </div>
+                    <div class="shadow-xl rounded-lg flex flex-col p-4 bg-[#DEFCFC] flex-grow w-fit">
+                        <div class="flex justify-between">
+                            <p> Refunded refund requests </p>
+                            <span class="material-symbols-outlined">
+                                package_2
+                            </span>
+                        </div>
+                        <p class="font-extrabold">0</p>
+                    </div>
+                    <div class="shadow-xl rounded-lg flex flex-col p-4 bg-[#FFE6EB] flex-grow w-fit">
+                        <div class="flex justify-between">
+                            <p> Rejected refund requests </p>
+                            <span class="material-symbols-outlined">
+                                cancel
+                            </span>
+                        </div>
+                        <p class="font-extrabold">0</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="bg-white shadow-xl overflow-x-auto rounded-lg mb-6">
-                <div class="flex justify-between p-5 flex-wrap">
-                    <div class="flex gap-3 items-center">
-                        <h1 class="text-2xl font-bold"> Reviews</h1>
-                        <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
-                    </div>
-
-                    <div class="flex border border-gray-800 shadow-md rounded-lg">
+            <div class="bg-white shadow-xl overflow-x-auto rounded-lg">
+                <div class="flex justify-between p-4 gap-2 flex-wrap">
+                    <div class="flex">
                         <div class="flex items-center rounded-l-lg border p-2 gap-2">
                             <span class="material-symbols-outlined text-gray-700">
                                 search
                             </span>
-                            <input type="text" placeholder="Search by order id" class="w-[75px] md:w-[150px]"
+                            <input type="text" placeholder="Search" class="w-[100px] md:w-[150px]"
                                 style="outline: none;" />
                         </div>
                         <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">
                             Search
                         </button>
                     </div>
+                    <div class="flex flex-wrap justify-center items-center gap-1">
+                        <p class="whitespace-nowrap">In-House Products</p>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" value="" class="sr-only peer">
+                            <div
+                                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                            </div>
+                        </label>
+                    </div>
                 </div>
-                <div class="bg-white p-4 lg:p-6 rounded-md flex-grow mb-8">
-                    <form id="product-detail" action="#" method="POST" enctype="multipart/form-data">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto">
-                            <!--Product Type Drop Down-->
-                            <div class="my-2">
-                                <label for="product-type" class="block text-sm font-medium text-black mb-2">Choose
-                                    Product</label>
-                                <select id="product-type-dropdown" name="product-type"
-                                    class="mt-1 p-2 w-full border rounded-md ">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                </select>
-                            </div>
 
-                            <!--Choose Customer DropDown-->
-                            <div class="my-2">
-                                <label for="category" class="block text-sm font-medium text-black mb-2">Choose
-                                    Customer</label>
-                                <select id="category-dropdown" name="category"
-                                    class="mt-1 p-2 w-full border rounded-md">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                            </div>
-
-                            <!--Status Dropdown-->
-                            <div class="my-2">
-                                <label for="subcategory" class="block text-sm font-medium text-black mb-2">Choose
-                                    Status</label>
-                                <select id="subcategory-dropdown" name="subcategory"
-                                    class="mt-1 p-2 w-full border rounded-md">
-                                    <option value="1">Block</option>
-                                    <option value="2">Unblock</option>
-                                </select>
-                            </div>
-                            <div class="flex flex-col w-full">
-                                <label>From</label>
-                                <input type="date" id="datePicker" name="datePicker"
-                                    class="mt-1 w-full p-2 border border-gray-300 rounded-md ">
-                            </div>
-
-                            <div class="flex flex-col w-full">
-                                <label>To</label>
-                                <input type="date" id="datePicker" name="datePicker"
-                                    class="mt-1 w-full p-2 border border-gray-300 rounded-md">
-                            </div>
-                            <div class="flex items-center gap-5 mt-6 ">
-                                <button
-                                    class="bg-[#134EA3] text-white center-container gap-1 p-1 sm:p-2 rounded-md shadow-lg">
-                                    <span class="material-symbols-outlined">
-                                        filter_alt
-                                    </span>
-                                    <p>Filter</p>
-                                </button>
-
-                                <button
-                                    class="border-2 border-[#134EA3] center-container gap-1 p-1 sm:p-2 rounded-md shadow-lg">
-                                    <span class="material-symbols-outlined text-[#134EA3]">download</span>
-                                    <p class="text-[#134EA3]">Export</p>
-                                    <span class="material-symbols-outlined text-[#134EA3]">keyboard_arrow_down</span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
+                    <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-md text-gray-500 text-center">
+                        <thead class="bg-[#D2E9FB] text-left">
+                            <tr>
+                                <th class="py-2 px-4 w-[25%] lg:w-fit">SL</th>
+                                <th class="py-2 px-4 w-[25%] lg:w-fit">Order ID</th>
+                                <th class="py-2 px-4 w-[25%] lg:w-fit">Product Info</th>
+                                <th class="py-2 px-4 w-[25%] lg:w-fit">Customer Info</th>
+                                <th class="py-2 px-4 w-[33.33%] lg:w-fit">Total Amount</th>
+                                <th class="py-2 px-4 w-[33.33%] lg:w-fit">Refund Status</th>
+                                <th class="py-2 px-4 w-[33.33%] lg:w-fit">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-left">
+                            <tr>
+                                <td class="py-2 px-4 border-b min-w-[box-width]">1</td>
+                                <td class="py-2 px-4 border-b min-w-[box-width]">0001</td>
+                                <td class="py-2 px-4 border-b min-w-[box-width] ">
+                                    <div class="flex flex-col sm:flex-row gap-4">
+                                        <img src="data:image/jpeg;base64,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"
+                                            alt="phone pic" style="width:50px; height: 50px;" class="border rounded" />
+                                        <div class="flex-col justify-items-start">
+                                            <p class="text-black">iPhone 15 pro max</p>
+                                            <p class="text-gray-500">Qty: 1</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-2 px-4 border-b min-w-[box-width]">
+                                    <p>Tamim Fatema</p>
+                                    <p>018800000</p>
+                                </td>
+                                <td class="py-2 px-4 border-b min-w-[box-width]">1000000</td>
+                                <td class="py-2 px-4 border-b min-w-[box-width] toggle-row">
+                                    <a href="#">
+                                        <button class="bg-gray-100 text-green-600 p-2 border-2 rounded-xl shadow-2xl">
+                                            confirmed
+                                        </button>
+                                    </a>
+                                </td>
+                                <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
+                                    <a href="/Order Management/Refund/RefundDetails.html">
+                                        <span
+                                            class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
+                                            visibility
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
 
-
-            <!--Review Table-->
-            <div class="bg-white w-full overflow-x-scroll lg:overflow-auto rounded-lg shadow-xl">
-                <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-md text-center">
-                    <thead class="bg-[#D2E9FB]">
-                        <tr>
-                            <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">SL</th>
-                            <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Product</th>
-                            <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Customer </th>
-                            <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Rating</th>
-                            <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Date</th>
-                            <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Status</th>
-                            <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Reviews</th>
-                        </tr>
-                    </thead>
-                    <tbody class="">
-                        <tr class="border-b">
-                            <td class="py-2 px-4 min-w-[box-width]">1</td>
-                            <td class="py-2 px-4 min-w-[box-width]">Stickers</td>
-                            <td class="py-2 px-4 min-w-[box-width]">Tamim Fatema</td>
-                            <td class="py-4 px-4 min-w-[box-width] items-center" style="text-align: right;">
-                                <button
-                                    class="flex bg-gray-100 text-yellow-500 p-1 rounded-md shadow-md items-center gap-1">
-                                    <p>4</p>
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M5.01974 17L6.30263 11.4539L2 7.72368L7.68421 7.23026L9.89474 2L12.1053 7.23026L17.7895 7.72368L13.4868 11.4539L14.7697 17L9.89474 14.0592L5.01974 17Z"
-                                            fill="#FCC123" />
-                                    </svg>
-                                </button>
-                            </td>
-                            <td class="py-2 px-4 min-w-[box-width]">22nd August 2022</td>
-                            <td class="py-2 px-4 min-w-[box-width] items-center">
-                                <label class="relative inline-flex items-center cursor-pointer">
-                                    <input type="checkbox" value="" class="sr-only peer">
-                                    <div
-                                        class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#134EA3]">
-                                    </div>
-                                </label>
-                            </td>
-                            <td class="py-2 px-4 min-w-[box-width] gap-2 items-center">
-                                <a>
-                                    <span
-                                        class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
-                                        visibility
-                                    </span>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-2 px-4 min-w-[box-width]">1</td>
-                            <td class="py-2 px-4 min-w-[box-width]">Stickers</td>
-                            <td class="py-2 px-4 min-w-[box-width]">Tamim Fatema</td>
-                            <td class="py-4 px-4 min-w-[box-width] items-center" style="text-align: right;">
-                                <button
-                                    class="flex bg-gray-100 text-yellow-500 p-1 rounded-md shadow-md items-center gap-1">
-                                    <p>4</p>
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M5.01974 17L6.30263 11.4539L2 7.72368L7.68421 7.23026L9.89474 2L12.1053 7.23026L17.7895 7.72368L13.4868 11.4539L14.7697 17L9.89474 14.0592L5.01974 17Z"
-                                            fill="#FCC123" />
-                                    </svg>
-                                </button>
-                            </td>
-                            <td class="py-2 px-4 min-w-[box-width]">22nd August 2022</td>
-                            <td class="py-2 px-4 min-w-[box-width] items-center">
-                                <label class="relative inline-flex items-center cursor-pointer">
-                                    <input type="checkbox" value="" class="sr-only peer">
-                                    <div
-                                        class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#134EA3]">
-                                    </div>
-                                </label>
-                            </td>
-                            <td class="py-2 px-4 min-w-[box-width] gap-2 items-center">
-                                <a href="/Product_Management/In House Products/Products/Reviews.html">
-                                    <span
-                                        class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
-                                        visibility
-                                    </span>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="md:hidden flex items-center justify-end space-x-4 mb-6 mx-3">
+                    <span class="material-symbols-outlined border py-2 px-2 rounded">
+                        chevron_left
+                    </span>
+                    <button class="page-btn text-black border py-2 px-4 rounded">1</button>
+                    <button class="page-btn text-black border py-2 px-4 rounded">2</button>
+                    <button class="page-btn text-black border py-2 px-4 rounded">3</button>
+                    <span class="material-symbols-outlined border py-2 px-2 rounded">
+                        chevron_right
+                    </span>
+                </div>
             </div>
         </div>
     </div>
+    <script src="/Script.js"></script>
 </body>
-<script src="/Script.js"> </script>
 
 </html>

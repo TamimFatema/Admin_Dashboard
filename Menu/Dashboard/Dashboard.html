@@ -128,96 +128,22 @@
             <h3 class="p-1">ORDER MANAGEMENT</h3>
             <ul class="dropdown">
               <li class="p-1">
-                <a id="orders-link"
-                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500 ease-in-out"
-                  href="javascript:void(0)"
-                  onclick="toggleDropdown('orders-dropdown'); toggleIcon('expand-icon-orders')">
-                  <span class="material-symbols-outlined"> package </span>
+                <a id="order-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Order Management/Orders/All/Orders.html">
+                  <span class="material-symbols-outlined">
+                    package
+                  </span>
                   <p class="mx-4 font-medium">Orders</p>
-                  <span id="expand-icon-orders" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
-
-                <ul id="orders-dropdown" class="dropdown-content pl-12">
-                  <a href="/Order Management/Orders/All/Orders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>All</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Pending Orders/PendingOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li> Pending</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Confirmed Orders/ConfirmedOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Confirmed</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Packaged Orders/PackagedOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Packaged Orders</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Out for Delivery/OutforDelivery.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Out for Delivery</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Delivered Orders/DeliveredOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Delivered</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Returned Orders/ReturnedOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Returned</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Delivery Failed/DeliveryFailedOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Failed to Deliver</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Cancelled Orders/CancelledOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Cancelled</li>
-                  </a>
-
-                </ul>
               </li>
-
-              <!-- refund requests -->
               <li class="p-1">
-                <a id="refund-list" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                  href="javascript:void(0)"
-                  onclick="toggleDropdown('refund-dropdown'); toggleIcon('expand-icon-refund')">
-                  <span class="material-symbols-outlined"> change_circle </span>
+                <a id="pos-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Order Management/Refund/AllRefunds.html">
+                  <span class="material-symbols-outlined">
+                    point_of_sale
+                  </span>
                   <p class="mx-4 font-medium">Refund Requests</p>
-                  <span id="expand-icon-refund" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
-                <ul id="refund-dropdown" class="dropdown-content pl-12">
-
-                  <a href="/Order Management/Refund/Pending Refund/PendingRequest.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Pending</li>
-                  </a>
-
-                  <a href="/Order Management/Refund/Approved Refunds/ApprovedRequests.html"
-                    class="=mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Approved</li>
-                  </a>
-
-                  <a href="/Order Management/Refund/Refunded/Refunded.html"
-                    class="=mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Refunded</li>
-                  </a>
-
-                  <a href="/Order Management/Refund/Rejected Refund Requests/RejectedRequests.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Rejected</li>
-                  </a>
-
-                </ul>
               </li>
             </ul>
           </div>
@@ -592,41 +518,13 @@
               <li class="p-1">
                 <a id="subscribers-list"
                   class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                  href="javascript:void(0)"
-                  onclick="toggleDropdown('subscribers-dropdown'); toggleIcon('expand-icon-subscribers')">
-                  <span class="material-symbols-outlined"> person </span>
-                  <p class="mx-4 font-medium">Subscribers</p>
-                  <span id="expand-icon-subscribers" class="material-symbols-outlined ml-auto"> expand_more </span>
+                  href="/Users/Subscribers/Subscriber.html">
+                  <span class="material-symbols-outlined">
+                    person
+                  </span>
+                  <span class="mx-4 font-medium">Subscribers</span>
                 </a>
-                <ul id="subscribers-dropdown" class="dropdown-content pl-12">
-
-                  <a href="/Users/Subscriber.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Something</li>
-                  </a>
-                </ul>
               </li>
-
-              <li class="p-1">
-                <a id="deliveryman-list"
-                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                  href="javascript:void(0)"
-                  onclick="toggleDropdown('deliveryman-dropdown'); toggleIcon('expand-icon-deliveryman')">
-                  <span class="material-symbols-outlined"> person </span>
-                  <p class="mx-4 font-medium">Delivery Man</p>
-                  <span id="expand-icon-deliveryman" class="material-symbols-outlined ml-auto"> expand_more </span>
-                </a>
-                <ul id="deliveryman-dropdown" class="dropdown-content pl-12">
-
-                  <a href="/Users/DeliveryMan.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Something</li>
-                  </a>
-
-                  <a href="/Users/DeliveryMan.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Something</li>
-                  </a>
-                </ul>
-              </li>
-
               <li class="p-1">
                 <a id="employee-list"
                   class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
@@ -647,7 +545,6 @@
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
                     <li>Employee Role Setup</li>
                   </a>
-
                 </ul>
               </li>
             </ul>

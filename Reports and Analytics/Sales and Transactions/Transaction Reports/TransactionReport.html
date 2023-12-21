@@ -679,23 +679,24 @@
 
       <div class="bg-white p-5 md:p-10 lg:p-5 rounded-lg shadow-xl flex flex-col mb-6">
         <h1 class="font-bold text-lg mb-2">Filter Data</h1>
-        <div class="flex flex-col md:flex-row space-x-6">
+        <div class="flex flex-col md:flex-row gap-3">
           <div class="flex w-full md:w-96 gap-2">
 
             <div class="flex w-full md:w-96 gap-2">
-
               <select class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md">
                 <option value="option1">This Year</option>
                 <option value="option2">This Month</option>
                 <option value="option3">This Week</option>
               </select>
-
+            </div>
+            <div class="flex w-full md:w-96 gap-2">
               <select class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md">
                 <option value="option1">This Year</option>
                 <option value="option2">This Month</option>
                 <option value="option3">This Week</option>
               </select>
-
+            </div>
+            <div class="flex w-full md:w-96 gap-2">
               <select class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md">
                 <option value="option1">This Year</option>
                 <option value="option2">This Month</option>
@@ -703,16 +704,16 @@
               </select>
             </div>
 
-
-            <select id="selector" name="selector"
-              class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md "
-              onchange="showDateFields()">
-              <option value="option1">This Year</option>
-              <option value="option2">This Month</option>
-              <option value="option3">This Week</option>
-              <option value="custom">Custom</option>
-            </select>
-
+            <div class="flex w-full md:w-96 gap-2">
+              <select id="selector" name="selector"
+                class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md "
+                onchange="showDateFields()">
+                <option value="option1">This Year</option>
+                <option value="option2">This Month</option>
+                <option value="option3">This Week</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
 
             <div class="flex flex-col md:flex-row gap-2 flex-grow" id="dateFields" style="display: none;">
               <div class="flex flex-col flex-1 flex-grow">
@@ -882,23 +883,23 @@
             <thead class="bg-[#D2E9FB] text-left">
               <tr>
                 <th class="px-5 py-3 w-[25%] lg:w-fit">SL</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Order ID</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Customer Name</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Total Product Amount</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Product Discount</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Coupon Discount</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Discounted Amount</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">VAT/TAX</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Shipping Charge</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Order Amount</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Delivered By</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Admin Discount</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Seller Discount</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Admin Commission</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Seller Net Income</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Payment Method</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Payment Status</th>
-                <th class="px-5 py-3 w-[25%] lg:w-fit">Action</th>
+                <th class="px-5 py-3 w-[70%] lg:w-fit">Order ID</th>
+                <th class="px-5 py-3 w-[70%] lg:w-fit">Customer Name</th>
+                <th class="px-5 py-3 w-[40%] lg:w-fit">Total Product Amount</th>
+                <th class="px-5 py-3 w-[40%] lg:w-fit">Product Discount</th>
+                <th class="px-5 py-3 w-[40%] lg:w-fit">Coupon Discount</th>
+                <th class="px-5 py-3 w-[40%] lg:w-fit">Discounted Amount</th>
+                <th class="px-5 py-3 w-[40%] lg:w-fit">VAT/TAX</th>
+                <th class="px-5 py-3 w-[40%] lg:w-fit">Shipping Charge</th>
+                <th class="px-5 py-3 w-[40%] lg:w-fit">Order Amount</th>
+                <th class="px-5 py-3 w-[40%] lg:w-fit">Delivered By</th>
+                <th class="px-5 py-3 w-[70%] lg:w-fit">Admin Discount</th>
+                <th class="px-5 py-3 w-[70%] lg:w-fit">Seller Discount</th>
+                <th class="px-5 py-3 w-[70%] lg:w-fit">Admin Commission</th>
+                <th class="px-5 py-3 w-[70%] lg:w-fit">Seller Net Income</th>
+                <th class="px-5 py-3 w-[70%] lg:w-fit">Payment Method</th>
+                <th class="px-5 py-3 w-[70%] lg:w-fit">Payment Status</th>
+                <th class="px-5 py-3 w-[70%] lg:w-fit">Action</th>
               </tr>
             </thead>
             <tbody class="text-left">
@@ -1023,17 +1024,6 @@
     };
 
     new Chart(ctx2, config2);
-
-    function showDateFields() {
-      var selector = document.getElementById("selector");
-      var dateFields = document.getElementById("dateFields");
-
-      if (selector.value === "custom") {
-        dateFields.style.display = "flex";
-      } else {
-        dateFields.style.display = "none";
-      }
-    }
 
   </script>
   <script src="/Script.js"> </script>

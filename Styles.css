@@ -77,3 +77,19 @@
     display: none;
   }
 }
+.background-svg {
+  position: absolute;
+  top: 0;
+  right: 0; /* Set to right instead of left */
+  width: 15%; /* Adjust as needed */
+  height: 100%;
+  pointer-events: none;
+}
+
+.content {
+  z-index: 1;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}

@@ -13,7 +13,7 @@
   <link href="/Styles.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -679,7 +679,7 @@
 
       <div class="bg-white p-5 md:p-10 lg:p-5 rounded-lg shadow-xl flex flex-col mb-6">
         <h1 class="font-bold text-lg mb-2">Filter Data</h1>
-        <div class="flex flex-col md:flex-row space-x-6 justify-stretch">
+        <div class="flex flex-col md:flex-row space-x-6">
           <div class="flex w-full md:w-96 gap-2">
             <select id="selector" name="selector"
               class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md "
@@ -689,27 +689,28 @@
               <option value="option3">This Week</option>
               <option value="custom">Custom</option>
             </select>
-
-            <div class="flex flex-col md:flex-row gap-2 flex-grow" id="dateFields" style="display: none;">
-              <div class="flex flex-col flex-1 flex-grow">
-                <label>Start Date</label>
-                <input type="date" id="startDatePicker" name="startDatePicker"
-                  class="p-2 border border-gray-300 rounded-md w-full md:96">
-              </div>
-
-              <div class="flex flex-col flex-1 flex-grow">
-                <label>End Date</label>
-                <input type="date" id="endDatePicker" name="endDatePicker"
-                  class="p-2 border border-gray-300 rounded-md w-full md:96">
-              </div>
-            </div>
-            <button class="bg-[#134EA3] h-fit self-end text-white center-container gap-2  py-2 px-4 sm:p-2 rounded-md">
-              <span class="material-symbols-outlined">
-                filter_alt
-              </span>
-              <p>Filter</p>
-            </button>
           </div>
+
+          <div class="flex flex-col md:flex-row gap-2 flex-grow" id="dateFields" style="display: none;">
+            <div class="flex flex-col flex-1 flex-grow">
+              <label>Start Date</label>
+              <input type="date" id="startDatePicker" name="startDatePicker"
+                class="p-2 border border-gray-300 rounded-md w-full md:96">
+            </div>
+
+            <div class="flex flex-col flex-1 flex-grow">
+              <label>End Date</label>
+              <input type="date" id="endDatePicker" name="endDatePicker"
+                class="p-2 border border-gray-300 rounded-md w-full md:96">
+            </div>
+          </div>
+          <button
+            class="bg-[#134EA3] h-fit self-end text-white center-container gap-2 py-2 px-3 sm:p-2 rounded-md flex">
+            <span class="material-symbols-outlined">
+              filter_alt
+            </span>
+            <p>Filter</p>
+          </button>
         </div>
       </div>
 
@@ -774,13 +775,12 @@
         </div>
 
         <!--Earning Statistics-->
-        <div class="bg-white p-5 flex-grow flex flex-col rounded-lg shadow-lg w-full lg:w-[40%] mb-6 lg:mb-0">
+        <div class="bg-white p-5 flex-grow flex flex-col rounded-lg shadow-lg w-full h-[500px] mb-6 lg:mb-0">
           <p class="mb-3 font-bold">Earning Statistics</p>
 
-          <div class="relative self-stretch my-auto">
-            <!-- <canvas id="myChart"></canvas> -->
+          <div class="relative">
+            <div id="chart"></div>
           </div>
-
         </div>
       </div>
 
@@ -861,70 +861,50 @@
 
     </div>
   </div>
-
-  <!-- <script>
-    const ctx = document.getElementById('myChart');
-
-    const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const data = {
-      labels: labels,
-      datasets: [{
-        data: [65, 59, 80, 81, 56, 55, 40],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-          'rgba(255, 205, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(201, 203, 207, 0.2)'
-        ],
-        borderColor: [
-          'rgb(255, 99, 132)',
-          'rgb(255, 159, 64)',
-          'rgb(255, 205, 86)',
-          'rgb(75, 192, 192)',
-          'rgb(54, 162, 235)',
-          'rgb(153, 102, 255)',
-          'rgb(201, 203, 207)'
-        ],
-        borderWidth: 1
-      }]
-    };
-
-
-    const config = {
-      type: 'bar',
-      data: data,
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        },
-        plugins: {
-          legend: {
-            display: false,
-          }
-        },
-        responsive: true
+  <script>
+    var options = {
+      series: [{
+        data: [44, 55, 41, 64, 22, 43, 21]
+      }, {
+        data: [53, 32, 33, 52, 13, 44, 32]
+      }],
+      chart: {
+        type: 'bar',
+        height: 430
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          dataLabels: {
+            position: 'top',
+          },
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        offsetX: -6,
+        style: {
+          fontSize: '12px',
+          colors: ['#fff']
+        }
+      },
+      stroke: {
+        show: true,
+        width: 1,
+        colors: ['#fff']
+      },
+      tooltip: {
+        shared: true,
+        intersect: false
+      },
+      xaxis: {
+        categories: [2001, 2002, 2003, 2004, 2005, 2006, 2007],
       },
     };
 
-    new Chart(ctx, config);
-
-    function showDateFields() {
-      var selector = document.getElementById("selector");
-      var dateFields = document.getElementById("dateFields");
-
-      if (selector.value === "custom") {
-        dateFields.style.display = "flex";
-      } else {
-        dateFields.style.display = "none";
-      }
-    }
-
-  </script> -->
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
   <script src="/Script.js"> </script>
 </body>
 

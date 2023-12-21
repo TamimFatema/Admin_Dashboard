@@ -668,45 +668,47 @@
 
       <div class="bg-white p-5 md:p-10 lg:p-5 rounded-lg shadow-xl flex flex-col mb-6">
         <h1 class="font-bold text-lg mb-2">Filter Data</h1>
-        <div class="flex flex-col md:flex-row space-x-6 justify-stretch">
-          <div class="flex w-full md:w-96 gap-2">
-            <select id="selector" name="selector"
-              class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md ">
-              <option value="option1">All</option>
-              <option value="option2">This Month</option>
-              <option value="option3">This Week</option>
-            </select>
-
-            <select id="selector" name="selector"
-              class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md "
-              onchange="showDateFields()">
-              <option value="option1">This Year</option>
-              <option value="option2">This Month</option>
-              <option value="option3">This Week</option>
-              <option value="custom">Custom</option>
-            </select>
-
-            <div class="flex flex-col md:flex-row gap-2 flex-grow" id="dateFields" style="display: none;">
-              <div class="flex flex-col flex-1 flex-grow">
-                <label>Start Date</label>
-                <input type="date" id="startDatePicker" name="startDatePicker"
-                  class="p-2 border border-gray-300 rounded-md w-full md:96">
-              </div>
-
-              <div class="flex flex-col flex-1 flex-grow">
-                <label>End Date</label>
-                <input type="date" id="endDatePicker" name="endDatePicker"
-                  class="p-2 border border-gray-300 rounded-md w-full md:96">
-              </div>
+        <div class="flex flex-col md:flex-row gap-2">
+          <div class="flex flex-col md:flex-row gap-3">
+            <div class="flex w-full md:w-96 ">
+              <select id="" name=""
+                class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md ">
+                <option value="option1">All Sellers</option>
+              </select>
             </div>
-            <button
-              class="bg-[#134EA3] h-fit self-end text-white center-container gap-2  py-2 px-4 sm:p-2 rounded-md flex-grow">
-              <span class="material-symbols-outlined">
-                filter_alt
-              </span>
-              <p>Filter</p>
-            </button>
+  
+            <div class="flex md:w-96">
+              <select id="selector" name="selector"
+                class="flex-1 flex-grow h-fit self-end p-2 border border-gray-300 rounded-md "
+                onchange="showDateFields()">
+                <option value="option1">This Year</option>
+                <option value="option2">This Month</option>
+                <option value="option3">This Week</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
           </div>
+          
+
+          <div class="flex flex-col md:flex-row gap-2 flex-grow" id="dateFields" style="display: none;">
+            <div class="flex flex-col flex-1 flex-grow">
+              <label>Start Date</label>
+              <input type="date" id="startDatePicker" name="startDatePicker"
+                class="p-2 border border-gray-300 rounded-md w-full md:96">
+            </div>
+
+            <div class="flex flex-col flex-1 flex-grow">
+              <label>End Date</label>
+              <input type="date" id="endDatePicker" name="endDatePicker"
+                class="p-2 border border-gray-300 rounded-md w-full md:96">
+            </div>
+          </div>
+          <button class="bg-[#134EA3] h-fit self-end text-white center-container gap-2 py-2 px-4 sm:p-2 rounded-md">
+            <span class="material-symbols-outlined">
+              filter_alt
+            </span>
+            <p>Filter</p>
+          </button>
         </div>
       </div>
 
@@ -881,20 +883,9 @@
     };
 
     new Chart(ctx, config);
-
-    function showDateFields() {
-      var selector = document.getElementById("selector");
-      var dateFields = document.getElementById("dateFields");
-
-      if (selector.value === "custom") {
-        dateFields.style.display = "flex";
-      } else {
-        dateFields.style.display = "none";
-      }
-    }
-
   </script>
   <script src="/Script.js"> </script>
+
 </body>
 
 </html>

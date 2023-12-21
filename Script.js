@@ -91,3 +91,15 @@ toggleElements.forEach((toggleElement) => {
     toggleElement.innerText = newValue === 1 ? "toggle_on" : "toggle_off";
   });
 });
+
+//date fields
+function showDateFields() {
+  var selector = document.getElementById("selector");
+  var dateFields = document.getElementById("dateFields");
+
+  if (selector.value === "custom") {
+    dateFields.style.display = "flex";
+  } else {
+    dateFields.style.display = "none";
+  }
+}

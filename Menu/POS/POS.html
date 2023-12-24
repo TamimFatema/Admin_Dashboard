@@ -663,28 +663,26 @@
         <h1 class="text-2xl font-bold">Point of Sale</h1>
       </div>
       <div class="flex flex-col md:flex-row gap-2">
-        <div class="w-4/6 flex-grow">
-          <div class="bg-white md:p-4 mt-0 mb-1 lg:p-4 rounded-t-lg shadow-xl flex-grow">
-            <h2>Product Section</h2>
+        <div class="flex-grow">
+          <div class="bg-white p-4 mt-0 mb-1 rounded-t-lg shadow-xl flex-grow">
+            <h2 class="font-bold">Product Section</h2>
           </div>
-          <div class="bg-white md:p-5 mt-0 mb-2 lg:p-5 rounded-b-lg shadow-xl flex-grow">
-            <div class="flex flex-col lg:grid lg:grid-cols-4 gap-2 items-center flex-grow">
-              <div class="col-span-3 flex flex-col gap-6 md:flex-row">
-                <div class="flex flex-col w-1/2">
+          <div class="bg-white p-5 mt-0 mb-2 rounded-b-lg shadow-xl flex-grow">
+              <div class="flex gap-6">
+                <div class="flex w-1/2">
                   <select id="selector" name="selector" class="mt-1 w-full p-2 border border-gray-300 rounded-md">
                     <option value="option1">All</option>
                     <option value="option2">In-House</option>
                     <option value="option3">Seller</option>
                   </select>
                 </div>
-                <div class="flex items-center rounded-lg border p-2 gap-2 w-1/2">
+                <div class="flex w-1/2 items-center rounded-lg border p-2 gap-2">
                   <span class="material-symbols-outlined text-gray-700">
                     search
                   </span>
                   <input type="text" placeholder="Search by name" class="w-full" style="outline: none;" />
                 </div>
               </div>
-            </div>
             <div class="flex grid grid-cols-4 gap-3">
               <div class="mt-7 rounded-lg bg-[#EEF8FF]" style="border: 1px solid #D2E9FB; ">
                 <img src="/Images/POS images/braclet.jpg" alt="Product Image"
@@ -758,12 +756,12 @@
             </div>
           </div>
         </div>
-        <div class="w-2/6 flex-grow">
+        <div class="flex-grow">
           <div class="flex flex-col">
-            <div class="bg-white md:p-4 mt-0 mb-1 lg:p-4 rounded-t-lg shadow-xl flex-grow">
-              <h2>Billing Section</h2>
+            <div class="bg-white mt-0 mb-1 p-4 rounded-t-lg shadow-xl flex-grow">
+              <h2 class="font-bold">Billing Section</h2>
             </div>
-            <div class="bg-white md:p-4 mt-0 mb-2 lg:p-4 rounded-b-lg shadow-xl flex-grow">
+            <div class="bg-white mt-0 mb-2 p-4 rounded-b-lg shadow-xl flex-grow">
               <div class="flex gap-3">
                 <div class="flex flex-col w-full">
                   <select id="selector" name="selector" class="mt-1 w-full px-2 py-1 border border-gray-300 rounded-md">

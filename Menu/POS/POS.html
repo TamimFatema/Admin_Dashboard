@@ -668,22 +668,22 @@
             <h2 class="font-bold">Product Section</h2>
           </div>
           <div class="bg-white p-5 mt-0 mb-2 rounded-b-lg shadow-xl flex-grow">
-              <div class="flex gap-6">
-                <div class="flex w-1/2">
-                  <select id="selector" name="selector" class="mt-1 w-full p-2 border border-gray-300 rounded-md">
-                    <option value="option1">All</option>
-                    <option value="option2">In-House</option>
-                    <option value="option3">Seller</option>
-                  </select>
-                </div>
-                <div class="flex w-1/2 items-center rounded-lg border p-2 gap-2">
-                  <span class="material-symbols-outlined text-gray-700">
-                    search
-                  </span>
-                  <input type="text" placeholder="Search by name" class="w-full" style="outline: none;" />
-                </div>
+            <div class="flex gap-6">
+              <div class="flex w-1/2">
+                <select id="selector" name="selector" class="mt-1 w-full p-2 border border-gray-300 rounded-md">
+                  <option value="option1">All</option>
+                  <option value="option2">In-House</option>
+                  <option value="option3">Seller</option>
+                </select>
               </div>
-            <div class="flex grid grid-cols-4 gap-3">
+              <div class="flex w-1/2 items-center rounded-lg border p-2 gap-2">
+                <span class="material-symbols-outlined text-gray-700">
+                  search
+                </span>
+                <input type="text" placeholder="Search by name" class="w-full" style="outline: none;" />
+              </div>
+            </div>
+            <div class="flex grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
               <div class="mt-7 rounded-lg bg-[#EEF8FF]" style="border: 1px solid #D2E9FB; ">
                 <img src="/Images/POS images/braclet.jpg" alt="Product Image"
                   class="h-48 w-full object-cover object-center bg-white" />
@@ -756,7 +756,7 @@
             </div>
           </div>
         </div>
-        <div class="flex-grow">
+        <div class="flex-grow w-full md:w-[50%]">
           <div class="flex flex-col">
             <div class="bg-white mt-0 mb-1 p-4 rounded-t-lg shadow-xl flex-grow">
               <h2 class="font-bold">Billing Section</h2>
@@ -770,12 +770,29 @@
                     <option value="option3">Seller</option>
                   </select>
                 </div>
-                <button class="flex gap-1 bg-[#4ED9A6] text-white rounded-md shadow-lg px-2 py-1 mt-1">
+                <button id="openModalBtn" class="flex gap-1 bg-[#4ED9A6] text-white rounded-md shadow-lg px-2 py-1 mt-1">
                   <span>+</span>
                   <p>Customer</p>
                 </button>
+                <div class="modal-overlay hidden fixed inset-0 bg-black bg-opacity-50"></div>
+                <div
+                  class="modal-content hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded shadow-lg">
+                  <!-- Your form content goes here -->
+                  <form>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+                    <input type="text" id="name" name="name" class="mt-1 p-2 border rounded-md w-full">
+
+                    <!-- Add other form fields as needed -->
+
+                    <!-- Close button for the modal -->
+                    <button type="button" onclick="closeModal()"
+                      class="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                      Close
+                    </button>
+                  </form>
+                </div>
               </div>
-              <p>Current customer: Walking customer</p>
+              <p class="mb-3 text-sm">Current customer: Walking customer</p>
               <div class="flex gap-3">
                 <div class="flex flex-col w-48">
                   <select id="selector" name="selector" class="mt-1 w-full px-2 py-1 border border-gray-300 rounded-md">
@@ -785,46 +802,70 @@
                   </select>
                 </div>
                 <button class="flex gap-1 bg-[#FA8A8A] text-white rounded-md shadow-lg px-2 py-1 mt-1">
-                  Clear cart
+                  <p>Clear cart</p>
                 </button>
                 <button class="flex gap-1 bg-[#7CD8FF] text-white rounded-md shadow-lg px-2 py-1 mt-1">
-                  New order
+                  <p>New order</p>
                 </button>
               </div>
-              <table
-                class="table-fixed mt-5 lg:table-auto w-[200%] lg:w-full text-md text-black text-center border border-[#D2E9FB] rounded-lg">
-                <thead class="bg-[#D2E9FB]">
-                  <tr>
-                    <th class="py-2 w-[25%] md:w-[20%] lg:w-fit items-center">Item</th>
-                    <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Qty</th>
-                    <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Price</th>
-                    <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">Delete</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="py-2 px-4 min-w-[box-width]">
-                      <div class="flex flex-wrap">
-                        <img
-                          src="https://www.optus.com.au/content/dam/optus/images/shop/mobile/phones/apple/iphone-15/carousel/SD-PDP-01-iphone-15-pink-front-back.jpg/renditions/version-1694741183491/original.jpeg"
-                          class=" border" style="width: 50px; height: 60px;" />
-                        <div class="flex-col px-1">
-                          <p>Phone </p>
+              <div class="overflow-x-auto">
+                <table
+                  class="table-fixed mt-5 lg:table-auto w-[200%] lg:w-full text-md text-black text-center border border-[#D2E9FB] rounded-lg">
+                  <thead class="bg-[#D2E9FB] text-left">
+                    <tr>
+                      <th class="py-2 px-4 w-[10%]">Item</th>
+                      <th class="py-2 px-4 w-[10%]">Qty</th>
+                      <th class="py-2 px-4 w-[15%]">Price</th>
+                      <th class="py-2 px-4 w-[10%]">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-left">
+                    <tr>
+                      <td class="py-2 px-4 min-w-[box-width]">
+                        <div class="flex flex-wrap">
+                          <img
+                            src="https://www.optus.com.au/content/dam/optus/images/shop/mobile/phones/apple/iphone-15/carousel/SD-PDP-01-iphone-15-pink-front-back.jpg/renditions/version-1694741183491/original.jpeg"
+                            class=" border" style="width: 50px; height: 60px;" />
+                          <div class="flex-col px-1">
+                            <p>Phone </p>
+                          </div>
                         </div>
-                      </div>
-                    </td>
-                    <td class="py-2 px-4 min-w-[box-width]">2</td>
-                    <td class="py-2 px-4 min-w-[box-width]">150,000 ৳</td>
-                    <td class="py-2 px-4 min-w-[box-width]">
-                      <a href="#">
-                        <span
-                          class="material-symbols-outlined border border-red-500 rounded-md text-red-500 delete-category">delete</span>
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="flex justify-between">
+                      </td>
+                      <td class="py-2 px-4 min-w-[box-width]">2</td>
+                      <td class="py-2 px-4 min-w-[box-width]">150,000 ৳</td>
+                      <td class="py-2 px-4 min-w-[box-width]">
+                        <a href="#">
+                          <span
+                            class="material-symbols-outlined border border-red-500 rounded-md text-red-500 delete-category">delete</span>
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="py-2 px-4 min-w-[box-width]">
+                        <div class="flex flex-wrap">
+                          <img
+                            src="https://www.optus.com.au/content/dam/optus/images/shop/mobile/phones/apple/iphone-15/carousel/SD-PDP-01-iphone-15-pink-front-back.jpg/renditions/version-1694741183491/original.jpeg"
+                            class=" border" style="width: 50px; height: 60px;" />
+                          <div class="flex-col px-1">
+                            <p>Phone </p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="py-2 px-4 min-w-[box-width]">2</td>
+                      <td class="py-2 px-4 min-w-[box-width]">150,000 ৳</td>
+                      <td class="py-2 px-4 min-w-[box-width]">
+                        <a href="#">
+                          <span
+                            class="material-symbols-outlined border border-red-500 rounded-md text-red-500 delete-category">delete</span>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="flex justify-between my-2">
                 <div class="items-start">
                   <p>Sub Total:</p>
                   <p>Product discount:</p>
@@ -846,7 +887,7 @@
                 <p>161,000.00 ৳</p>
               </div>
               <p>Paid by:</p>
-              <div class="flex my-2 gap-3">
+              <div class="flex mb-5 gap-3">
                 <button class="bg-[#134EA3] text-white px-2 py-1 rounded-lg shadow-lg">Cash</button>
                 <button class="text-[#134EA3] border border-[#134EA3] px-2 py-1 rounded-lg shadow-lg">Card</button>
               </div>
@@ -866,6 +907,27 @@
     </div>
 
   </div>
+  <script>
+    // Get references to the modal elements
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const modalContent = document.querySelector('.modal-content');
+    const openModalBtn = document.getElementById('openModalBtn');
+
+    // Function to open the modal
+    function openModal() {
+        modalOverlay.classList.remove('hidden');
+        modalContent.classList.remove('hidden');
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        modalOverlay.classList.add('hidden');
+        modalContent.classList.add('hidden');
+    }
+
+    // Attach click event to the button to open the modal
+    openModalBtn.addEventListener('click', openModal);
+</script>
 </body>
 <script src="/Script.js"> </script>
 

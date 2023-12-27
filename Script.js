@@ -103,3 +103,7 @@ function showDateFields() {
     dateFields.style.display = "none";
   }
 }
+function Dropdown() {
+  const dropdownMaterial = document.getElementById('dropdownMaterial');
+  dropdownMaterial.classList.toggle('hidden');
+}

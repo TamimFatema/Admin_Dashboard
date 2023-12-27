@@ -18,16 +18,12 @@
                 extend: {
                     colors: {
                         clifford: "#da373d",
-                        green: "rgba(49, 189, 122, 1)",
-                        gb: "rgba(42, 198, 188, 1)",
-                        reset: "rgba(236, 40, 111, 1)",
-                        newb: "rgba(16, 129, 224, 1)",
                     },
                 },
             },
         };
     </script>
-    <title>Navbar</title>
+    <title>Order Invoice</title>
 </head>
 
 <body class="h-max bg-gray-100">
@@ -589,61 +585,70 @@
             <div class="bg-white p-4">
                 <h2 class="text-2xl font-extrabold">Order Invoice</h2>
                 <p class="text-base my-2">Invoice #20236985</p>
-                <div class="flex justify-between text-base">
+                <div class="flex justify-between text-base font-semibold">
                     <p>Shop: UpOn online mart</p>
                     <p>Date: 19.12.2023 3:45:24pm</p>
                 </div>
-                <div class="flex justify-between mx-10 my-7">
-
+                <div class="flex justify-between mx-10 my-8">
                     <!--Our Details-->
                     <div>
-                        <p>Invoice from</p>
-                        <p> UpOn Online Mart</p>
+                        <p class="font-semibold">Invoice from</p>
+                        <p class="font-semibold"> UpOn Online Mart</p>
                         <p> Bangla Motor, Dhaka</p>
                         <p> +88021365412 </p>
                         <p> upon@ctsgroupbd.com </p>
                     </div>
                     <!--Billing Details-->
                     <div class="flex flex-col">
-                        <p>Invoice to</p>
-                        <p>Ishrat Jahan</p>
+                        <p class="font-semibold">Invoice to</p>
+                        <p class="font-semibold">Ishrat Jahan</p>
                         <p>Mirpur, Dhaka</p>
                         <p>+880125369874</p>
                         <p>ishrat@gmail.com </p>
                     </div>
                 </div>
                 <!--Table-->
-                <div class="mx-10 my-7">
-                    <table
-                    class="table-fixed lg:table-auto w-[200%] lg:w-full text-md text-black text-center border border-[#D2E9FB] rounded-lg">
-                    <thead class="bg-[#D2E9FB] text-left">
-                      <tr>
-                        <th class="py-2 px-4">SL</th>
-                        <th class="py-2 px-4">Product’s description</th>
-                        <th class="py-2 px-4">Quantity</th>
-                        <th class="py-2 px-4">Unit price</th>
-                        <th class="py-2 px-4">Subtotal</th>
-                      </tr>
-                    </thead>
-                    <tbody class="text-left">
-                      <tr>
-                        <td class="py-2 px-4 min-w-[box-width]">2</td>
-                        <td class="py-2 px-4 min-w-[box-width]">2</td>
-                        <td class="py-2 px-4 min-w-[box-width]">2</td>
-                        <td class="py-2 px-4 min-w-[box-width]">150,000 ৳</td>
-                        <td class="py-2 px-4 min-w-[box-width]">
-                          <a href="#">
-                            <span
-                              class="material-symbols-outlined border border-red-500 rounded-md text-red-500 delete-category">delete</span>
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="mx-10 my-10 border border-[#D2E9FB] rounded-xl">
+                    <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-md text-black text-center ">
+                        <thead class="bg-[#D2E9FB] text-left">
+                            <tr>
+                                <th class="py-2 px-4">SL</th>
+                                <th class="py-2 px-4">Product’s description</th>
+                                <th class="py-2 px-4">Quantity</th>
+                                <th class="py-2 px-4">Unit price</th>
+                                <th class="py-2 px-4">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-left">
+                            <tr>
+                                <td class="py-2 px-4 min-w-[box-width]">2</td>
+                                <td class="py-2 px-4 min-w-[box-width]">
+                                    <div class="text-sm">
+                                        <p class="font-bold">JBL Bluetooth Speaker</p>
+                                        <p>Variation: black</p>
+                                    </div>
+                                </td>
+                                <td class="py-2 px-4 min-w-[box-width]">2</td>
+                                <td class="py-2 px-4 min-w-[box-width]">150,000 ৳</td>
+                                <td class="py-2 px-4 min-w-[box-width]">150,000 ৳ </td>
+                            </tr>
+                            <tr class="border mx-4">
+                                <td class="py-2 px-4 min-w-[box-width]"></td>
+                                <td class="py-2 px-4 min-w-[box-width]">
+                                </td>
+                                <td class="py-2 px-4 min-w-[box-width]"></td>
+                                <td class="py-2 px-4 min-w-[box-width]">Total Paid</td>
+                                <td class="py-2 px-4 min-w-[box-width]">
+                                    7,000 ৳
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-      
+
                 <h1 class="text-md font-bold">Notes:</h1>
-                <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
             </div>

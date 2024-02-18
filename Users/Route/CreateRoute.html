@@ -24,7 +24,7 @@
         };
     </script>
 
-    <title>Admin Table</title>
+    <title>Create Route</title>
 </head>
 
 <body class="h-max bg-gray-100">
@@ -686,95 +686,89 @@
                 <span class="material-symbols-outlined">
                     account_circle
                 </span>
-                <h2 class="text-2xl font-bold">Admin</h2>
+                <h2 class="text-2xl font-bold">Create Route</h2>
             </div>
-            <!-- Table Section -->
 
-            <div class="bg-white shadow-xl rounded-lg">
-                <div class="flex justify-between p-5 flex-wrap">
-                    <div class="flex gap-4 text-base">
-                        <h1 class="text-xl font-bold mb-4">Admin</h1>
-                        <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
+            <form class="bg-white shadow-xl p-4 sm:p-8 md:p-10 lg:p-8 mb-8 rounded-md flex-grow">
+                <div class="grid gap-6 mb-6 md:grid-cols-2">
+                    <div>
+                        <label for="Name" class="block mb-2 text-sm font-medium text-black">Route Type</label>
+                        <select id="Role" name="Role"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                        </select>
                     </div>
-                    <div class="flex gap-10">
-                        <div class="flex">
-                            <div class="flex justify-items-end rounded-l-lg border p-2 gap-2">
-                                <span class="material-symbols-outlined text-gray-700">
-                                    search
-                                </span>
-                                <input type="text" placeholder="Search by employee’s name"
-                                    class="w-[100px] md:w-[300px]" style="outline:none;" />
-                            </div>
-                            <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">
-                                Search
-                            </button>
-                        </div>
-                        <button
-                            class="border-2 border-[#134EA3] center-container gap-1 p-1 sm:p-2 rounded-md shadow-lg">
-                            <span class="material-symbols-outlined text-[#134EA3]">download</span>
-                            <p class="text-[#134EA3]">Export</p>
-                            <span class="material-symbols-outlined text-[#134EA3]">keyboard_arrow_down</span>
-                        </button>
+
+                    <div>
+                        <label for="Name" class="block mb-2 text-sm font-medium text-black">Route Status</label>
+                        <select id="Role" name="Role"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="Name" class="block mb-2 text-sm font-medium text-black">Title</label>
+                        <input type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                    </div>
+
+                    <div>
+                        <label for="Name" class="block mb-2 text-sm font-medium text-black">URL</label>
+                        <input type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                    </div>
+
+                    <div>
+                        <label for="Name" class="block mb-2 text-sm font-medium text-black">Name</label>
+                        <input type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                    </div>
+
+                    <div>
+                        <label for="Name" class="block mb-2 text-sm font-medium text-black">Mode's Name</label>
+                        <input type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                    </div>
+                    <div>
+                        <label for="Name" class="block mb-2 text-sm font-medium text-black">Controller</label>
+                        <input type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                    </div>
+                    <div>
+                        <label for="Name" class="block mb-2 text-sm font-medium text-black">Function</label>
+                        <input type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                    </div>
+
+                    <div>
+                        <label for="Name" class="block mb-2 text-sm font-medium text-black">Method</label>
+                        <input type="text"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                    </div>
+
+                    <div>
+                        <label for="Name" class="block mb-2 text-sm font-medium text-black">Parameter</label>
+                        <select id="Role" name="Role"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <option value="option1">Select Parameter</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                        </select>
                     </div>
                 </div>
-                <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
-                    <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
-                        <thead class="bg-[#D2E9FB]">
-                            <tr>
-                                <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">
-                                    <input name="featured" id="link-checkbox" type="checkbox" value="1"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded ">
-                                    <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900"><a
-                                            href="#" class="text-blue-600"></a></label>
-                                </th>
-                                <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">SL</th>
-                                <th class="py-2 w-[25%] md:w-[40%] lg:w-fit">Name</th>
-                                <th class="py-2 w-[40%] md:w-[40%] lg:w-fit">Role</th>
-                                <th class="py-2 w-[50%] md:w-[40%] lg:w-fit">Mobile</th>
-                                <th class="py-2 w-[80%] md:w-[40%] lg:w-fit">Email</th>
-                                <th class="py-2 w-[70%] md:w-[40%] lg:w-fit">Password</th>
-                                <th class="py-2 w-[40%] md:w-[40%] lg:w-fit">Type</th>
-                                <th class="py-2 w-[40%] md:w-[40%] lg:w-fit">Status</th>
-                                <th class="py-2 w-[50%] md:w-[40%] lg:w-fit">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="items-center">
-                                <td class="py-2 px-4 min-w-[box-width]">Ishrat</td>
-                                <td class="py-2 px-4 min-w-[box-width]">1</td>
-                                <td class="py-2 px-4 min-w-[box-width]">Ishrat</td>
-                                <td class="py-2 px-4 min-w-[box-width]">Admin</td>
-                                <td class="py-2 px-4 min-w-[box-width]">01888888888</td>
-                                <td class="py-2 px-4 min-w-[box-width]">ishratjahan@gmail.com</td>
-                                <td class="py-2 px-4 min-w-[box-width]">@@@@@@@</td>
-                                <td class="py-2 px-4 min-w-[box-width]">Permanent</td>
-                                <td class="py-2 px-4 min-w-[box-width] toggle-row">
-                                    <label class="relative inline-flex items-center cursor-pointer">
-                                        <input type="checkbox" value="" class="sr-only peer">
-                                        <div
-                                            class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#134EA3]">
-                                        </div>
-                                    </label>
-                                </td>
-                                <td class="py-2 px-4 min-w-[box-width]">
-                                    <div class="flex gap-1">
-                                        <a href="/Users/Admin/EditAdmin.html">
-                                            <span
-                                                class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
-                                                edit
-                                            </span>
-                                        </a>
-                                        <a href="#">
-                                            <span
-                                                class="material-symbols-outlined border border-red-500 rounded-md text-red-500 delete-category">delete</span>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                <button type="submit"
+                    class="text-white flex gap-2 bg-[#134EA3] font-medium rounded-lg w-full sm:w-auto px-3 py-2 items-center">
+                    <span class="material-symbols-outlined">
+                        add_circle
+                    </span>
+                    <p>Add Route</p>
+                </button>
+            </form>
 
         </div>
     </div>

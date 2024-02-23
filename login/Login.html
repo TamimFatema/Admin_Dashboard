@@ -2,16 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
-    <link rel="stylesheet" href="/login/login.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link href="/login/login.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: "#da373d",
+                    },
+                },
+            },
+        };
+    </script>
+    <title>Admin Login</title>
 </head>
 
 <body>
-   
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <div class="bg-white p-8 rounded shadow-md w-96 mx-auto my-48">
+        <div class="flex flex-col gap-2 items-center">
+            <img src="/login/1-removebg-preview.png" alt="logo" style="height: 150px; width: 150px;">
+            <h2 class="text-xl font-semibold mb-4">Welcome Admin</h2>
+        </div>
+        <form class="flex flex-col items-center">
+            <div class="mb-4 w-full">
+                <label for="username" class="block text-gray-700 font-medium mb-1">User ID</label>
+                <input type="text" id="username" name="username"
+                    class="border border-gray-300 px-3 py-2 w-full rounded focus:outline-none focus:border-blue-500">
+            </div>
+            <div class="mb-4 w-full">
+                <label for="password" class="block text-gray-700 font-medium mb-1">Password</label>
+                <input type="password" id="password" name="password"
+                    class="border border-gray-300 px-3 py-2 w-full rounded focus:outline-none focus:border-blue-500">
+            </div>
+            <button type="submit" class="bg-[#134EA3] text-white px-4 py-2 rounded">Login</button>
+        </form>
+    </div>
+    
+
 </body>
 
 </html>

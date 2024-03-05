@@ -144,7 +144,16 @@
                   <span class="material-symbols-outlined">
                     package
                   </span>
-                  <p class="mx-4 font-medium">Orders</p>
+                  <p class="mx-4 font-medium">Orders (In-House)</p>
+                </a>
+              </li>
+              <li class="p-1">
+                <a id="order-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Order Management/Orders/All/Orders.html">
+                  <span class="material-symbols-outlined">
+                    orders
+                  </span>
+                  <p class="mx-4 font-medium">Orders (Vendors)</p>
                 </a>
               </li>
               <li class="p-1">
@@ -550,11 +559,21 @@
       </div>
       <p class="mb-2 ">Welcome to admin's dashboard</p>
       <div class="bg-white p-5 md:p-10 lg:p-5 rounded-lg flex flex-col text-sm sm:text-base">
-        <div class="flex gap-3">
-          <span class="material-symbols-outlined">
-            monitoring
-          </span>
-          <h2 class="px-1 py-1">Business Analytics</h2>
+        <div class="flex justify-between">
+          <div class="flex gap-3">
+            <span class="material-symbols-outlined">
+              monitoring
+            </span>
+            <h2 class="px-1 py-1">Business Analytics</h2>
+          </div>
+          <div>
+            <button class="flex gap-1 p-2 items-center border border-gray-200 rounded-xl text-sm">
+              <p>Overall Statistics</p>
+              <span class="material-symbols-outlined">
+                expand_more
+              </span>
+            </button>
+          </div>
         </div>
 
         <div class="grid grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6 my-4 md:px-2">
@@ -756,7 +775,7 @@
 
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6 w-grow mt-3 md:px-2">
-          <div class="shadow-xl rounded-lg flex justify-between items-center p-5"
+          <div class="shadow-lg shadow-[#BAA7E2] rounded-lg flex justify-between items-center p-5"
             style="background: linear-gradient(262deg, #FFF 0.24%, #BAA7E2 100%); ">
             <div>
               <h3>Total Sale</h3>
@@ -769,7 +788,7 @@
             </div>
           </div>
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center p-5"
+          <div class="shadow-lg shadow-[#E8B2CB] rounded-lg flex justify-between items-center p-5"
             style="background: linear-gradient(262deg, #FFF 0.24%, #E8B2CB 100%); ">
             <div>
               <h3>Total Stores</h3>
@@ -782,7 +801,7 @@
             </div>
           </div>
 
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center p-5"
+          <div class="shadow-lg shadow-[#FFD2A5] rounded-lg flex justify-between items-center p-5"
             style="background: linear-gradient(262deg, #FFF 0.24%, #FFD2A5 100%);">
             <div>
               <h3>Total Products</h3>
@@ -795,8 +814,8 @@
             </div>
           </div>
 
-          
-          <div class="bg-[#D2E9FB] shadow-xl rounded-lg flex justify-between items-center p-5"
+
+          <div class="shadow-lg shadow-[#FFFFC1] rounded-lg flex justify-between items-center p-5"
             style="background: linear-gradient(265deg, #FFF 0%, #FFFFC1 100%); ">
             <div>
               <h3>Total Customers</h3>

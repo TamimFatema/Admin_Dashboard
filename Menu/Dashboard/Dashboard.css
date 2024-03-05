@@ -6,8 +6,8 @@
 .background-svg {
   position: absolute;
   top: 0;
-  right: 0; /* Set to right instead of left */
-  width: 15%; /* Adjust as needed */
+  right: 0;
+  width: 15%; 
   height: 100%;
   pointer-events: none;
 }

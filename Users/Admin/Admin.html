@@ -55,11 +55,7 @@
                         Home
                     </a>
                 </li>
-                <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    <a class="flex items-center" href="#">
-                        <span class="material-symbols-outlined"> account_circle </span>
-                    </a>
-                </li>
+
                 <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
                     <a class="flex items-center" href="#">
                         <span class="material-symbols-outlined">
@@ -77,6 +73,13 @@
                             <span class="material-symbols-outlined"> globe </span>
                         </div>
                     </div>
+                </li>
+                <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+                    <a class="flex items-center" href="#">
+                        <a href="#" class="flex items-center gap-1">
+                            <span class="material-symbols-outlined"> account_circle </span>
+                            Logout
+                        </a>
                 </li>
             </ul>
 
@@ -682,12 +685,28 @@
         </div>
         <!--Sidebar ends-->
         <div class="justify-center container mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
-            <div class="flex items-center gap-2 mb-4">
-                <span class="material-symbols-outlined">
-                    account_circle
-                </span>
-                <h2 class="text-2xl font-bold">Admin</h2>
+            <div class="flex justify-between">
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                    <h2 class="text-2xl font-bold">Admin</h2>
+                </div>
+                <div class="flex items-center gap-2 mb-4">
+                    <a href="/Users/Admin/CreateAdmin.html">
+                        <button class="bg-[#134EA3] text-white font-bold flex rounded-lg p-2 gap-2">
+
+                            <span class="material-symbols-outlined">
+                                person_add
+                            </span>
+
+                            <h2>Add Admin</h2>
+                        </button>
+                    </a>
+
+                </div>
             </div>
+
             <!-- Table Section -->
 
             <div class="bg-white shadow-xl rounded-lg">

@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   <link href="/Styles.css" rel="stylesheet" />
+  <link href="/Users/Sellers/Seller List/Seller.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -23,7 +24,7 @@
       },
     };
   </script>
-  <title>Navbar</title>
+  <title>All Sellers</title>
 </head>
 
 <body class="h-max bg-gray-100">
@@ -136,22 +137,14 @@
           <div class="mb-2">
             <h3 class="p-1">ORDER MANAGEMENT</h3>
             <ul class="dropdown">
-              <li class="p-1">
-                <a id="order-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                  href="/Order Management/Orders/All/Orders.html">
-                  <span class="material-symbols-outlined">
-                    package
-                  </span>
-                  <p class="mx-4 font-medium">Orders (In-House)</p>
-                </a>
-              </li>
+             
               <li class="p-1">
                 <a id="order-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
                   href="/Order Management/Orders/All/Orders.html">
                   <span class="material-symbols-outlined">
                     orders
                   </span>
-                  <p class="mx-4 font-medium">Orders (Vendors)</p>
+                  <p class="mx-4 font-medium">Orders</p>
                 </a>
               </li>
               <li class="p-1">
@@ -602,7 +595,7 @@
       <div class="bg-white shadow-xl rounded-lg">
         <div class="flex justify-between p-4 flex-wrap">
           <div class="flex gap-2 text-base">
-            <h1 class="text-xl font-bold mb-4">Sellers List</h1>
+            <h1 class="text-xl font-bold mb-4">All Sellers List</h1>
           </div>
           <div>
             <button class="flex gap-2 border border-1 border-gray-300 p-2 rounded-md">
@@ -619,23 +612,23 @@
 
         <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
           <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
-            <thead class="bg-[#D2E9FB]">
+            <thead class="table_head bg-[#D2E9FB]">
               <tr>
-                <th class="py-2 w-[25%] md:w-[20%] lg:w-fit">SL</th>
-                <th class="py-2 w-[25%] md:w-[40%] lg:w-fit">Seller's Name/Shop Name</th>
-                <th class="py-2 w-[40%] md:w-[40%] lg:w-fit">Category</th>
-                <th class="py-2 w-[50%] md:w-[40%] lg:w-fit">Quantity Uploaded</th>
-                <th class="py-4 w-[50%] md:w-[40%] lg:w-fit">Status</th>
-                <th class="py-2 w-[50%] md:w-[40%] lg:w-fit">Details</th>
+                <th>SL</th>
+                <th>Seller's Name/Shop Name</th>
+                <th>Category</th>
+                <th>Quantity Uploaded</th>
+                <th>Status</th>
+                <th>Details</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="items-center">
-                <td class="py-2 px-4 min-w-[box-width]">1</td>
-                <td class="py-2 px-4 min-w-[box-width]">Ishrat</td>
-                <td class="py-2 px-4 min-w-[box-width]">Admin</td>
-                <td class="py-2 px-4 min-w-[box-width]">20</td>
-                <td class="py-2 px-4 min-w-[box-width]">
+            <tbody class="table_body">
+              <tr class="border">
+                <td>1</td>
+                <td>Ishrat</td>
+                <td>Admin</td>
+                <td>20</td>
+                <td>
                   <button class="bg-[#D2E9FB] text-[#134EA3] rounded-md p-3 shadow-lg">
                     Approved
                   </button>
@@ -649,7 +642,7 @@
                 </td>
               </tr>
 
-              <tr class="items-center">
+              <tr class="border">
                 <td class="py-2 px-4 min-w-[box-width]">1</td>
                 <td class="py-2 px-4 min-w-[box-width]">Ishrat</td>
                 <td class="py-2 px-4 min-w-[box-width]">test</td>
@@ -668,17 +661,17 @@
                 </td>
               </tr>
 
-              <tr class="items-center">
-                <td class="py-2 px-4 min-w-[box-width]">1</td>
-                <td class="py-2 px-4 min-w-[box-width]">Ishrat</td>
-                <td class="py-2 px-4 min-w-[box-width]">Admin</td>
-                <td class="py-2 px-4 min-w-[box-width]">20</td>
-                <td class="py-2 px-4 min-w-[box-width]">
+              <tr class="border">
+                <td class="">1</td>
+                <td class="">Ishrat</td>
+                <td class="">Admin</td>
+                <td class="">20</td>
+                <td class="">
                   <button class="bg-red-100 text-red-600 rounded-md p-3 shadow-lg">
                     Declined
                   </button>
                 </td>
-                <td class="py-2 px-4 min-w-[box-width]">
+                <td class="">
                   <a href="/Users/Sellers/Seller List/SellerDetails.html">
                     <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
                       visibility

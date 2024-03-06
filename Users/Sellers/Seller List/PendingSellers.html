@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="/Styles.css" rel="stylesheet" />
+    <link href="/Users/Sellers/Seller List/Seller.css" rel="stylesheet" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -24,7 +26,7 @@
             },
         };
     </script>
-    <title>Approved Refund Requests</title>
+    <title>Pending Seller Requests</title>
 </head>
 
 <body class="h-max bg-gray-100">
@@ -145,7 +147,7 @@
                                     <span class="material-symbols-outlined">
                                         package
                                     </span>
-                                    <p class="mx-4 font-medium">Orders (In-House)</p>
+                                    <p class="mx-4 font-medium"></p>
                                 </a>
                             </li>
                             <li class="p-1">
@@ -155,7 +157,7 @@
                                     <span class="material-symbols-outlined">
                                         orders
                                     </span>
-                                    <p class="mx-4 font-medium">Orders (Vendors)</p>
+                                    <p class="mx-4 font-medium">Orders</p>
                                 </a>
                             </li>
                             <li class="p-1">
@@ -632,32 +634,32 @@
 
                 <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
                     <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
-                        <thead class="bg-[#D2E9FB] text-center">
+                        <thead class="table_head bg-[#D2E9FB]">
                             <tr>
-                                <th class="py-4 w-[25%] lg:w-fit">SL</th>
-                                <th class="py-4 w-[25%] lg:w-fit">Seller's Name/Shop Name</th>
-                                <th class="py-4 w-[25%] lg:w-fit">Contact No.</th>
-                                <th class="py-4 w-[25%] lg:w-fit">NID</th>
-                                <th class="py-4 w-[33.33%] lg:w-fit">Address</th>
-                                <th class="py-4 w-[33.33%] lg:w-fit">Email</th>
-                                <th class="py-4 w-[33.33%] lg:w-fit">Shop Name</th>
-                                <th class="py-4 w-[33.33%] lg:w-fit">Shop Address</th>
-                                <th class="py-4 w-[33.33%] lg:w-fit">Business License No.</th>
-                                <th class="py-4 w-[33.33%] lg:w-fit">Tax ID</th>
+                                <th>SL</th>
+                                <th>Seller's Name/Shop Name</th>
+                                <th>Contact No.</th>
+                                <th>NID</th>
+                                <th>Address</th>
+                                <th>Email</th>
+                                <th>Shop Name</th>
+                                <th>Shop Address</th>
+                                <th>Business License No.</th>
+                                <th>Tax ID</th>
                             </tr>
                         </thead>
-                        <tbody class="text-center">
-                            <tr>
-                                <td class="py-3 px-4 border-b min-w-[box-width]">1</td>
-                                <td class="py-3 px-4 border-b min-w-[box-width]">ABC General Store</td>
-                                <td class="py-3 px-4 border-b min-w-[box-width] ">wfghoiwgh </td>
-                                <td class="py-3 px-4 border-b min-w-[box-width]">fqenf;pgj </td>
-                                <td class="py-3 px-4 border-b min-w-[box-width]">1000000</td>
-                                <td class="py-3 px-4 border-b min-w-[box-width] ">wfghoiwgh </td>
-                                <td class="py-3 px-4 border-b min-w-[box-width]">fqenf;pgj </td>
-                                <td class="py-3 px-4 border-b min-w-[box-width]">1000000</td>
-                                <td class="py-3 px-4 border-b min-w-[box-width]">fqenf;pgj </td>
-                                <td class="py-3 px-4 border-b min-w-[box-width]">1000000</td>
+                        <tbody class="table_body">
+                            <tr class="border">
+                                <td>1</td>
+                                <td>ABC General Store</td>
+                                <td>018888888</td>
+                                <td>408922820228</td>
+                                <td>213/3 Thai Lane</td>
+                                <td>seller@gmail.com</td>
+                                <td>ABC General Store</td>
+                                <td>213/3 Thai Lane</td>
+                                <td>1234567</td>
+                                <td>12345</td>
                             </tr>
                         </tbody>
                     </table>

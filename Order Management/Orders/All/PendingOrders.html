@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link href="/Styles.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: "#da373d",
-                    },
-                },
-            },
-        };
-    </script>
-    <title>Top Banner Update</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+  <link href="/Styles.css" rel="stylesheet" />
+  <link href="/Order Management/Table.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+          },
+        },
+      },
+    };
+  </script>
+  <title>Pending Orders</title>
 </head>
 
 <body class="h-max bg-gray-100">
@@ -42,9 +43,9 @@
         </span>
       </button>
       <!-- <div class="flex">
-       <img src="/Images/Blue Illustrative E-Commerce Online Shop Logo(2).png" alt="upon logo"
-         style="width: auto; height: 40px;" />
-     </div> -->
+      <img src="/Images/Blue Illustrative E-Commerce Online Shop Logo(2).png" alt="upon logo"
+        style="width: auto; height: 40px;" />
+    </div> -->
       <!-- <p>ICON</p> -->
 
       <ul class="ml-auto justify-items-end gap-3 flex">
@@ -540,86 +541,349 @@
       </div>
     </div>
     <!--Sidebar ends-->
-        <div class="justify-center container mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="material-symbols-outlined">
-                    planner_banner_ad_pt
-                </span>
-                <h2 class="text-2xl font-bold">Banner Setting</h2>
-            </div>
-            <!-- Form Section -->
-            <div class="mb-8 flex flex-col sm:flex-row">
-                <form id="categoryForm" action="#" method="POST" enctype="multipart/form-data"
-                    class="bg-white shadow-xl p-4 sm:p-8 md:p-10 lg:p-8 rounded-md flex-grow">
-                    <h1 class="underline text-[#134EA3] text-2xl font-bold mb-3">English (EN)</h1>
-                    <!-- Category Name -->
-                    <div class="flex flex-col lg:flex-row justify-between">
-                        <div class="flex flex-col gap-2">
-                            <div class="w-full lg:w-80 xl:w-96 mb-2 ">
-                                <div class="flex items-center gap-2">
-                                    <label for="categoryName" class="block text-sm font-medium text-black">Banner
-                                        Title</label>
-                                </div>
-                                <input type="text" id="categoryName" name="categoryName"
-                                    class="mt-1 p-2 w-full border border-black rounded-md" required />
-                            </div>
-
-                            <!-- Status -->
-                            <div class="flex items-center gap-2 mb-2">
-                                <label for="link-checkbox" class="block text-sm font-medium text-black">
-                                    Status</label>
-                                <input name="featured" id="link-checkbox" type="checkbox" value="1"
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded ">
-                            </div>
-
-                            <!-- Image Upload -->
-                            <div class="w-full lg:w-80 xl:w-96 mb-2">
-                                <label for="image" class="block text-sm font-medium text-black mb-2">Upload
-                                    Image</label>
-                                <input type="file" id="image" name="image"
-                                    class="mt-1 w-full mb-2 sm:mb-0 border rounded-md file:bg-[#134EA3] file:text-white file:border-0 file:p-2" />
-                            </div>
-                        </div>
-
-                        <!-- Image Preview -->
-                        <img id="preview" src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg"
-                            alt="Preview" class="h-[220px] w-auto self-end rounded-md" />
-
-                        <!-- Submit Buttons -->
-                        <div class="mt-4 flex gap-3 items-end">
-                            <button type="button"
-                                class="w-full h-fit bg-[#545454] text-white px-6 py-2 font-bold rounded-md">
-                                Reset
-                            </button>
-                            <button type="submit"
-                                class="w-full h-fit bg-[#134EA3] text-white px-6 py-2 font-bold rounded-md">
-                                Submit
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+    <div class="justify-center container w-full mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
+      <div class="flex gap-3 items-center mb-4">
+        <span class="material-symbols-outlined">
+          package
+        </span>
+        <h1 class="text-2xl font-bold">Pending Orders</h1>
+        <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
+      </div>
+      <div class="bg-white p-5 sm:p-8 md:p-5 rounded-lg flex flex-col flex-grow shadow-xl mb-1">
+        <div class="flex gap-3">
+          <h2 class="px-1 py-1 text-2xl font-bold">Select Date Range</h2>
         </div>
+        <div class="flex flex-col lg:grid lg:grid-cols-4 gap-2 items-center">
+          <div class="col-span-3 flex flex-col justify-between md:flex-row flex-grow gap-2 w-full">
+            <div class="flex flex-col w-full pt-6">
+              <select id="selector" name="selector" class="mt-1 w-full p-2 border border-gray-300 rounded-md">
+                <option value="option1">All</option>
+                <option value="option2">In-House</option>
+                <option value="option3">Seller</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col w-full">
+              <label>Start Date</label>
+              <input type="date" id="datePicker" name="datePicker"
+                class="mt-1 w-full p-2 border border-gray-300 rounded-md ">
+            </div>
+
+            <div class="flex flex-col w-full">
+              <label>End Date</label>
+              <input type="date" id="datePicker" name="datePicker"
+                class="mt-1 w-full p-2 border border-gray-300 rounded-md">
+            </div>
+          </div>
+          <div class="col-span-1 flex-grow xl:w-full lg:w-full md:w-80 sm:w-80 pt-6">
+            <button class="mt-1 py-2 px-5 w-full bg-[#134EA3] text-white border-gray-300 rounded-md">
+              Show Data
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white md:p-5 mt-0 mb-7 lg:p-5 rounded-b-lg flex flex-col flex-grow">
+        <div class="grid grid-cols-2 lg:grid-cols-4 grid-flow-row gap-6 my-4 md:px-2">
+          <a href="/Order Management/Orders/All/PendingOrders.html">
+            <div class="shadow-lg shadow-[#DBF094] rounded-lg flex flex-col p-4"
+              style="background: linear-gradient(262deg, #FFF 0%, #DBF094 100%); position: relative;">
+              <div class="content">
+                <div class="flex justify-between">
+                  <p>Pending Orders</p>
+                  <span class="material-symbols-outlined">
+                    deployed_code_history
+                  </span>
+                </div>
+                <p class="font-extrabold">0</p>
+              </div>
+              <svg class="background-svg" width="39" height="92" viewBox="0 0 39 92" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect y="86.3555" width="50" height="50" transform="rotate(-45 0 86.3555)" fill="#A3C13C"
+                  fill-opacity="0.25" />
+                <rect x="18" y="48" width="60" height="60" transform="rotate(-45 18 48)" fill="#A3C13C"
+                  fill-opacity="0.25" />
+                <rect y="8.42627" width="50" height="50" transform="rotate(-45 0 8.42627)" fill="#A3C13C"
+                  fill-opacity="0.25" />
+              </svg>
+            </div>
+          </a>
+          <a href="/Order Management/Orders/All/ConfirmedORders.html">
+            <div class="shadow-xl  rounded-lg flex flex-col p-4"
+              style="background: linear-gradient(262deg, #FFF 0%, #6CE6DD 100%); position: relative;">
+              <div class="content">
+                <div class="flex justify-between">
+                  <p>
+                    Confirmed Orders
+                  </p>
+                  <span class="material-symbols-outlined">
+                    check_circle
+                  </span>
+                </div>
+                <p class="font-extrabold">0</p>
+              </div>
+              <svg class="background-svg" width="39" height="92" viewBox="0 0 39 92" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect y="86.3555" width="50" height="50" transform="rotate(-45 0 86.3555)" fill="#1E7A73"
+                  fill-opacity="0.25" />
+                <rect x="18" y="48" width="60" height="60" transform="rotate(-45 18 48)" fill="#1E7A73"
+                  fill-opacity="0.25" />
+                <rect y="8.42627" width="50" height="50" transform="rotate(-45 0 8.42627)" fill="#1E7A73"
+                  fill-opacity="0.25" />
+              </svg>
+            </div>
+          </a>
+          <a href="/Order Management/Orders/All/PackagingOrders.html">
+            <div class="shadow-xl rounded-lg flex flex-col p-4"
+              style="background: linear-gradient(262deg, #FFF 0%, #6ACAFC 100%); position: relative;">
+              <div class="content">
+                <div class="flex justify-between">
+                  <p>
+                    Packaging Orders
+                  </p>
+                  <span class="material-symbols-outlined">
+                    package_2
+                  </span>
+                </div>
+                <p class="font-extrabold">0</p>
+              </div>
+              <svg class="background-svg" width="39" height="92" viewBox="0 0 39 92" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect y="86.3555" width="50" height="50" transform="rotate(-45 0 86.3555)" fill="#2D6E91"
+                  fill-opacity="0.25" />
+                <rect x="18" y="48" width="60" height="60" transform="rotate(-45 18 48)" fill="#2D6E91"
+                  fill-opacity="0.25" />
+                <rect y="8.42627" width="50" height="50" transform="rotate(-45 0 8.42627)" fill="#2D6E91"
+                  fill-opacity="0.25" />
+              </svg>
+            </div>
+          </a>
+          <a href="/Order Management/Orders/All/OutforDelivery.html">
+            <div class="shadow-xl rounded-lg flex flex-col p-4"
+              style="background: linear-gradient(262deg, #FFF 0%, #8E9FE6 100%); position: relative;">
+              <div class="content">
+                <div class="flex justify-between">
+                  <p>
+                    Shipped Out Orders
+                  </p>
+                  <span class="material-symbols-outlined">
+                    local_shipping
+                  </span>
+                </div>
+                <p class="font-extrabold">0</p>
+              </div>
+              <svg class="background-svg" width="39" height="92" viewBox="0 0 39 92" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect y="86.3555" width="50" height="50" transform="rotate(-45 0 86.3555)" fill="#6177D0"
+                  fill-opacity="0.25" />
+                <rect x="18" y="48" width="60" height="60" transform="rotate(-45 18 48)" fill="#6177D0"
+                  fill-opacity="0.25" />
+                <rect y="8.42627" width="50" height="50" transform="rotate(-45 0 8.42627)" fill="#6177D0"
+                  fill-opacity="0.25" />
+              </svg>
+            </div>
+          </a>
+          <a href="/Order Management/Orders/All/DeliveredOrders.html">
+            <div class="shadow-xl rounded-lg flex flex-col p-4"
+              style="background: linear-gradient(262deg, #FFF 0%, #87A7FF 100%); position: relative;">
+              <div class="content">
+                <div class="flex justify-between">
+                  <p>
+                    Delivered Orders
+                  </p>
+                  <span class="material-symbols-outlined">
+                    select_check_box
+                  </span>
+                </div>
+                <p class="font-extrabold">0</p>
+              </div>
+              <svg class="background-svg" width="39" height="92" viewBox="0 0 39 92" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect y="86.3555" width="50" height="50" transform="rotate(-45 0 86.3555)" fill="#5570BC"
+                  fill-opacity="0.25" />
+                <rect x="18" y="48" width="60" height="60" transform="rotate(-45 18 48)" fill="#5570BC"
+                  fill-opacity="0.25" />
+                <rect y="8.42627" width="50" height="50" transform="rotate(-45 0 8.42627)" fill="#5570BC"
+                  fill-opacity="0.25" />
+              </svg>
+            </div>
+          </a>
+          <a href="/Order Management/Orders/All/CancelledORders.html">
+            <div class="shadow-xl rounded-lg flex flex-col p-4"
+              style="background: linear-gradient(262deg, #FFF 0%, #7AC0E3 100%); position: relative;">
+              <div class="content">
+                <div class="flex justify-between">
+                  <p>
+                    Cancelled Orders
+                  </p>
+                  <span class="material-symbols-outlined">
+                    cancel
+                  </span>
+                </div>
+                <p class="font-extrabold">0</p>
+              </div>
+              <svg class="background-svg" width="39" height="92" viewBox="0 0 39 92" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect y="86.3555" width="50" height="50" transform="rotate(-45 0 86.3555)" fill="#247199"
+                  fill-opacity="0.25" />
+                <rect x="18" y="48" width="60" height="60" transform="rotate(-45 18 48)" fill="#247199"
+                  fill-opacity="0.25" />
+                <rect y="8.42627" width="50" height="50" transform="rotate(-45 0 8.42627)" fill="#247199"
+                  fill-opacity="0.25" />
+              </svg>
+            </div>
+          </a>
+          <a href="/Order Management/Orders/All/ReturnedOrders.html">
+            <div class="shadow-xl rounded-lg flex flex-col p-4"
+              style="background: linear-gradient(262deg, #FFF 0%, #DBF094 100%); position: relative;">
+              <div class="content">
+                <div class="flex justify-between">
+                  <p>
+                    Returned
+                  </p>
+                  <span class="material-symbols-outlined">
+                    sync
+                  </span>
+                </div>
+                <p class="font-extrabold">0</p>
+              </div>
+              <svg class="background-svg" width="39" height="92" viewBox="0 0 39 92" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect y="86.3555" width="50" height="50" transform="rotate(-45 0 86.3555)" fill="#A3C13C"
+                  fill-opacity="0.25" />
+                <rect x="18" y="48" width="60" height="60" transform="rotate(-45 18 48)" fill="#A3C13C"
+                  fill-opacity="0.25" />
+                <rect y="8.42627" width="50" height="50" transform="rotate(-45 0 8.42627)" fill="#A3C13C"
+                  fill-opacity="0.25" />
+              </svg>
+            </div>
+          </a>
+          <a href="/Order Management/Orders/All/FailedOrders.html">
+            <div class="shadow-xl rounded-lg flex flex-col p-4"
+              style="background: linear-gradient(262deg, #FFF 0%, #6CE6DD 100%); position: relative;">
+              <div class="content">
+                <div class="flex justify-between">
+                  <p>
+                    Failed to Deliver
+                  </p>
+                  <span class="material-symbols-outlined">
+                    close
+                  </span>
+                </div>
+                <p class="font-extrabold">0</p>
+              </div>
+              <svg class="background-svg" width="39" height="92" viewBox="0 0 39 92" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect y="86.3555" width="50" height="50" transform="rotate(-45 0 86.3555)" fill="#1E7A73"
+                  fill-opacity="0.25" />
+                <rect x="18" y="48" width="60" height="60" transform="rotate(-45 18 48)" fill="#1E7A73"
+                  fill-opacity="0.25" />
+                <rect y="8.42627" width="50" height="50" transform="rotate(-45 0 8.42627)" fill="#1E7A73"
+                  fill-opacity="0.25" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-xl overflow-x-auto rounded-lg">
+        <div class="flex justify-between p-5 flex-wrap">
+          <div class="flex border border-gray-800 shadow-md rounded-lg">
+            <div class="flex items-center rounded-l-lg border p-2 gap-2">
+              <span class="material-symbols-outlined text-gray-700">
+                search
+              </span>
+              <input type="text" placeholder="Search by order id" class="w-[75px] md:w-[150px]"
+                style="outline: none;" />
+            </div>
+            <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">
+              Search
+            </button>
+          </div>
+
+          <button class="border-2 border-[#134EA3] center-container gap-1 p-1 sm:p-2 rounded-md">
+            <span class="material-symbols-outlined text-[#134EA3]">download</span>
+            <p class="text-[#134EA3]">Export</p>
+            <span class="material-symbols-outlined text-[#134EA3]">keyboard_arrow_down</span>
+          </button>
+        </div>
+
+        <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
+          <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-md  text-center">
+            <thead class="table_head bg-[#D2E9FB]">
+              <tr>
+                <th>SL</th>
+                <th>Order ID</th>
+                <th>Order Date</th>
+                <th>Customer Info</th>
+                <th>Store Name</th>
+                <th>Total Amount</th>
+                <th>Order Status</th>
+                <th>Action</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="table_body">
+              <tr class="border">
+                <td class="py-2 px-4 border-b min-w-[box-width]">1</td>
+                <td class="py-2 px-4 border-b min-w-[box-width]">0003</td>
+                <div class="flex flex-col">
+                  <td class="py-2 px-4 border-b min-w-[box-width]">
+                    <p>2023-11-02</p>
+                    <p>11:00 PM</p>
+                  </td>
+                </div>
+                <div class="flex flex-col">
+                  <td class="py-2 px-4 border-b min-w-[box-width]">
+                    <p>John Doe</p>
+                    <p>01712121212</p>
+                  </td>
+                  </td>
+                </div>
+                <td class="py-2 px-4 border-b min-w-[box-width]">Store Name</td>
+                <td class="py-2 px-4 border-b min-w-[box-width]">
+                  <p>$100.00</p>
+                  <p class="text-red-500 font-bold">unpaid</p>
+
+                </td>
+                <td class="py-2 px-4 border-b min-w-[box-width]">
+                  <button class="bg-gray-100 text-green-600 p-2 border-2 rounded-xl shadow-2xl">
+                    pending
+                  </button>
+                </td>
+                <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
+                  <a>
+                    <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
+                      visibility
+                    </span>
+                  </a>
+                  <a>
+                    <span class="material-symbols-outlined border border-green-300 rounded-md text-green-300">
+                      download
+                    </span>
+                  </a>
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- <div class="md:hidden flex items-center justify-end space-x-4 mb-6 mx-3">
+          <span class="material-symbols-outlined border py-2 px-2 rounded">
+            chevron_left
+          </span>
+          <button class="page-btn text-black border py-2 px-4 rounded">1</button>
+          <button class="page-btn text-black border py-2 px-4 rounded">2</button>
+          <button class="page-btn text-black border py-2 px-4 rounded">3</button>
+          <span class="material-symbols-outlined border py-2 px-2 rounded">
+            chevron_right
+          </span>
+        </div> -->
+      </div>
     </div>
-    <script>
-        const imageInput = document.getElementById("image");
-        const preview = document.getElementById("preview");
+  </div>
+  <script src="/Script.js"> </script>
 
-        imageInput.addEventListener("change", function () {
-            const file = this.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    preview.src = e.target.result;
-                };
-                reader.readAsDataURL(file);
-            } else {
-                preview.src =
-                    "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg";
-            }
-        });
-    </script>
 </body>
-
 
 </html>

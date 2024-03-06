@@ -30,7 +30,7 @@
   <!-- Navbar Starts -->
   <nav
     class="inset-0 z-10 block h-max w-full max-w-full rounded-none border border-blue-80 bg-white bg-opacity-80 py-2 px-4 text-white backdrop-saturate-200 md:py-4">
-    <div class="flex items-center text-gray-900">
+    <div class="flex items-center justify-between text-gray-900">
       <button
         class="left none relative mr-auto h-6 max-h-[40px] w-6 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-blue-gray-500 transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
         data-collapse-target="sticky-navar">
@@ -41,21 +41,31 @@
         </span>
       </button>
       <!-- <div class="flex">
-       <img src="/Images/Blue Illustrative E-Commerce Online Shop Logo(2).png" alt="upon logo" style="width: auto; height: 40px;"/>
-     </div> -->
+ <img src="/Images/Blue Illustrative E-Commerce Online Shop Logo(2).png" alt="upon logo"
+   style="width: auto; height: 40px;" />
+</div> -->
+      <!-- <p>ICON</p> -->
+
       <ul class="ml-auto justify-items-end gap-3 flex">
-        <li class="block p-1 justify-items-start font-sans text-sm font-normal leading-normal text-inherit antialiased">
-          <a href="#" class="flex items-center gap-1">
+        <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+          <a class="flex items-center" href="#">
+            <p>Go to main Website</p>
             <span class="material-symbols-outlined">
-              home
+              logout
             </span>
-            Home
           </a>
         </li>
         <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-          <a class="flex items-center" href="#">
-            <span class="material-symbols-outlined"> account_circle </span>
-          </a>
+          <div class="relative group">
+            <a class="flex items-center cursor-pointer" onclick="Dropdown()">
+              <span class="material-symbols-outlined"> account_circle </span>
+            </a>
+            <div id="dropdownMaterial" class="absolute hidden bg-white rounded-md shadow-lg mt-2 space-y-2">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">My Profile</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
+            </div>
+          </div>
         </li>
         <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
           <a class="flex items-center" href="#">
@@ -97,6 +107,7 @@
           placeholder="Search" />
       </div>
 
+
       <div class="flex flex-col justify-between flex-1 mt-6 text-sm font-medium">
         <aside class="h-screen sticky top-0">
           <div class="mb-2">
@@ -125,98 +136,24 @@
           <div class="mb-2">
             <h3 class="p-1">ORDER MANAGEMENT</h3>
             <ul class="dropdown">
+
               <li class="p-1">
-                <a id="orders-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                  href="javascript:void(0)"
-                  onclick="toggleDropdown('orders-dropdown'); toggleIcon('expand-icon-orders')">
-                  <span class="material-symbols-outlined"> package </span>
+                <a id="order-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Order Management/Orders/All/Orders.html">
+                  <span class="material-symbols-outlined">
+                    orders
+                  </span>
                   <p class="mx-4 font-medium">Orders</p>
-                  <span id="expand-icon-orders" class="material-symbols-outlined ml-auto"> expand_more
-                  </span>
                 </a>
-
-                <ul id="orders-dropdown" class="dropdown-content pl-12">
-                  <a href="/Order Management/Orders/All/Orders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>All</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Pending Orders/PendingOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li> Pending</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Confirmed Orders/ConfirmedOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Confirmed</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Packaged Orders/PackagedOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>PackagedOrders</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Out for Delivery/OutforDelivery.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Out for Delivery</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Delivered Orders/DeliveredOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Delivered</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Returned Orders/ReturnedOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Returned</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Delivery Failed/DeliveryFailedOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Failed to Deliver</li>
-                  </a>
-
-                  <a href="/Order Management/Orders/Cancelled Orders/CancelledOrders.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Cancelled</li>
-                  </a>
-
-                </ul>
               </li>
-
-              <!-- refund requests -->
               <li class="p-1">
-                <a id="refund-list" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                  href="javascript:void(0)"
-                  onclick="toggleDropdown('refund-dropdown'); toggleIcon('expand-icon-refund')">
-                  <span class="material-symbols-outlined"> change_circle </span>
-                  <p class="mx-4 font-medium">Refund Requests</p>
-                  <span id="expand-icon-refund" class="material-symbols-outlined ml-auto"> expand_more
+                <a id="pos-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
+                  href="/Order Management/Refund/AllRefunds.html">
+                  <span class="material-symbols-outlined">
+                    change_circle
                   </span>
+                  <p class="mx-4 font-medium">Refund Requests</p>
                 </a>
-                <ul id="refund-dropdown" class="dropdown-content pl-12">
-
-                  <a href="/Order Management/Refund/Pending Refund/PendingRequest.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Pending</li>
-                  </a>
-
-                  <a href="/Order Management/Refund/Approved Refunds/ApprovedRequests.html"
-                    class="=mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Approved</li>
-                  </a>
-
-                  <a href="/Order Management/Refund/Refunded/Refunded.html"
-                    class="=mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Refunded</li>
-                  </a>
-
-                  <a href="/Order Management/Refund/Rejected Refund Requests/RejectedRequests.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Rejected</li>
-                  </a>
-
-                </ul>
               </li>
             </ul>
           </div>
@@ -278,14 +215,6 @@
               </li>
 
               <li class="p-1">
-                <a id="prodAttributes-list" href="/Product_Management/Product Attribute/ProductAttributes.html"
-                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                  <span class="material-symbols-outlined"> sell </span>
-                  <p class="mx-4 font-medium">Product Attributes</p>
-                </a>
-              </li>
-
-              <li class="p-1">
                 <a id="inhouse-list"
                   class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
                   href="javascript:void(0)"
@@ -344,8 +273,8 @@
 
 
                   <a href="/Product_Management/Seller Products/Declined Products/DeclinedProduct.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">Declined
-                    <li>Product </li>
+                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
+                    <li>Declined Product </li>
                   </a>
 
                 </ul>
@@ -353,7 +282,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">PROMOTION MANAGEMENT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -371,16 +300,6 @@
                     <li>Top Banner </li>
                   </a>
 
-                  <a href="/Promotion/Banners/Side Banner/SidebarBanner.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Sidebar Banner</li>
-                  </a>
-
-                  <a href="/Promotion/Banners/Header Banner/HeaderBanner.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Header Banner</li>
-                  </a>
-
                   <a href="/Promotion/Banners/Main Banner/MainSectionBanner.html"
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
                     <li>Main Section Banner</li>
@@ -390,12 +309,6 @@
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
                     <li>Popup Banner</li>
                   </a>
-
-                  <a href="/Promotion/Banners/Footer Banner/Footerbanner.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Footer Banner</li>
-                  </a>
-
                 </ul>
               </li>
               <li class="p-1">
@@ -449,7 +362,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">HELP & SUPPORT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -469,7 +382,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">REPORT & ANALYTICS</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -528,7 +441,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="mb-2">
             <h3 class="py-2">USER MANAGEMENT</h3>
             <ul class="dropdown p-1">
               <li class="p-1">
@@ -600,43 +513,13 @@
               <li class="p-1">
                 <a id="subscribers-list"
                   class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                  href="javascript:void(0)"
-                  onclick="toggleDropdown('subscribers-dropdown'); toggleIcon('expand-icon-subscribers')">
-                  <span class="material-symbols-outlined"> person </span>
-                  <p class="mx-4 font-medium">Subscribers</p>
-                  <span id="expand-icon-subscribers" class="material-symbols-outlined ml-auto">
-                    expand_more </span>
+                  href="/Users/Subscribers/Subscriber.html">
+                  <span class="material-symbols-outlined">
+                    person
+                  </span>
+                  <span class="mx-4 font-medium">Subscribers</span>
                 </a>
-                <ul id="subscribers-dropdown" class="dropdown-content pl-12">
-
-                  <a href="/Users/Subscriber.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Something</li>
-                  </a>
-                </ul>
               </li>
-
-              <li class="p-1">
-                <a id="deliveryman-list"
-                  class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
-                  href="javascript:void(0)"
-                  onclick="toggleDropdown('deliveryman-dropdown'); toggleIcon('expand-icon-deliveryman')">
-                  <span class="material-symbols-outlined"> person </span>
-                  <p class="mx-4 font-medium">Delivery Man</p>
-                  <span id="expand-icon-deliveryman" class="material-symbols-outlined ml-auto">
-                    expand_more </span>
-                </a>
-                <ul id="deliveryman-dropdown" class="dropdown-content pl-12">
-
-                  <a href="/Users/DeliveryMan.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Something</li>
-                  </a>
-
-                  <a href="/Users/DeliveryMan.html" class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Something</li>
-                  </a>
-                </ul>
-              </li>
-
               <li class="p-1">
                 <a id="employee-list"
                   class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
@@ -658,7 +541,6 @@
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
                     <li>Employee Role Setup</li>
                   </a>
-
                 </ul>
               </li>
             </ul>
@@ -705,9 +587,8 @@
       <div class="bg-white m-2 flex justify-between">
 
         <div class="flex flex-col sm:flex-row gap-2">
-          <img
-            src="https://buffer.com/library/content/images/2022/03/amina.png"
-            alt="phone pic" style="width:80px; height: 80px;" class="border rounded-full m-2" />
+          <img src="https://buffer.com/library/content/images/2022/03/amina.png" alt="phone pic"
+            style="width:80px; height: 80px;" class="border rounded-full m-2" />
           <div class="flex-col justify-items-start my-2">
             <p class="text-black">dew</p>
             <p class="text-gray-500">name@ctsgroupbd.com</p>
@@ -726,13 +607,13 @@
         </div>
         <div class="m-5">
           <label class="relative inline-flex items-center cursor-pointer">
-          <input type="checkbox" value="" class="sr-only peer">
-          <div
-            class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
-          </div>
-        </label>
+            <input type="checkbox" value="" class="sr-only peer">
+            <div
+              class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+            </div>
+          </label>
         </div>
-        
+
       </div>
       <div class="bg-white flex justify-between p-2 m-2 gap-5">
         <p>
@@ -746,13 +627,13 @@
         </p>
         <div>
           <button class="flex bg-[#134EA3] text-white items-center rounded-md gap-2 p-2">
-          <span class="material-symbols-outlined">
-            visibility
-          </span>
-          <p>View</p>
-        </button>
+            <span class="material-symbols-outlined">
+              visibility
+            </span>
+            <p>View</p>
+          </button>
         </div>
-        
+
       </div>
 
     </div>

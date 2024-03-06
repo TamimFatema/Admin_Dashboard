@@ -143,7 +143,7 @@
           <div class="mb-2">
             <h3 class="p-1">ORDER MANAGEMENT</h3>
             <ul class="dropdown">
-             
+
               <li class="p-1">
                 <a id="order-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
                   href="/Order Management/Orders/All/Orders.html">
@@ -230,7 +230,7 @@
                   <p class="mx-4 font-medium">In-house Products</p>
                   <span id="expand-icon-inhouse" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
-              <ul id="inhouse-dropdown" class="dropdown-content pl-12">
+                <ul id="inhouse-dropdown" class="dropdown-content pl-12">
 
                   <a href="/Product_Management/In House Products/Products/ProductsList.html"
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
@@ -648,39 +648,62 @@
           </div>
         </div>
       </div>
-      <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
-        <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-md text-gray-500 text-center">
-          <thead class="bg-[#D2E9FB]">
-            <tr>
-              <th class="py-3 px-6 border-b min-w-[box-width]">SL</th>
-              <th class="py-3 px-6 border-b min-w-[box-width]">Product</th>
-              <th class="py-3 px-6 border-b min-w-[box-width]">Customer </th>
-              <th class="py-3 px-6 border-b min-w-[box-width]">Rating</th>
-              <th class="py-3 px-6 border-b min-w-[box-width]">Review</th>
-              <th class="py-3 px-6 border-b min-w-[box-width]">Date</th>
-            </tr>
-          </thead>
-          <tbody class="bg-white rounded-lg">
-            <tr>
-              <td class="py-3 px-6 border-b min-w-[box-width]">1</td>
-              <td class="py-3 px-6 border-b min-w-[box-width]">0003</td>
-              <td class="py-3 px-6 border-b min-w-[box-width]">Tamim Fatema</td>
-              <td class="py-3 px-6 border-b min-w-[box-width]">
-                4 stars
-              </td>
-              <td class="py-3 px-6 border-b min-w-[box-width]">Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Consequuntur ex similique hic
-              </td>
-              <td class="py-3 px-6 border-b min-w-[box-width]">
-                11/11/2023
-              </td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+
+      <div class="bg-white shadow-xl overflow-x-auto rounded-lg">
+        <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
+          <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
+            <thead class="bg-[#D2E9FB] table_head">
+              <tr>
+                <th>SL</th>
+                <th>Product</th>
+                <th>Customer </th>
+                <th>Rating</th>
+                <th>Review</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody class="table_body">
+              <tr>
+                <td>1</td>
+                <td>0003</td>
+                <td>Tamim Fatema</td>
+                <td>
+                  <div class="flex gap-2 bg-gray-100 rounded-md text-yellow-500 items-center text-center p-1">
+                    4
+                    <span class="material-symbols-outlined">
+                      star
+                    </span>
+                  </div>
+
+                </td>
+                <td>Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Consequuntur ex similique hic
+                </td>
+                <td>
+                  11/11/2023
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- <div class="md:hidden flex items-center justify-end space-x-4 mb-6 mx-3">
+        <span class="material-symbols-outlined border py-2 px-2 rounded">
+          chevron_left
+        </span>
+        <button class="page-btn text-black border py-2 px-4 rounded">1</button>
+        <button class="page-btn text-black border py-2 px-4 rounded">2</button>
+        <button class="page-btn text-black border py-2 px-4 rounded">3</button>
+        <span class="material-symbols-outlined border py-2 px-2 rounded">
+          chevron_right
+        </span>
+      </div> -->
       </div>
+
+
     </div>
   </div>
+  <script src="/Script.js"></script>
 </body>
 
 

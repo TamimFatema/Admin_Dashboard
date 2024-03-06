@@ -225,7 +225,7 @@
                 </a>
               <ul id="inhouse-dropdown" class="dropdown-content pl-12">
 
-                  <a href="/Product_Management/In House Products/Products/ProductsList.html"
+                    <a href="/Product_Management/In House Products/Products/ProductsList.html"
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
                     <li>Products</li>
                   </a>
@@ -608,7 +608,6 @@
 
       <!-- End Form Section -->
 
-      <!-- Table Section -->
       <!-- Sub Sub Category Section -->
       <div class="bg-white shadow-xl overflow-x-auto rounded-lg">
         <div class="flex justify-between p-5 flex-wrap">
@@ -626,16 +625,16 @@
         </div>
 
         <!-- Sub Sub Category Table Container -->
-        <table id="subSubCategoryTable" class="w-full text-sm text-black text-center">
-          <thead class="text-xs text-black uppercase bg-blue-100">
+        <table id="subSubCategoryTable" class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
+          <thead class="table_head bg-[#D2E9FB]">
             <tr>
-              <th scope="col" class="px-6 py-3">ID</th>
-              <th scope="col" class="px-6 py-3">Sub Sub Category Name</th>
-              <th scope="col" class="px-6 py-3">Priority</th>
-              <th scope="col" class="px-6 py-3">Action</th>
+              <th>ID</th>
+              <th>Sub Sub Category Name</th>
+              <th>Priority</th>
+              <th>Action</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="table_body">
             <!-- Sample Row -->
             <tr>
               <td>1</td>
@@ -660,6 +659,8 @@
     </div>
   </div>
   <script src="/Product_Management/Category/SubSub Category/SubSub.js"> </script>
+  <script src="/Script.js"></script>
+
 </body>
 
 </html>

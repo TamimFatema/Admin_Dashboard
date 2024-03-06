@@ -144,7 +144,7 @@
                     <div class="mb-2">
                         <h3 class="p-1">ORDER MANAGEMENT</h3>
                         <ul class="dropdown">
-                    
+
                             <li class="p-1">
                                 <a id="order-link"
                                     class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
@@ -599,47 +599,48 @@
                     </div>
                 </div>
 
-                <table class="w-full text-sm text-gray-500 text-center">
-                    <thead class="text-xs text-gray-700 uppercase bg-blue-100">
+                <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
+                    <thead class="table_head bg-[#D2E9FB]">
                         <tr>
-                            <th scope="col" class="px-6 py-4">Select</th>
-                            <th scope="col" class="px-6 py-4">SL</th>
-                            <th scope="col" class="px-6 py-4">Product Name</th>
-                            <th scope="col" class="px-6 py-4">Date</th>
-                            <th scope="col" class="px-6 py-4">Product Price</th>
-                            <th scope="col" class="px-6 py-4">Selling Price</th>
-                            <th scope="col" class="px-6 py-4">Quantity</th>
-                            <th scope="col" class="px-6 py-4">Active Status</th>
-                            <th scope="col" class="px-6 py-4">Action</th>
+                            <th scope="col" >Select</th>
+                            <th scope="col" >SL</th>
+                            <th scope="col" >Product Name</th>
+                            <th scope="col" >Date</th>
+                            <th scope="col" >Product Price</th>
+                            <th scope="col" >Selling Price</th>
+                            <th scope="col" >Quantity</th>
+                            <th scope="col" >Active Status</th>
+                            <th scope="col" >Action</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="bg-white ">
-                            <td class="px-6 py-4">
+                    <tbody class="table_body">
+                        <tr class="bg-white border ">
+                            <td >
                                 <input type="checkbox" class="form-checkbox text-[#134EA3]">
                             </td>
-                            <td class="px-6 py-4">1</td>
-                            <td class="px-6 py-4">Somename</td>
-                            <td class="px-6 py-4">
+                            <td >1</td>
+                            <td >Somename</td>
+                            <td >
                                 <p>11th Nov 2023</p>
                                 <p>11th Nov 2023</p>
                             </td>
-                            <td class="px-6 py-4">$100.00</td>
-                            <td class="px-6 py-4">$150.00</td>
-                            <td class="px-6 py-4 flex gap-3">
+                            <td >$100.00</td>
+                            <td >$150.00</td>
+                            <td class="flex gap-3">
                                 <button id="incrementButton" class="flex items-center space-x-1 p-2 ">
                                     <span id="counter" class="text-sm font-bold">0</span>
                                     <span class="material-symbols-outlined text-sm text-[#134EA3]">add_circle</span>
                                 </button>
                             </td>
-                            <td class="px-6 py-4">
-                                <a href="#">
-                                    <span class="material-icons toggle-element" data-value="0">
-                                        toggle_off
-                                    </span>
-                                </a>
+                            <td class="toggle-row">
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div
+                                        class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#134EA3]">
+                                    </div>
+                                </label>
                             </td>
-                            <td class="px-6 py-4 flex gap-2 justify-center">
+                            <td class="flex gap-2">
                                 <a href="/Product_Management/In House Products/Products/GeneradeBarcode.html">
                                     <span
                                         class="material-symbols-outlined border border-[#E86B35] rounded-md text-[#E86B35]">
@@ -696,37 +697,7 @@
         </div>
     </div>
 
-    <script>
-        // Get all elements with the toggle class
-        const toggleElements = document.querySelectorAll('.toggle-element');
 
-        // Add a click event listener to toggle the state for each element
-        toggleElements.forEach(toggleElement => {
-            toggleElement.addEventListener('click', () => {
-                // Toggle the value between 1 and 0
-                const currentValue = parseInt(toggleElement.getAttribute('data-value'));
-                const newValue = currentValue === 1 ? 0 : 1;
-
-                // Update the value attribute
-                toggleElement.setAttribute('data-value', newValue);
-
-                // Toggle the class for the "on" state
-                toggleElement.classList.toggle('on', newValue === 1);
-
-                // Set the icon based on the value
-                toggleElement.innerText = newValue === 1 ? 'toggle_on' : 'toggle_off';
-            });
-        });
-        // JavaScript to handle button click and counter update
-        const incrementButton = document.getElementById('incrementButton');
-        const counterElement = document.getElementById('counter');
-        let counterValue = 0;
-
-        incrementButton.addEventListener('click', () => {
-            counterValue++;
-            counterElement.innerText = counterValue;
-        });
-    </script>
 
 </body>
 

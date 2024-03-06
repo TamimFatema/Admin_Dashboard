@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   <link href="/Styles.css" rel="stylesheet" />
+  <link href="/Product_Management/ProductTable.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -143,7 +144,7 @@
           <div class="mb-2">
             <h3 class="p-1">ORDER MANAGEMENT</h3>
             <ul class="dropdown">
-             
+
               <li class="p-1">
                 <a id="order-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
                   href="/Order Management/Orders/All/Orders.html">
@@ -232,7 +233,7 @@
                 </a>
                 <ul id="inhouse-dropdown" class="dropdown-content pl-12">
 
-                  <a href="/Product_Management/In House Products/Products/Products.html"
+                  <a href="/Product_Management/In House Products/Products/ProductsList.html"
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
                     <li>Products</li>
                   </a>
@@ -615,121 +616,40 @@
         </div>
 
         <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
-          <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-gray-500 text-center">
-            <thead class="text-xs text-gray-700 uppercase bg-blue-100 text-left">
+          <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
+            <thead class="table_head bg-[#D2E9FB]">
               <tr>
-                <th scope="col" class="px-6 py-3 w-[20%] lg:w-fit">SL</th>
-                <th scope="col" class="px-6 py-3 w-[30%] lg:w-fit">Product Name</th>
-                <th scope="col" class="px-6 py-3 w-[30%] lg:w-fit">Product Type</th>
-                <th scope="col" class="px-6 py-3 w-[20%] lg:w-fit">Product Price</th>
-                <th scope="col" class="px-6 py-3 w-[20%] lg:w-fit">Selling Price</th>
-                <th scope="col" class="px-6 py-3 w-[20%] lg:w-fit">Verify Status</th>
-                <th scope="col" class="px-6 py-3 w-[20%] lg:w-fit">Active Status</th>
-                <th scope="col" class="px-6 py-3 w-[40%] lg:w-fit">Action</th>
+                <th>SL</th>
+                <th>Product Name</th>
+                <th>Product Type</th>
+                <th>Product Price</th>
+                <th>Selling Price</th>
+                <th>Verify Status</th>
+                <th>Active Status</th>
+                <th>Action</th>
               </tr>
             </thead>
-            <tbody class="text-left">
-              <tr class="bg-white border-b">
-                <td class="px-6 py-4">1</td>
-                <td class="px-6 py-4">Somename</td>
-                <td class="px-6 py-4">Physical</td>
-                <td class="px-6 py-4">$100.00</td>
-                <td class="px-6 py-4">$150.00</td>
-                <td class="px-6 py-4">
+            <tbody class="table_body">
+              <tr class="bg-white border">
+                <td>1</td>
+                <td>Somename</td>
+                <td>Physical</td>
+                <td>$100.00</td>
+                <td>$150.00</td>
+                <td>
                   <button class="bg-approval text-green shadow-lg p-2">
                     Approved
                   </button>
                 </td>
-                <td class="px-6 py-4 border-b min-w-[box-width] toggle-row">
-                  <a href="#">
-                    <span class="material-icons toggle-element" data-value="0">
-                      toggle_off
-                    </span>
-                  </a>
+                <td class="toggle-row">
+                  <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer">
+                    <div
+                      class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#134EA3]">
+                    </div>
+                  </label>
                 </td>
-                <td class="px-6 py-4 flex gap-2">
-                  <a href="/Product_Management/In House Products/Products/GeneradeBarcode.html">
-                    <span class="material-symbols-outlined border border-[#E86B35] rounded-md text-[#E86B35]">
-                      barcode
-                    </span>
-                  </a>
-                  <a href="/Product_Management/In House Products/Products/ProductDetails.html">
-                    <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
-                      visibility
-                    </span>
-                  </a>
-                  <a href="/Product_Management/In House Products/Products/ProductUpdate.html">
-                    <span class="material-symbols-outlined border border-[#24C7FB] rounded-md text-[#24C7FB]">
-                      edit
-                    </span>
-                  </a>
-                  <a href="#">
-                    <span class="material-symbols-outlined border border-[#D34D4D] rounded-md text-[#D34D4D]">
-                      delete
-                    </span>
-                  </a>
-                </td>
-              </tr>
-              <tr class="bg-white border-b">
-                <td class="px-6 py-4">1</td>
-                <td class="px-6 py-4">Somename</td>
-                <td class="px-6 py-4">Physical</td>
-                <td class="px-6 py-4">$100.00</td>
-                <td class="px-6 py-4">$150.00</td>
-                <td class="px-6 py-4">
-                  <button class="bg-approval text-green shadow-lg p-2">
-                    Approved
-                  </button>
-                </td>
-                <td class="px-6 py-4 border-b min-w-[box-width] toggle-row">
-                  <a href="#">
-                    <span class="material-icons toggle-element" data-value="0">
-                      toggle_off
-                    </span>
-                  </a>
-                </td>
-                <td class="px-6 py-4 flex gap-2">
-                  <a href="/Product_Management/In House Products/Products/GeneradeBarcode.html">
-                    <span class="material-symbols-outlined border border-[#E86B35] rounded-md text-[#E86B35]">
-                      barcode
-                    </span>
-                  </a>
-                  <a href="/Product_Management/In House Products/Products/ProductDetails.html">
-                    <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
-                      visibility
-                    </span>
-                  </a>
-                  <a href="/Product_Management/In House Products/Products/ProductUpdate.html">
-                    <span class="material-symbols-outlined border border-[#24C7FB] rounded-md text-[#24C7FB]">
-                      edit
-                    </span>
-                  </a>
-                  <a href="#">
-                    <span class="material-symbols-outlined border border-[#D34D4D] rounded-md text-[#D34D4D]">
-                      delete
-                    </span>
-                  </a>
-                </td>
-              </tr>
-              <tr class="bg-white">
-                <td class="px-6 py-4">1</td>
-                <td class="px-6 py-4">Somename</td>
-                <td class="px-6 py-4">Physical</td>
-                <td class="px-6 py-4">$100.00</td>
-                <td class="px-6 py-4">$150.00</td>
-                <td class="px-6 py-4">
-                  <button class="bg-approval text-green shadow-lg p-2">
-                    Approved
-                  </button>
-                </td>
-                <td class="px-6 py-4 border-b min-w-[box-width] toggle-row">
-                  <a href="#">
-                    <span class="material-icons toggle-element" data-value="0">
-                      toggle_off
-                    </span>
-                  </a>
-                </td>
-                <td class="px-6 py-4 flex gap-2">
+                <td>
                   <a href="/Product_Management/In House Products/Products/GeneradeBarcode.html">
                     <span class="material-symbols-outlined border border-[#E86B35] rounded-md text-[#E86B35]">
                       barcode

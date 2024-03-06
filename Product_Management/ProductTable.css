@@ -1,0 +1,26 @@
+.table_head th {
+    padding-top: 1rem; /* Adjust as needed */
+    padding-bottom: 1rem; /* Adjust as needed */
+    width: 25%; /* Adjust as needed */
+  }
+  
+  .table_body td {
+    padding-top: 1rem; /* Adjust as needed */
+    padding-bottom:1rem; /* Adjust as needed */
+    padding-left: 1rem; /* Adjust as needed */
+    padding-right: 1rem; /* Adjust as needed */
+    min-width: [box-width]; /* Replace [box-width] with your desired value */
+  }
+  
+  @media (min-width: 768px) {
+    .table_head th {
+      width: 20%; /* Adjust as needed */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .table_head th {
+      width: fit-content; /* Adjust as needed */
+    }
+  }
+  

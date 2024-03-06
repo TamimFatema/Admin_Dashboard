@@ -552,8 +552,50 @@
         <span class="material-symbols-outlined">
           groups
         </span>
-        <h2 class="text-2xl font-bold">Sellers</h2>
+        <h2 class="text-2xl font-bold">All Sellers</h2>
       </div>
+      <div class="bg-white rounded-lg flex mb-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 mx-10 my-10 md:px-2 gap-10 flex-grow">
+
+          <a href="/Users/Sellers/Seller List/Sellers.html">
+            <div class="shadow-xl shadow-[#FEFDCA] rounded-lg flex flex-col p-4 bg-[#FEFDCA] flex-grow w-full">
+              <div class="flex justify-between mb-2">
+
+                <p class="font-bold">All Sellers</p>
+                <span class="material-symbols-outlined">
+                  groups_3
+                </span>
+              </div>
+              <p class="font-extrabold text-2xl">0</p>
+            </div>
+          </a>
+
+          <a href="/Users/Sellers/Seller List/ApprovedSellers.html">
+            <div class="shadow-xl rounded-lg flex flex-col p-4 bg-[#E0F9B5] flex-grow w-full">
+              <div class="flex justify-between mb-2">
+                <p class="font-bold">Approved Sellers Requests</p>
+                <span class="material-symbols-outlined">
+                  check_circle
+                </span>
+              </div>
+              <p class="font-extrabold text-2xl">0</p>
+            </div>
+          </a>
+          <a href="/Users/Sellers/Seller List/PendingSellers.html">
+            <div class="shadow-xl rounded-lg flex flex-col p-4 bg-[#A5DEE5] flex-grow w-full">
+              <div class="flex justify-between mb-2">
+                <p class="font-bold">Pending Seller Requests</p>
+
+                <span class="material-symbols-outlined">
+                  history
+                </span>
+              </div>
+              <p class="font-extrabold text-2xl">0</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
 
       <!-- Table Section -->
 
@@ -583,6 +625,7 @@
                 <th class="py-2 w-[25%] md:w-[40%] lg:w-fit">Seller's Name/Shop Name</th>
                 <th class="py-2 w-[40%] md:w-[40%] lg:w-fit">Category</th>
                 <th class="py-2 w-[50%] md:w-[40%] lg:w-fit">Quantity Uploaded</th>
+                <th class="py-4 w-[50%] md:w-[40%] lg:w-fit">Status</th>
                 <th class="py-2 w-[50%] md:w-[40%] lg:w-fit">Details</th>
               </tr>
             </thead>
@@ -593,6 +636,11 @@
                 <td class="py-2 px-4 min-w-[box-width]">Admin</td>
                 <td class="py-2 px-4 min-w-[box-width]">20</td>
                 <td class="py-2 px-4 min-w-[box-width]">
+                  <button class="bg-[#D2E9FB] text-[#134EA3] rounded-md p-3 shadow-lg">
+                    Approved
+                  </button>
+                </td>
+                <td class="py-2 px-4 min-w-[box-width]">
                   <a href="/Users/Sellers/Seller List/SellerDetails.html">
                     <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
                       visibility
@@ -600,6 +648,45 @@
                   </a>
                 </td>
               </tr>
+
+              <tr class="items-center">
+                <td class="py-2 px-4 min-w-[box-width]">1</td>
+                <td class="py-2 px-4 min-w-[box-width]">Ishrat</td>
+                <td class="py-2 px-4 min-w-[box-width]">test</td>
+                <td class="py-2 px-4 min-w-[box-width]">0</td>
+                <td class="py-2 px-4 min-w-[box-width]">
+                  <button class="bg-gray-100 text-green-700 rounded-md p-3 shadow-lg">
+                    Pending
+                  </button>
+                </td>
+                <td class="py-2 px-4 min-w-[box-width]">
+                  <a href="/Users/Sellers/Seller List/SellerDetails.html">
+                    <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
+                      visibility
+                    </span>
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="items-center">
+                <td class="py-2 px-4 min-w-[box-width]">1</td>
+                <td class="py-2 px-4 min-w-[box-width]">Ishrat</td>
+                <td class="py-2 px-4 min-w-[box-width]">Admin</td>
+                <td class="py-2 px-4 min-w-[box-width]">20</td>
+                <td class="py-2 px-4 min-w-[box-width]">
+                  <button class="bg-red-100 text-red-600 rounded-md p-3 shadow-lg">
+                    Declined
+                  </button>
+                </td>
+                <td class="py-2 px-4 min-w-[box-width]">
+                  <a href="/Users/Sellers/Seller List/SellerDetails.html">
+                    <span class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
+                      visibility
+                    </span>
+                  </a>
+                </td>
+              </tr>
+
             </tbody>
           </table>
         </div>

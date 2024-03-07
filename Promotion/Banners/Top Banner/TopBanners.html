@@ -136,7 +136,7 @@
           <div class="mb-2">
             <h3 class="p-1">ORDER MANAGEMENT</h3>
             <ul class="dropdown">
-             
+
               <li class="p-1">
                 <a id="order-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
                   href="/Order Management/Orders/All/Orders.html">
@@ -223,9 +223,9 @@
                   <p class="mx-4 font-medium">In-house Products</p>
                   <span id="expand-icon-inhouse" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
-              <ul id="inhouse-dropdown" class="dropdown-content pl-12">
+                <ul id="inhouse-dropdown" class="dropdown-content pl-12">
 
-                    <a href="/Product_Management/In House Products/Products/ProductsList.html"
+                  <a href="/Product_Management/In House Products/Products/ProductsList.html"
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
                     <li>Products</li>
                   </a>
@@ -300,10 +300,7 @@
                     <li>Main Section Banner</li>
                   </a>
 
-                  <a href="/Promotion/Banners/Popup Banner/PopupBanner.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Popup Banner</li>
-                  </a>
+
                 </ul>
               </li>
               <li class="p-1">
@@ -633,51 +630,54 @@
         <!-- Table -->
         <div class="w-full overflow-x-scroll md:overflow-auto">
           <table id="categoryTable" class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
-            <thead class="text-xs text-black uppercase text-left bg-[#D2E9FB]">
+            <thead class="bg-[#D2E9FB] table_head">
               <tr>
-                <th scope="col" class="px-6 py-3 w-[10%] lg:w-fit">ID</th>
-                <th scope="col" class="px-6 py-3 w-[50%] lg:w-fit">Banner Image</th>
-                <th scope="col" class="px-6 py-3 w-[40%] lg:w-fit">Banner Status</th>
-                <th scope="col" class="px-6 py-3 w-[50%] lg:w-fit">Time</th>
-                <th scope="col" class="px-6 py-3 w-[50%] lg:w-fit">Action</th>
+                <th>ID</th>
+                <th>Banner Image</th>
+                <th>Banner Status</th>
+                <th>Time</th>
+                <th>Action</th>
               </tr>
             </thead>
-            <tbody class="text-left">
-              <td class="px-6 py-3 border-b min-w-[box-width]">1</td>
-              <td class="px-6 py-3 border-b min-w-[box-width]">
-                <img
-                  src="https://img.freepik.com/free-vector/abstract-yellow-blue-geometric-banner-half-tone-design_1017-39620.jpg"
-                  alt="" style="width: auto; height: 50px;" />
-              </td>
-              <td class="px-6 py-3 border-b min-w-[box-width] toggle-row">
-                <a href="#">
-                  <label class="relative inline-flex items-center mb-5 cursor-pointer">
-                    <input type="checkbox" value="" class="sr-only peer">
-                    <div
-                      class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
-                    </div>
-                  </label>
-                </a>
-              </td>
-              <td class="px-6 py-3 border-b min-w-[box-width] gap-2">
-                <div class="flex flex-col">
-                  <p>26th November 2023 10:00am -</p>
-                  <p>26th November 2023 10:00pm </p>
-                </div>
+            <tbody class="table_body">
+              <tr>
+                <td>1</td>
+                <td>
+                  <img
+                    src="https://img.freepik.com/free-vector/abstract-yellow-blue-geometric-banner-half-tone-design_1017-39620.jpg"
+                    alt="" style="width: auto; height: 50px;" />
+                </td>
+                <td class="toggle-row">
+                  <a href="#">
+                    <label class="relative inline-flex items-center mb-5 cursor-pointer">
+                      <input type="checkbox" value="" class="sr-only peer">
+                      <div
+                        class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                      </div>
+                    </label>
+                  </a>
+                </td>
+                <td class="gap-2">
+                  <div class="flex flex-col">
+                    <p>26th November 2023 10:00am -</p>
+                    <p>26th November 2023 10:00pm </p>
+                  </div>
 
-              <td class="px-6 py-3 border-b min-w-[box-width] gap-2">
-                <a href="/Promotion/Banners/Top Banner/TopUpdate.html">
-                  <span class="material-symbols-outlined border border-[#46D7BD] rounded-md text-[#46D7BD]">
-                    edit
-                  </span>
-                </a>
-                <a href="#">
-                  <span class="material-symbols-outlined border border-red-500 rounded-md text-red-500">
-                    delete
-                  </span>
-                </a>
+                <td class="gap-2">
+                  <a href="/Promotion/Banners/Top Banner/TopUpdate.html">
+                    <span class="material-symbols-outlined border border-[#46D7BD] rounded-md text-[#46D7BD]">
+                      edit
+                    </span>
+                  </a>
+                  <a href="#">
+                    <span class="material-symbols-outlined border border-red-500 rounded-md text-red-500">
+                      delete
+                    </span>
+                  </a>
 
-              </td>
+                </td>
+              </tr>
+
             </tbody>
           </table>
         </div>
@@ -695,44 +695,7 @@
       </div>
     </div>
   </div>
-  <script>
-    // Get all elements with the toggle class
-    const toggleElements = document.querySelectorAll('.toggle-element');
-
-    // Add a click event listener to toggle the state for each element
-    toggleElements.forEach(toggleElement => {
-      toggleElement.addEventListener('click', () => {
-        // Toggle the value between 1 and 0
-        const currentValue = parseInt(toggleElement.getAttribute('data-value'));
-        const newValue = currentValue === 1 ? 0 : 1;
-
-        // Update the value attribute
-        toggleElement.setAttribute('data-value', newValue);
-
-        // Toggle the class for the "on" state
-        toggleElement.classList.toggle('on', newValue === 1);
-
-        // Set the icon based on the value
-        toggleElement.innerText = newValue === 1 ? 'toggle_on' : 'toggle_off';
-      });
-    });
-    const imageInput = document.getElementById("image");
-    const preview = document.getElementById("preview");
-
-    imageInput.addEventListener("change", function () {
-      const file = this.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          preview.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-      } else {
-        preview.src =
-          "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg";
-      }
-    });
-  </script>
+  <script src="/Script.js"></script>
 </body>
 
 </html>

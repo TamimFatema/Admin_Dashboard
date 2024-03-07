@@ -137,7 +137,7 @@
           <div class="mb-2">
             <h3 class="p-1">ORDER MANAGEMENT</h3>
             <ul class="dropdown">
-             
+
               <li class="p-1">
                 <a id="order-link" class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
                   href="/Order Management/Orders/All/Orders.html">
@@ -224,9 +224,9 @@
                   <p class="mx-4 font-medium">In-house Products</p>
                   <span id="expand-icon-inhouse" class="material-symbols-outlined ml-auto"> expand_more </span>
                 </a>
-              <ul id="inhouse-dropdown" class="dropdown-content pl-12">
+                <ul id="inhouse-dropdown" class="dropdown-content pl-12">
 
-                    <a href="/Product_Management/In House Products/Products/ProductsList.html"
+                  <a href="/Product_Management/In House Products/Products/ProductsList.html"
                     class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
                     <li>Products</li>
                   </a>
@@ -301,10 +301,7 @@
                     <li>Main Section Banner</li>
                   </a>
 
-                  <a href="/Promotion/Banners/Popup Banner/PopupBanner.html"
-                    class="mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500">
-                    <li>Popup Banner</li>
-                  </a>
+                  
                 </ul>
               </li>
               <li class="p-1">
@@ -545,7 +542,7 @@
         <span class="material-symbols-outlined">
           package
         </span>
-        <h2 class="text-xl font-bold">Seller Products List</h2>
+        <h2 class="text-xl font-bold">New Seller Products List</h2>
         <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
       </div>
       <div class="bg-white shadow-xl overflow-x-auto rounded-lg">
@@ -572,13 +569,12 @@
                 <th>Product Type</th>
                 <th>Purchase Price</th>
                 <th>Selling Price</th>
-                <th>Show as Featured</th>
-                <th>Active Status</th>
                 <th>Action</th>
+                <th>Select Status</th>
               </tr>
             </thead>
             <tbody class="table_body">
-              <tr>
+              <tr class="border">
                 <td>1</td>
                 <td>
                   <div class="flex flex-col sm:flex-row gap-4">
@@ -593,22 +589,6 @@
                 <td>Physical</td>
                 <td>BDT 90,000.00</td>
                 <td>BDT 90,000.00</td>
-                <td>
-                  <label class="relative inline-flex items-center cursor-pointer">
-                    <input type="checkbox" value="" class="sr-only peer">
-                    <div
-                      class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
-                    </div>
-                  </label>
-                </td>
-                <td>
-                  <label class="relative inline-flex items-center cursor-pointer">
-                    <input type="checkbox" value="" class="sr-only peer">
-                    <div
-                      class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
-                    </div>
-                  </label>
-                </td>
                 <td>
                   <a href="/Product_Management/In House Products/Products/GeneradeBarcode.html">
                     <span class="material-symbols-outlined border border-[#E86B35] rounded-md text-[#E86B35]">
@@ -630,6 +610,23 @@
                       delete
                     </span>
                   </a>
+                </td>
+                <td class="items-center">
+                  <div class="flex gap-3">
+                    <button class="flex p-2 text-white bg-green-600 rounded-md items-center gap-2">
+                      <span class="material-symbols-outlined">
+                        done
+                      </span>
+                      <p> Approved </p>
+                    </button>
+
+                    <button class="flex p-2 text-white bg-red-600 rounded-md items-center gap-2">
+                      <span class="material-symbols-outlined">
+                        close
+                      </span>
+                      <p> Declined</p>
+                    </button>
+                  </div>
                 </td>
               </tr>
             </tbody>

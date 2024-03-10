@@ -649,14 +649,10 @@
                 Search
               </button>
             </div>
-            <button class="flex items-center border-2 border-[#134EA3] gap-1 p-1 sm:p-2 rounded-md">
-              <span class="material-symbols-outlined text-[#134EA3]">
-                download
-              </span>
-              <span class="text-[#134EA3]">Export</span>
-              <span class="material-symbols-outlined  text-[#134EA3]">
-                keyboard_arrow_down
-              </span>
+            <button class="export-button">
+              <span class="material-symbols-outlined">download</span>
+              <p>Export</p>
+              <span class="material-symbols-outlined">keyboard_arrow_down</span>
             </button>
           </div>
 
@@ -664,7 +660,7 @@
 
         <!-- Table -->
         <table id="categoryTable" class="w-full text-sm text-black text-center">
-          <            <thead class="table_head">
+           <thead class="table_head">
             <tr>
               <th>ID</th>
               <th>Banner Image</th>
@@ -675,52 +671,52 @@
               <th>Custom Link</th>
               <th>Action</th>
             </tr>
-          </thead>
-          <tbody class="table_body">
-            <tr class="border">
-              <td>1</td>
-              <td>
-                <img
-                  src="https://img.freepik.com/free-vector/abstract-yellow-blue-geometric-banner-half-tone-design_1017-39620.jpg"
-                  alt="" style="width: auto; height: 50px;" class="mx-auto" />
-              </td>
-              <td>banner</td>
-              <td>1</td>
+            </thead>
+            <tbody class="table_body">
+              <tr class="border">
+                <td>1</td>
+                <td>
+                  <img
+                    src="https://img.freepik.com/free-vector/abstract-yellow-blue-geometric-banner-half-tone-design_1017-39620.jpg"
+                    alt="" style="width: auto; height: 50px;" class="mx-auto" />
+                </td>
+                <td>banner</td>
+                <td>1</td>
 
-              <td class="toggle-row">
-                <a href="#">
-                  <label class="relative inline-flex items-center mb-5 cursor-pointer">
-                    <input type="checkbox" value="" class="sr-only peer">
-                    <div
-                      class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
-                    </div>
-                  </label>
-                </a>
-              </td>
+                <td class="toggle-row">
+                  <a href="#">
+                    <label class="relative inline-flex items-center mb-5 cursor-pointer">
+                      <input type="checkbox" value="" class="sr-only peer">
+                      <div
+                        class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                      </div>
+                    </label>
+                  </a>
+                </td>
 
-              <td>1</td>
+                <td>1</td>
 
-              <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
-                <a href="www.ishrat.com">
-                  www.ishrat.com
-                </a>
-              </td>
+                <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
+                  <a href="www.ishrat.com">
+                    www.ishrat.com
+                  </a>
+                </td>
 
-              <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
-                <a href="/Promotion/Banners/Main Banner/MainBannerUpdate.html">
-                  <span class="material-symbols-outlined border border-[#46D7BD] rounded-md text-[#46D7BD]">
-                    edit
-                  </span>
-                </a>
-                <a href="#">
-                  <span class="material-symbols-outlined border border-red-500 rounded-md text-red-500">
-                    delete
-                  </span>
-                </a>
-              </td>
-            </tr>
+                <td class="py-2 px-4 border-b min-w-[box-width] gap-2">
+                  <a href="/Promotion/Banners/Main Banner/MainBannerUpdate.html">
+                    <span class="material-symbols-outlined border border-[#46D7BD] rounded-md text-[#46D7BD]">
+                      edit
+                    </span>
+                  </a>
+                  <a href="#">
+                    <span class="material-symbols-outlined border border-red-500 rounded-md text-red-500">
+                      delete
+                    </span>
+                  </a>
+                </td>
+              </tr>
 
-          </tbody>
+            </tbody>
         </table>
         <!-- <div class="flex items-center justify-end space-x-4 mb-6 mx-3">
           <span class="material-symbols-outlined border py-2 px-2 rounded">

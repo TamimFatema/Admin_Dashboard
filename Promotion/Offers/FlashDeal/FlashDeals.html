@@ -552,7 +552,7 @@
           <div class="w-full mb-2">
             <label for="categoryName" class="block text-sm font-medium text-black mb-2">Title</label>
             <input type="text" id="categoryName" name="categoryName"
-              class="mt-1 p-2 w-full border border-black rounded-md" required />
+              class="mt-1 p-2 w-full border border-gray-300 rounded-md" required />
           </div>
           <div class="w-full mb-2">
             <label for="sku" class="block text-sm font-medium text-black mb-2">Start
@@ -593,17 +593,21 @@
 
       <!-- Table Section -->
       <div class="bg-white shadow-xl overflow-x-auto rounded-lg">
-        <div class="flex flex-row flex-nowrap justify-between p-5">
+        <div class="flex flex-row flex-wrap justify-between p-5 items-center">
           <div class="flex gap-2 text-base flex-nowrap">
             <h1 class="text-xl font-bold whitespace-nowrap">Flash Deal Table</h1>
             <p class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center font-bold">2</p>
           </div>
-          <div class="flex flex-row flex-nowrap">
-            <div class="flex items-center rounded-l-lg border p-1 gap-2 w-28 sm:w-full">
-              <span class="material-symbols-outlined text-gray-700">search</span>
-              <input type="text" placeholder="Search" class="w-full" />
+          <div class="flex border rounded-lg">
+            <div class="flex items-center rounded-l-lg border p-1.5 gap-2">
+              <span class="material-symbols-outlined text-gray-700">
+                search
+              </span>
+              <input type="text" placeholder="Search by Title" class="w-[150px] md:w-[200px]" style="outline: none;" />
             </div>
-            <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">Search</button>
+            <button class="bg-[#134EA3] rounded-r-lg px-2 text-white">
+              Search
+            </button>
           </div>
         </div>
 

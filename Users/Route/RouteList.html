@@ -138,7 +138,7 @@
                     <div class="mb-2">
                         <h3 class="p-1">ORDER MANAGEMENT</h3>
                         <ul class="dropdown">
-                    
+
                             <li class="p-1">
                                 <a id="order-link"
                                     class="flex items-center mb-1 text-gray-700 hover:text-blue-500 focus:text-blue-500"
@@ -612,36 +612,68 @@
                 </div>
                 <div class="w-full overflow-x-scroll lg:overflow-auto mb-6">
                     <table class="table-fixed lg:table-auto w-[200%] lg:w-full text-sm text-black text-center">
-                        <thead class="bg-[#D2E9FB]">
+                        <thead class="table_head">
                             <tr>
 
-                                <th class="py-2 w-[25%] md:w-[25%] lg:w-fit">Title</th>
-                                <th class="py-2 w-[25%] md:w-[25%] lg:w-fit">Name</th>
-                                <th class="py-2 w-[25%] md:w-[25%] lg:w-fit">URL</th>
-                                <th class="py-2 w-[25%] md:w-[25%] lg:w-fit">Model Name</th>
-                                <th class="py-2 w-[25%] md:w-[25%] lg:w-fit">Controller</th>
-                                <th class="py-2 w-[25%] md:w-[25%] lg:w-fit">Funtion</th>
-                                <th class="py-2 w-[25%] md:w-[25%] lg:w-fit">Method</th>
-                                <th class="py-2 w-[25%] md:w-[25%] lg:w-fit">Parameter</th>
-                                <th class="py-2 w-[25%] md:w-[25%] lg:w-fit">Route Status</th>
-
-                                <th class="py-2 w-[25%] md:w-[25%] lg:w-fit">Route Type</th>
-                                <th class="py-2 w-[25%] md:w-[25%] lg:w-fit">Action</th>
+                                <th>Title</th>
+                                <th>Name</th>
+                                <th>URL</th>
+                                <th>Model Name</th>
+                                <th>Controller</th>
+                                <th>Funtion</th>
+                                <th>Method</th>
+                                <th>Parameter</th>
+                                <th>Route Status</th>
+                                <th>Route Type</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr class="">
-                                <td >Category</td>
-                                <td >category.index</td>
-                                <td >category/index</td>
-                                <td >Category</td>
-                                <td >CategoryController</td>
-                                <td >index</td>
-                                <td >get</td>
-                                <td >{id}</td>
-                                <td >1</td>
-                                <td >resource</td>
-                                <td >
+                        <tbody class="table_body">
+                            <tr class="border">
+                                <td>Category</td>
+                                <td>category.index</td>
+                                <td>category/index</td>
+                                <td>Category</td>
+                                <td>CategoryController</td>
+                                <td>index</td>
+                                <td>get</td>
+                                <td>{id}</td>
+                                <td>1</td>
+                                <td>resource</td>
+                                <td>
+                                    <div class="flex gap-1">
+                                        <a href="/Users/Route/CreateRoute.html">
+                                            <span
+                                                class="material-symbols-outlined border border-black rounded-md text-black">
+                                                visibility
+                                            </span>
+                                        </a>
+                                        <a href="/Users/Route/EditRoute.html">
+                                            <span
+                                                class="material-symbols-outlined border border-[#134EA3] rounded-md text-[#134EA3]">
+                                                edit
+                                            </span>
+                                        </a>
+                                        <a href="#">
+                                            <span
+                                                class="material-symbols-outlined border border-red-500 rounded-md text-red-500 delete-category">delete</span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="border">
+                                <td>Category</td>
+                                <td>category.index</td>
+                                <td>category/index</td>
+                                <td>Category</td>
+                                <td>CategoryController</td>
+                                <td>index</td>
+                                <td>get</td>
+                                <td>{id}</td>
+                                <td>1</td>
+                                <td>resource</td>
+                                <td>
                                     <div class="flex gap-1">
                                         <a href="/Users/Route/CreateRoute.html">
                                             <span
